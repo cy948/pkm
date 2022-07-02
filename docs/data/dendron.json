@@ -112,6 +112,7 @@
     ],
     "enableSiteLastModified": true,
     "siteRootDir": "docs",
+    "assetsPrefix": "/docs",
     "enableFrontmatterTags": true,
     "enableHashesForFMTags": false,
     "enableRandomlyColoredTags": true,
@@ -133,8 +134,8 @@
       "editViewMode": "tree"
     },
     "enablePrettyLinks": true,
+    "siteUrl": "https://show.notcloud.net/docs",
     "enableTaskNotes": true,
-    "siteUrl": "localhost:3000",
     "siteFaviconPath": "favicon.ico",
     "siteIndex": "root"
   }

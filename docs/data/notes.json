@@ -9,8 +9,8 @@
       "title": "This page has not yet sprouted",
       "schemaStub": false,
       "type": "note",
-      "updated": 1656783182713,
-      "created": 1656783182713,
+      "updated": 1656784092881,
+      "created": 1656784092881,
       "desc": "",
       "links": [],
       "anchors": {},
@@ -47,13 +47,13 @@
       },
       "children": [
         "7FIYe9gq60KcGHIlDnkGP",
-        "uk8on3wnoy5xtbx90ny8ur0",
-        "z05yps4f5k5yr67x19bwrv8"
+        "35a9er8rv1nngyb4qixuj0p",
+        "mxdmgy0g0ciiwzrwpumtrhm"
       ],
       "parent": null,
       "data": {}
     },
-    "z05yps4f5k5yr67x19bwrv8": {
+    "mxdmgy0g0ciiwzrwpumtrhm": {
       "fname": "daily",
       "stub": true,
       "vault": {
@@ -61,14 +61,14 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1656783182613,
-      "created": 1656783182613,
-      "id": "z05yps4f5k5yr67x19bwrv8",
+      "updated": 1656784092780,
+      "created": 1656784092780,
+      "id": "mxdmgy0g0ciiwzrwpumtrhm",
       "desc": "",
       "links": [],
       "anchors": {},
       "children": [
-        "1p0gd78354zy7pubpop9cnb"
+        "34repxvzsl96b6v7ww87u3u"
       ],
       "parent": "ik5Bi5OCTsmfKfq5JQtEB",
       "data": {},
@@ -78,7 +78,7 @@
         "moduleId": "daily"
       }
     },
-    "1p0gd78354zy7pubpop9cnb": {
+    "34repxvzsl96b6v7ww87u3u": {
       "fname": "daily.journal",
       "stub": true,
       "vault": {
@@ -86,24 +86,24 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1656783182613,
-      "created": 1656783182613,
-      "id": "1p0gd78354zy7pubpop9cnb",
+      "updated": 1656784092780,
+      "created": 1656784092780,
+      "id": "34repxvzsl96b6v7ww87u3u",
       "desc": "",
       "links": [],
       "anchors": {},
       "children": [
-        "wqlq0o3h5a060sqquka9fhz"
+        "54k81p9vt9iu9lr310v6hmc"
       ],
-      "parent": "z05yps4f5k5yr67x19bwrv8",
+      "parent": "mxdmgy0g0ciiwzrwpumtrhm",
       "data": {},
       "title": "Journal",
       "schema": {
-        "schemaId": "zduzp42y40mmsrokbadx0sm",
+        "schemaId": "wc5wf9yy4utfdtbndv44upg",
         "moduleId": "daily"
       }
     },
-    "wqlq0o3h5a060sqquka9fhz": {
+    "54k81p9vt9iu9lr310v6hmc": {
       "fname": "daily.journal.2022",
       "stub": true,
       "vault": {
@@ -111,24 +111,24 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1656783182613,
-      "created": 1656783182613,
-      "id": "wqlq0o3h5a060sqquka9fhz",
+      "updated": 1656784092780,
+      "created": 1656784092780,
+      "id": "54k81p9vt9iu9lr310v6hmc",
       "desc": "",
       "links": [],
       "anchors": {},
       "children": [
-        "c3hbjvv8ynk1ebscvw46u3e"
+        "xxbxfo7jvskzjn7vs29hlsx"
       ],
-      "parent": "1p0gd78354zy7pubpop9cnb",
+      "parent": "34repxvzsl96b6v7ww87u3u",
       "data": {},
       "title": "2022",
       "schema": {
-        "schemaId": "nzjwu7d6ydlprmepcqlbqw3",
+        "schemaId": "um4k7tgkzmn6dv5xixddko3",
         "moduleId": "daily"
       }
     },
-    "c3hbjvv8ynk1ebscvw46u3e": {
+    "xxbxfo7jvskzjn7vs29hlsx": {
       "fname": "daily.journal.2022.07",
       "stub": true,
       "vault": {
@@ -136,20 +136,20 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1656783182613,
-      "created": 1656783182613,
-      "id": "c3hbjvv8ynk1ebscvw46u3e",
+      "updated": 1656784092780,
+      "created": 1656784092780,
+      "id": "xxbxfo7jvskzjn7vs29hlsx",
       "desc": "",
       "links": [],
       "anchors": {},
       "children": [
         "s28swvvfd96wk0xjaihn0to"
       ],
-      "parent": "wqlq0o3h5a060sqquka9fhz",
+      "parent": "54k81p9vt9iu9lr310v6hmc",
       "data": {},
       "title": "07",
       "schema": {
-        "schemaId": "9d7uft52rosgj8it6h770f0",
+        "schemaId": "ols3nbwhazb23j37ncld5a1",
         "moduleId": "daily"
       }
     },
@@ -258,14 +258,14 @@
         }
       },
       "children": [],
-      "parent": "c3hbjvv8ynk1ebscvw46u3e",
+      "parent": "xxbxfo7jvskzjn7vs29hlsx",
       "data": {},
       "schema": {
-        "schemaId": "telsdw0glk8altd69nbq1ym",
+        "schemaId": "x3xp9r52okg6ducr4pyj8ep",
         "moduleId": "daily"
       }
     },
-    "uk8on3wnoy5xtbx90ny8ur0": {
+    "35a9er8rv1nngyb4qixuj0p": {
       "fname": "dendron",
       "stub": true,
       "vault": {
@@ -273,20 +273,20 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1656783182612,
-      "created": 1656783182612,
-      "id": "uk8on3wnoy5xtbx90ny8ur0",
+      "updated": 1656784092779,
+      "created": 1656784092779,
+      "id": "35a9er8rv1nngyb4qixuj0p",
       "desc": "",
       "links": [],
       "anchors": {},
       "children": [
-        "1wrkd1d8tup80s7kedqm9d7"
+        "7b7uaa9wgg9rjklyncn1ass"
       ],
       "parent": "ik5Bi5OCTsmfKfq5JQtEB",
       "data": {},
       "title": "Dendron"
     },
-    "1wrkd1d8tup80s7kedqm9d7": {
+    "7b7uaa9wgg9rjklyncn1ass": {
       "fname": "dendron.templates",
       "stub": true,
       "vault": {
@@ -294,16 +294,16 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1656783182612,
-      "created": 1656783182612,
-      "id": "1wrkd1d8tup80s7kedqm9d7",
+      "updated": 1656784092779,
+      "created": 1656784092779,
+      "id": "7b7uaa9wgg9rjklyncn1ass",
       "desc": "",
       "links": [],
       "anchors": {},
       "children": [
         "r9521r2kwdw38p12h7hx6be"
       ],
-      "parent": "uk8on3wnoy5xtbx90ny8ur0",
+      "parent": "35a9er8rv1nngyb4qixuj0p",
       "data": {},
       "title": "Templates"
     },
@@ -431,7 +431,7 @@
         }
       },
       "children": [],
-      "parent": "1wrkd1d8tup80s7kedqm9d7",
+      "parent": "7b7uaa9wgg9rjklyncn1ass",
       "data": {}
     },
     "7FIYe9gq60KcGHIlDnkGP": {
@@ -505,8 +505,8 @@
       },
       "children": [
         "7FIYe9gq60KcGHIlDnkGP",
-        "uk8on3wnoy5xtbx90ny8ur0",
-        "z05yps4f5k5yr67x19bwrv8"
+        "35a9er8rv1nngyb4qixuj0p",
+        "mxdmgy0g0ciiwzrwpumtrhm"
       ],
       "parent": null,
       "data": {},
@@ -542,8 +542,8 @@
     },
     "children": [
       "7FIYe9gq60KcGHIlDnkGP",
-      "uk8on3wnoy5xtbx90ny8ur0",
-      "z05yps4f5k5yr67x19bwrv8"
+      "35a9er8rv1nngyb4qixuj0p",
+      "mxdmgy0g0ciiwzrwpumtrhm"
     ],
     "parent": null,
     "data": {},
