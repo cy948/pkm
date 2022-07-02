@@ -28,7 +28,7 @@
           ]
         },
         {
-          "key": "bsvtsjkmnl92xqjmy9ggq6z",
+          "key": "z05yps4f5k5yr67x19bwrv8",
           "title": "Daily",
           "icon": "bookOutlined",
           "hasTitleNumberOutlined": false,
@@ -36,7 +36,7 @@
           "navExclude": false,
           "children": [
             {
-              "key": "7493i1hx9sqgowmcnf0vfeq",
+              "key": "1p0gd78354zy7pubpop9cnb",
               "title": "Journal",
               "icon": "bookOutlined",
               "hasTitleNumberOutlined": false,
@@ -44,7 +44,7 @@
               "navExclude": false,
               "children": [
                 {
-                  "key": "0gjdt0qxkiyntnafzu1zbo8",
+                  "key": "wqlq0o3h5a060sqquka9fhz",
                   "title": "2022",
                   "icon": "bookOutlined",
                   "hasTitleNumberOutlined": false,
@@ -52,7 +52,7 @@
                   "navExclude": false,
                   "children": [
                     {
-                      "key": "hi76pkhuqj22mofp17qlvbs",
+                      "key": "c3hbjvv8ynk1ebscvw46u3e",
                       "title": "07",
                       "icon": "bookOutlined",
                       "hasTitleNumberOutlined": false,
@@ -77,7 +77,7 @@
           ]
         },
         {
-          "key": "0og2to23am9t9a4beqp8kx1",
+          "key": "uk8on3wnoy5xtbx90ny8ur0",
           "title": "Dendron",
           "icon": "plusOutlined",
           "hasTitleNumberOutlined": false,
@@ -85,7 +85,7 @@
           "navExclude": false,
           "children": [
             {
-              "key": "4hidnvk7fzulg9gyh6i8dq1",
+              "key": "1wrkd1d8tup80s7kedqm9d7",
               "title": "Templates",
               "icon": "plusOutlined",
               "hasTitleNumberOutlined": false,
@@ -111,14 +111,14 @@
   "child2parent": {
     "403": null,
     "ik5Bi5OCTsmfKfq5JQtEB": null,
-    "bsvtsjkmnl92xqjmy9ggq6z": "ik5Bi5OCTsmfKfq5JQtEB",
-    "7493i1hx9sqgowmcnf0vfeq": "bsvtsjkmnl92xqjmy9ggq6z",
-    "0gjdt0qxkiyntnafzu1zbo8": "7493i1hx9sqgowmcnf0vfeq",
-    "hi76pkhuqj22mofp17qlvbs": "0gjdt0qxkiyntnafzu1zbo8",
-    "s28swvvfd96wk0xjaihn0to": "hi76pkhuqj22mofp17qlvbs",
-    "0og2to23am9t9a4beqp8kx1": "ik5Bi5OCTsmfKfq5JQtEB",
-    "4hidnvk7fzulg9gyh6i8dq1": "0og2to23am9t9a4beqp8kx1",
-    "r9521r2kwdw38p12h7hx6be": "4hidnvk7fzulg9gyh6i8dq1",
+    "z05yps4f5k5yr67x19bwrv8": "ik5Bi5OCTsmfKfq5JQtEB",
+    "1p0gd78354zy7pubpop9cnb": "z05yps4f5k5yr67x19bwrv8",
+    "wqlq0o3h5a060sqquka9fhz": "1p0gd78354zy7pubpop9cnb",
+    "c3hbjvv8ynk1ebscvw46u3e": "wqlq0o3h5a060sqquka9fhz",
+    "s28swvvfd96wk0xjaihn0to": "c3hbjvv8ynk1ebscvw46u3e",
+    "uk8on3wnoy5xtbx90ny8ur0": "ik5Bi5OCTsmfKfq5JQtEB",
+    "1wrkd1d8tup80s7kedqm9d7": "uk8on3wnoy5xtbx90ny8ur0",
+    "r9521r2kwdw38p12h7hx6be": "1wrkd1d8tup80s7kedqm9d7",
     "7FIYe9gq60KcGHIlDnkGP": "ik5Bi5OCTsmfKfq5JQtEB",
     "mqhqeek1z4t04q6kos1zfro": "7FIYe9gq60KcGHIlDnkGP"
   }
