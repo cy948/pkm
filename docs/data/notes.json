@@ -1,0 +1,557 @@
+{
+  "notes": {
+    "403": {
+      "vault": {
+        "fsPath": "vault"
+      },
+      "fname": "403",
+      "id": "403",
+      "title": "This page has not yet sprouted",
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1656743476728,
+      "created": 1656743476728,
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": null,
+      "data": {}
+    },
+    "ik5Bi5OCTsmfKfq5JQtEB": {
+      "id": "ik5Bi5OCTsmfKfq5JQtEB",
+      "title": "Root",
+      "desc": "",
+      "updated": 1637610830605,
+      "created": 1637610830605,
+      "custom": {
+        "nav_order": 0,
+        "permalink": "/"
+      },
+      "fname": "root",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "df6c530d3842f1e4a4ec27951d479af1",
+      "links": [],
+      "anchors": {
+        "welcome-to-dendron": {
+          "type": "header",
+          "text": "Welcome to Dendron",
+          "value": "welcome-to-dendron",
+          "line": 7,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [
+        "7FIYe9gq60KcGHIlDnkGP",
+        "0og2to23am9t9a4beqp8kx1",
+        "bsvtsjkmnl92xqjmy9ggq6z"
+      ],
+      "parent": null,
+      "data": {}
+    },
+    "bsvtsjkmnl92xqjmy9ggq6z": {
+      "fname": "daily",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1656743476577,
+      "created": 1656743476577,
+      "id": "bsvtsjkmnl92xqjmy9ggq6z",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "7493i1hx9sqgowmcnf0vfeq"
+      ],
+      "parent": "ik5Bi5OCTsmfKfq5JQtEB",
+      "data": {},
+      "title": "Daily",
+      "schema": {
+        "schemaId": "daily",
+        "moduleId": "daily"
+      }
+    },
+    "7493i1hx9sqgowmcnf0vfeq": {
+      "fname": "daily.journal",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1656743476577,
+      "created": 1656743476577,
+      "id": "7493i1hx9sqgowmcnf0vfeq",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "0gjdt0qxkiyntnafzu1zbo8"
+      ],
+      "parent": "bsvtsjkmnl92xqjmy9ggq6z",
+      "data": {},
+      "title": "Journal",
+      "schema": {
+        "schemaId": "7o2fw5u1rj2hr07u5um1fcn",
+        "moduleId": "daily"
+      }
+    },
+    "0gjdt0qxkiyntnafzu1zbo8": {
+      "fname": "daily.journal.2022",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1656743476577,
+      "created": 1656743476577,
+      "id": "0gjdt0qxkiyntnafzu1zbo8",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "hi76pkhuqj22mofp17qlvbs"
+      ],
+      "parent": "7493i1hx9sqgowmcnf0vfeq",
+      "data": {},
+      "title": "2022",
+      "schema": {
+        "schemaId": "zr6amb6mmk9arczsxmyv9km",
+        "moduleId": "daily"
+      }
+    },
+    "hi76pkhuqj22mofp17qlvbs": {
+      "fname": "daily.journal.2022.07",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1656743476577,
+      "created": 1656743476577,
+      "id": "hi76pkhuqj22mofp17qlvbs",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "s28swvvfd96wk0xjaihn0to"
+      ],
+      "parent": "0gjdt0qxkiyntnafzu1zbo8",
+      "data": {},
+      "title": "07",
+      "schema": {
+        "schemaId": "y2t7apzvwzuyi986txb4jz3",
+        "moduleId": "daily"
+      }
+    },
+    "s28swvvfd96wk0xjaihn0to": {
+      "id": "s28swvvfd96wk0xjaihn0to",
+      "title": "2022-07-02",
+      "desc": "",
+      "updated": 1656732302943,
+      "created": 1656732289134,
+      "traitIds": [
+        "journalNote"
+      ],
+      "custom": {},
+      "fname": "daily.journal.2022.07.02",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "7ea10591872e553824af1068adac08cb",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "daily.journal.2022.07.02",
+            "id": "s28swvvfd96wk0xjaihn0to",
+            "vaultName": "vault"
+          },
+          "value": "dendron.templates.daily",
+          "alias": "dendron.templates.daily",
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 68,
+              "offset": 67
+            },
+            "end": {
+              "line": 1,
+              "column": 95,
+              "offset": 94
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "sameFile": false,
+          "to": {
+            "fname": "dendron.templates.daily"
+          }
+        }
+      ],
+      "anchors": {
+        "morning": {
+          "type": "header",
+          "text": "Morning",
+          "value": "morning",
+          "line": 18,
+          "column": 0,
+          "depth": 2
+        },
+        "gratitude": {
+          "type": "header",
+          "text": "Gratitude",
+          "value": "gratitude",
+          "line": 22,
+          "column": 0,
+          "depth": 3
+        },
+        "what-would-make-today-great": {
+          "type": "header",
+          "text": "What would make today great?",
+          "value": "what-would-make-today-great",
+          "line": 30,
+          "column": 0,
+          "depth": 3
+        },
+        "daily-affirmations": {
+          "type": "header",
+          "text": "Daily affirmations",
+          "value": "daily-affirmations",
+          "line": 36,
+          "column": 0,
+          "depth": 3
+        },
+        "evening": {
+          "type": "header",
+          "text": "Evening",
+          "value": "evening",
+          "line": 40,
+          "column": 0,
+          "depth": 2
+        },
+        "amazing-things-that-happened-today": {
+          "type": "header",
+          "text": "Amazing things that happened today",
+          "value": "amazing-things-that-happened-today",
+          "line": 44,
+          "column": 0,
+          "depth": 3
+        },
+        "how-could-i-have-made-today-even-better": {
+          "type": "header",
+          "text": "How could I have made today even better?",
+          "value": "how-could-i-have-made-today-even-better",
+          "line": 50,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "hi76pkhuqj22mofp17qlvbs",
+      "data": {},
+      "schema": {
+        "schemaId": "of1sc7o08bs6kixz2dwhtg6",
+        "moduleId": "daily"
+      }
+    },
+    "0og2to23am9t9a4beqp8kx1": {
+      "fname": "dendron",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1656743476576,
+      "created": 1656743476576,
+      "id": "0og2to23am9t9a4beqp8kx1",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "4hidnvk7fzulg9gyh6i8dq1"
+      ],
+      "parent": "ik5Bi5OCTsmfKfq5JQtEB",
+      "data": {},
+      "title": "Dendron"
+    },
+    "4hidnvk7fzulg9gyh6i8dq1": {
+      "fname": "dendron.templates",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1656743476576,
+      "created": 1656743476576,
+      "id": "4hidnvk7fzulg9gyh6i8dq1",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "r9521r2kwdw38p12h7hx6be"
+      ],
+      "parent": "0og2to23am9t9a4beqp8kx1",
+      "data": {},
+      "title": "Templates"
+    },
+    "r9521r2kwdw38p12h7hx6be": {
+      "id": "r9521r2kwdw38p12h7hx6be",
+      "title": "Daily Journal Template",
+      "desc": "",
+      "updated": 1656732289104,
+      "created": 1656732289104,
+      "custom": {},
+      "fname": "dendron.templates.daily",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "0bf4e605d78f9b8aa245e29e78c0988b",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "dendron.templates.daily",
+            "id": "r9521r2kwdw38p12h7hx6be",
+            "vaultName": "vault"
+          },
+          "value": "dendron.templates.daily",
+          "alias": "dendron.templates.daily",
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 68,
+              "offset": 67
+            },
+            "end": {
+              "line": 1,
+              "column": 95,
+              "offset": 94
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "sameFile": false,
+          "to": {
+            "fname": "dendron.templates.daily"
+          }
+        },
+        {
+          "from": {
+            "fname": "daily.journal.2022.07.02",
+            "vaultName": "vault"
+          },
+          "type": "backlink",
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 68,
+              "offset": 67
+            },
+            "end": {
+              "line": 1,
+              "column": 95,
+              "offset": 94
+            },
+            "indent": []
+          },
+          "value": "dendron.templates.daily",
+          "alias": "dendron.templates.daily"
+        }
+      ],
+      "anchors": {
+        "morning": {
+          "type": "header",
+          "text": "Morning",
+          "value": "morning",
+          "line": 16,
+          "column": 0,
+          "depth": 2
+        },
+        "gratitude": {
+          "type": "header",
+          "text": "Gratitude",
+          "value": "gratitude",
+          "line": 20,
+          "column": 0,
+          "depth": 3
+        },
+        "what-would-make-today-great": {
+          "type": "header",
+          "text": "What would make today great?",
+          "value": "what-would-make-today-great",
+          "line": 28,
+          "column": 0,
+          "depth": 3
+        },
+        "daily-affirmations": {
+          "type": "header",
+          "text": "Daily affirmations",
+          "value": "daily-affirmations",
+          "line": 34,
+          "column": 0,
+          "depth": 3
+        },
+        "evening": {
+          "type": "header",
+          "text": "Evening",
+          "value": "evening",
+          "line": 38,
+          "column": 0,
+          "depth": 2
+        },
+        "amazing-things-that-happened-today": {
+          "type": "header",
+          "text": "Amazing things that happened today",
+          "value": "amazing-things-that-happened-today",
+          "line": 42,
+          "column": 0,
+          "depth": 3
+        },
+        "how-could-i-have-made-today-even-better": {
+          "type": "header",
+          "text": "How could I have made today even better?",
+          "value": "how-could-i-have-made-today-even-better",
+          "line": 48,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "4hidnvk7fzulg9gyh6i8dq1",
+      "data": {}
+    },
+    "7FIYe9gq60KcGHIlDnkGP": {
+      "id": "7FIYe9gq60KcGHIlDnkGP",
+      "title": "About",
+      "desc": "",
+      "updated": 1637610878030,
+      "created": 1637610850873,
+      "custom": {},
+      "fname": "about",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "7204a40aef18a8e5993065729ffbcc2f",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "mqhqeek1z4t04q6kos1zfro"
+      ],
+      "parent": "ik5Bi5OCTsmfKfq5JQtEB",
+      "data": {}
+    },
+    "mqhqeek1z4t04q6kos1zfro": {
+      "id": "mqhqeek1z4t04q6kos1zfro",
+      "title": "One",
+      "desc": "",
+      "updated": 1656732273892,
+      "created": 1656732273892,
+      "custom": {},
+      "fname": "about.one",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "ac85a7f3bd972899c0bb34244135fc1e",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "7FIYe9gq60KcGHIlDnkGP",
+      "data": {}
+    }
+  },
+  "domains": [
+    {
+      "id": "ik5Bi5OCTsmfKfq5JQtEB",
+      "title": "Root",
+      "desc": "",
+      "updated": 1637610830605,
+      "created": 1637610830605,
+      "custom": {
+        "nav_order": 0,
+        "permalink": "/"
+      },
+      "fname": "root",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "df6c530d3842f1e4a4ec27951d479af1",
+      "links": [],
+      "anchors": {
+        "welcome-to-dendron": {
+          "type": "header",
+          "text": "Welcome to Dendron",
+          "value": "welcome-to-dendron",
+          "line": 7,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [
+        "7FIYe9gq60KcGHIlDnkGP",
+        "0og2to23am9t9a4beqp8kx1",
+        "bsvtsjkmnl92xqjmy9ggq6z"
+      ],
+      "parent": null,
+      "data": {},
+      "body": "\n# Welcome to Dendron\r\n\r\nThis is the root of your dendron vault. If you decide to publish your entire vault, this will be your landing page. You are free to customize any part of this page except the frontmatter on top. \r\n"
+    }
+  ],
+  "noteIndex": {
+    "id": "ik5Bi5OCTsmfKfq5JQtEB",
+    "title": "Root",
+    "desc": "",
+    "updated": 1637610830605,
+    "created": 1637610830605,
+    "custom": {
+      "nav_order": 0,
+      "permalink": "/"
+    },
+    "fname": "root",
+    "type": "note",
+    "vault": {
+      "fsPath": "vault"
+    },
+    "contentHash": "df6c530d3842f1e4a4ec27951d479af1",
+    "links": [],
+    "anchors": {
+      "welcome-to-dendron": {
+        "type": "header",
+        "text": "Welcome to Dendron",
+        "value": "welcome-to-dendron",
+        "line": 7,
+        "column": 0,
+        "depth": 1
+      }
+    },
+    "children": [
+      "7FIYe9gq60KcGHIlDnkGP",
+      "0og2to23am9t9a4beqp8kx1",
+      "bsvtsjkmnl92xqjmy9ggq6z"
+    ],
+    "parent": null,
+    "data": {},
+    "body": "\n# Welcome to Dendron\r\n\r\nThis is the root of your dendron vault. If you decide to publish your entire vault, this will be your landing page. You are free to customize any part of this page except the frontmatter on top. \r\n"
+  },
+  "vaults": [
+    {
+      "fsPath": "vault"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "roots": [
+    {
+      "key": "ik5Bi5OCTsmfKfq5JQtEB",
+      "title": "Root",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "navExclude": false,
+      "children": [
+        {
+          "key": "7FIYe9gq60KcGHIlDnkGP",
+          "title": "About",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "navExclude": false,
+          "children": [
+            {
+              "key": "mqhqeek1z4t04q6kos1zfro",
+              "title": "One",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "navExclude": false,
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "bsvtsjkmnl92xqjmy9ggq6z",
+          "title": "Daily",
+          "icon": "bookOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "navExclude": false,
+          "children": [
+            {
+              "key": "7493i1hx9sqgowmcnf0vfeq",
+              "title": "Journal",
+              "icon": "bookOutlined",
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "navExclude": false,
+              "children": [
+                {
+                  "key": "0gjdt0qxkiyntnafzu1zbo8",
+                  "title": "2022",
+                  "icon": "bookOutlined",
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "navExclude": false,
+                  "children": [
+                    {
+                      "key": "hi76pkhuqj22mofp17qlvbs",
+                      "title": "07",
+                      "icon": "bookOutlined",
+                      "hasTitleNumberOutlined": false,
+                      "vaultName": "vault",
+                      "navExclude": false,
+                      "children": [
+                        {
+                          "key": "s28swvvfd96wk0xjaihn0to",
+                          "title": "2022-07-02",
+                          "icon": "bookOutlined",
+                          "hasTitleNumberOutlined": false,
+                          "vaultName": "vault",
+                          "navExclude": false,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "0og2to23am9t9a4beqp8kx1",
+          "title": "Dendron",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "navExclude": false,
+          "children": [
+            {
+              "key": "4hidnvk7fzulg9gyh6i8dq1",
+              "title": "Templates",
+              "icon": "plusOutlined",
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "navExclude": false,
+              "children": [
+                {
+                  "key": "r9521r2kwdw38p12h7hx6be",
+                  "title": "Daily Journal Template",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "navExclude": false,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "child2parent": {
+    "403": null,
+    "ik5Bi5OCTsmfKfq5JQtEB": null,
+    "bsvtsjkmnl92xqjmy9ggq6z": "ik5Bi5OCTsmfKfq5JQtEB",
+    "7493i1hx9sqgowmcnf0vfeq": "bsvtsjkmnl92xqjmy9ggq6z",
+    "0gjdt0qxkiyntnafzu1zbo8": "7493i1hx9sqgowmcnf0vfeq",
+    "hi76pkhuqj22mofp17qlvbs": "0gjdt0qxkiyntnafzu1zbo8",
+    "s28swvvfd96wk0xjaihn0to": "hi76pkhuqj22mofp17qlvbs",
+    "0og2to23am9t9a4beqp8kx1": "ik5Bi5OCTsmfKfq5JQtEB",
+    "4hidnvk7fzulg9gyh6i8dq1": "0og2to23am9t9a4beqp8kx1",
+    "r9521r2kwdw38p12h7hx6be": "4hidnvk7fzulg9gyh6i8dq1",
+    "7FIYe9gq60KcGHIlDnkGP": "ik5Bi5OCTsmfKfq5JQtEB",
+    "mqhqeek1z4t04q6kos1zfro": "7FIYe9gq60KcGHIlDnkGP"
+  }
+}
