@@ -2,7 +2,7 @@
 id: 1j9m6b09al19l86d3pmczqo
 title: layoutsincss
 desc: '常见的双飞翼布局、圣杯布局'
-updated: 1658932103965
+updated: 1659001071308
 created: 1658906047633
 ---
 
@@ -91,7 +91,7 @@ created: 1658906047633
 
 ### 正式使用[Flex](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox#%E7%AE%80%E5%86%99%E5%B1%9E%E6%80%A7_flex-flow)进行布局
 
-为了更好地控制 flex 元素，有三个属性可以作用于它们： `flex-grow` | `flex-shrink` |
+为了更好地控制 flex 元素，有三个属性可以作用于它们： `flex-grow` | `flex-shrink` |****
  `flex-basis`
 
 > 在考虑这几个属性的作用之前，需要先了解一下 可用空间 available space 这个概念。这几个 flex 属性的作用其实就是改变了 flex 容器中的可用空间的行为。同时，可用空间对于 flex 元素的对齐行为也是很重要的。
