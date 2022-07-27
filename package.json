@@ -1,5 +1,10 @@
 {
-  "dependencies": {
-    "@dendronhq/dendron-cli": "^0.101.0"
-  }
+    "dependencies": {
+        "@dendronhq/dendron-cli": "^0.101.0"
+    },
+    "scripts": {
+        "build": "sh ./dendron-publish-site.sh"
+    },
+    "name": "note.cy948.top",
+    "version": "0.0.0"
 }
