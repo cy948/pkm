@@ -85,7 +85,7 @@ publishing:
         - root
     enableSiteLastModified: true
     siteRootDir: docs
-    assetsPrefix: /docs    
+    # assetsPrefix: /docs
     enableFrontmatterTags: true
     enableHashesForFMTags: false
     enableRandomlyColoredTags: true
@@ -95,7 +95,7 @@ publishing:
             - vault
     writeStubs: false
     seo:
-        title: Dendron Netlify Template
+        title: note.cy948.top
         description: Personal knowledge space
     github:
         enableEditLink: true
@@ -103,4 +103,4 @@ publishing:
         editBranch: main
         editViewMode: tree
     enablePrettyLinks: true
-    siteUrl: 'https://show.notcloud.net/docs'
+    siteUrl: ''
