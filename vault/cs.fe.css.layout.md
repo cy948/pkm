@@ -2,7 +2,7 @@
 id: 1j9m6b09al19l86d3pmczqo
 title: layoutsincss
 desc: '常见的双飞翼布局、圣杯布局'
-updated: 1658923640339
+updated: 1658932103965
 created: 1658906047633
 ---
 
@@ -172,7 +172,7 @@ container
 <style>
 .gridContainer{
     display: grid;
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 50px 50px 50px;
 }
 .gridContainer>div{
     background-color: lightblue;
@@ -267,9 +267,9 @@ grid-auto-rows: minmax(100px, auto);
     .gridContainerMinsize{
         display:grid;
         /* 设定列最小值和最大值 */
-        grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+        grid-template-columns: repeat(auto-fill, minmax(50px, 2fr));
         /* 行的 */
-        grid-auto-rows: minmax(100px, auto);
+        grid-auto-rows: minmax(50px, auto);
         gap: 20px;
     }
     .gridContainerMinsize>div{
@@ -447,7 +447,7 @@ footer {
         background-color: lightgray;
     }
     .left {
-        width: 200px;
+        width: 50px;
         /* 因为浮动的左边已经有父元素，所以要偏移整个父元素的width才能到左边 */
         margin-left: -100%;
         background-color: lightpink;
@@ -456,9 +456,9 @@ footer {
         left: -200px; */
     }
     .right {
-        width: 200px;
+        width: 50px;
         /* 偏移自己的width即可 */
-        margin-left: -200px;
+        margin-left: -50px;
         background-color: lightgreen;
         /* 圣杯布局 */
         /* position: relative;
@@ -466,7 +466,7 @@ footer {
     }
     .inner {
         /* 双飞翼 */
-        margin: 0 200px 0 200px;
+        margin: 0 50px 0 50px;
     }
 </style>
 <body>
