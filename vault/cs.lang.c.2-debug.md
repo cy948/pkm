@@ -8,6 +8,30 @@ created: 1659590387956
 
 # C语言程序的运行与调试
 
+```mermaid
+graph LR
+o[运行与调试] --> A[C实现]
+A --> A1[诊断消息]
+A --> A2[GCC和CLANG]
+o --> B[调试] 
+B --> B1[GDB GNU debugger] 
+B1 --> B2[调试命令 b,r,p,n,l,c,q]
+o --> C[IDE]
+o --> D[注释]
+D --> D1[多行注释]
+D --> D2[单行注释]
+o --> E[函数调用]
+E --> E1[形式参数 parameter]
+E --> E2[实际参数 argument]
+E --> E3[函数指示符 function]
+E --> E4[函数调用表达式 functionCallExpression]
+E4 --> E41[函数调用运算符 双括号]
+E --> E5[变量的生存期 lifeTime]
+E --> E6[函数原型 functionPrototype]
+```
+
+
+
 ## 安装对应版本的C Compiler
 
 Linux下安装 GCC
