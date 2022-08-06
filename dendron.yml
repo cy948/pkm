@@ -95,7 +95,7 @@ publishing:
             - vault
     writeStubs: false
     seo:
-        title: note.cy948.top
+        title: g2a.cc
         description: Personal knowledge space
     github:
         enableEditLink: true
@@ -104,3 +104,4 @@ publishing:
         editViewMode: tree
     enablePrettyLinks: true
     siteUrl: ''
+    theme: dark
