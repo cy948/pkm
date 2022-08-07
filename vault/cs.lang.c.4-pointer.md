@@ -2,7 +2,7 @@
 id: knf383ffka46dw9ydbi9si7
 title: 4 Pointer
 desc: ''
-updated: 1659780246099
+updated: 1659867080055
 created: 1659502436026
 ---
 
@@ -464,4 +464,168 @@ int main(void){
 }
 ```
 
-在表达式 `sl += cx + cy` 中，虽然 `cx` 和 `cy` 的类型为 `signed char` ,但计算时需要进行整型转换再相加。
+在表达式 `sl += cx + cy` 中，虽然 `cx` 和 `cy` 的类型为 `signed char` ,但计算时需要进行整型加宽转换成`int`或`unsigned int`再相加。
+
+> `int`和`unsigned int`类型通常等于所用计算机的自然字长32位处理器上是32个比特。
+
+#### 整型转换阶
+
+如果一个操作数相对于`int`类型来说比较窄，但它的值能用`int`类型表示，则将其转换为`int`类型；如果无法表示，则转换为`unsigned int`类型，这个过程叫做**整型提升**。
+
+![](https://cdn.notcloud.net/static/md/cy948/202208071037193.png)
+
+- 整型提升是一种特殊的整数类型转换，特指从阶较低的整数类型转换（提升）为`int`或者`unsigned int`类型，从`int`类型转换到`long int`类型并不是整型提升；
+
+- 并不是所有运算符的操作数都需要做整型提升，例如递增和递减运算符的操作数就不需要，即时它们是整数类型
+
+> 表达式`cx + cy`，左值`cx`和`cy`的类型都是`signed char`所以它们都必须进行整型提升，提升为`int`类型，故表达式`cx + cy`的类型是`int`
+
+原则上，运算符的操作数在整型提升后应具有一致的类型，如果不一致的，还必须做进一步的转换。总原则是：阶较低的整数类型转换为阶较高的整数类型。
+
+> 表达式`sl += cx * 3L`的字表达式`cx * 3L`，常量表达式`3L`的类型为`signed long int`，而左值`cx`的类型是`signed char`。首先将`cx`的值从`signed char`类型提升为`int`类型。提升后类型仍不一致，故必须将`cx`的值再次从`int`类型转换为`signed long int`类型。`cx * 3L`的类型`signed long int`；
+
+- 如果提升之后两个操作数的类型不同，一个是有符号整型，另一个是无符号整型，且无符号整数类型的阶高于或者等于有符号整型，则将有符号的整数类型操作数转换为那个无符号整数类型。
+
+> 表达式`ul += sl <= ul`的子表达式`sl <= ul`，左值`sl`的类型为`signed long int`，而左值`ul`的类型是`unsigned long int`，这两种整数类型的阶都高于`int`和`unsigned int`，这两种整数类型都高于`int`和`unsigned int`，所以这里不存在整型提升，但它们仍不是同一种类型。需要将`sl`的值从`signed long int`转换为`unsigned long int`类型；
+
+#### Checkpoint4.8
+
+#### 负号运算符
+
+符号运算符需要一个右操作数，如果这个操作数是整数类型，必须先整型提升，负号运算符的结果是提升后的负值，结果类型是提升后的类型；
+
+```C
+unsigned char uc = -1;
+```
+> 这里的负号运算符的操作数1是常量表达式，按要求必须先做整型提升，但其类型已经是int，提升后最终`-1`的类型也是`int`；
+
+表达式`-1`的值用于初始化变量`uc`，变量`uc`的类型为`unsigned char`，这就要把表达式`-1`的值从原来的`int`类型转换为`unsigned char`类型
+
+> 在（64位 gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04)）上：
+> `signed char`类型最大值是255，转换的过程是：`256 + (-1) = 255`，这就是说将`-1` 赋值 给`unsigned char`类型的变量，将使该变量的值为`unsigned char`类型所能表示的最大值；
+
+结论：将表达式`-1`赋值给任何一种**无符号整数**类型，其结果是该类型的最大值；
+
+#### Checkpoint4.9
+
+1. 编写程序获取 `unsigned char` `unsigned int` `unsigned long int` `unsigned long long int`的最大值；
+
+```C
+int main(){
+    unsigned char uc = -1;
+    unsigned int ui = -1;
+    unsigned long int ul = -1;
+    unsigned long long int ull = -1;
+}
+```
+
+```c
+(gdb) p uc
+$1 = 255 '\377'
+(gdb) p ui
+$2 = 4294967295
+(gdb) p ul
+$3 = 18446744073709551615
+(gdb) p ull
+$4 = 18446744073709551615
+```
+
+2. 表达式`-3u`的结果是多少？ 结果类型是什么？
+
+4294967293 `unsigned int`
+
+```c
+int main(){
+    unsigned uint = -3u; 
+}
+/*
+(gdb) p uint
+$1 = 4294967293
+(gdb) ptype uint
+type = unsigned int
+ */
+```
+
+#### 转型运算符
+
+一般情况下，类型转换是自动进行的，也可以手动进行类型转换；
+```
+(类型名) 表达式
+```
+
+转型表达式的作用是将“表达式”的值从它于原先的类型转换为“类型名”指定的那种类型。举个例子来说，在以下声明中，是将整数常量`0x33`从它原先的`int`类型转换为`long long int`类型后，再用于初始化变量`ll`
+
+```C
+long long ll = (long long) 0x33;
+```
+
+> 注意，被转型的表达式是可能含有别的运算符，如果它们的优先级低于转型运算符，则被转型的表达式应当用圆括号括起来以形成基本表达式，如：
+```C
+signed char cx, cy;
+cx = (signed char) 0x33;
+cy = (signed char) (cx + 0x30);
+```
+
+以上，转型运算符的优先级高于赋值运算符，表达式`cx = (signed char) 0x33;`是将整型常量`0x33`从它原来的`int`类型转换为`signed char`类型，然后赋值给`cx`。
+
+表达式`cx = (signed char) (cx + 0x30)`里，是将表达式`cx`的值从`signed char`类型提升为`int`类型， 再与`int`类型的`0x30`相加，得到一个`int`类型的结果。这个结果再转型为`signed char`类型，赋给变量`cy`;
+
+> 如果不用括号括住，就变成将`cx`的值转换为`signed char`后经过整型提升后再与`0x30`相加，最终结果的类型是`int`不是`signed char`
+```C
+cy = (signed char) cx + 0x30;
+```
+
+
+### 指针——整数转换
+
+```c
+int main(void){
+    int m = 0;
+    unsigned long long ull;
+
+    ull = (unsigned long long) & m;
+    * (int *) ull = 10086;
+}
+```
+
+以上，我们先声明了一个`int`类型的变量`m`和一个`unsigned long long`类型的变量`ull`；然后，子表达式`& m`的类型是指向`int`的指针，这是其值的类型。这个指针的类型被转换成`unsigned long long`类型的值后赋值给变量`ull`，因为不知道指针的长度，我们使用一个最长的整数类型`unsigned long long`来保存转换后的结果。
+
+接着，在表达式`* (int *) ull = 10086`里，左值`ull`执行左值转换，转换为`unsigned long long`类型的值。这个自己值被转型运算符转换为指向`int`的指针，然后一元`*`运算符作用于这个指针，得到一个`int`类型的左值，这个左值接受赋值。至此，因为表达式`(int *) ull`的值实际上指向变量`m`，故变量`m`的存储值是10086；
+
+#### Checkpoint4.10
+
+1. 表达式 `(unsigned long long) & m` 和 `(unsigned long long) m` 所执行的转换过程有什么区别？
+
+> 表达式 `(unsigned long long) & m` 是将一个指针（变量m的地址）转换为 `unsigned long long` ；表达式 `(unsigned long long) m` 是将变量 `m` 的值转换为 `unsigned long long` 类型。
+
+2. 编写一个程序完成以下工作：将一个指向函数的指针转换为整数，再将这个整数转换为指向函数的指针，最后，用这个指针调用那个函数。
+
+此题的难点在于如何声明[[函数类型|#函数指示符指针转换]]和[[声明函数指针|#指向函数的指针]]
+
+```C
+int func(int n){
+    return n;
+}
+int main(){
+    unsigned long long ull = 
+        (unsigned long long) & func; //D1
+    
+    int (* pf) (int) = 
+        * (int (*) (int)) ull; // D2
+
+    unsigned res = pf(10);
+}
+
+/*
+(gdb) p res
+$1 = 10
+ */
+```
+
+`D1` 处进行类型强转，将函数指针转化为地址；
+
+`D2` 处进行类型强转，将ull从 `unsigned long long` 转回函数类型 `(int (*) (int)`；
+
+#### 空指针
+
+p113……
