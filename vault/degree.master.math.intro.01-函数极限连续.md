@@ -241,10 +241,11 @@ $$
 证明：
 
 1. 因为数列收敛，有：
-   $$
-   lim_{n\to\infty}x_n=a$ ，$\forall \varepsilon > 0 \\
+
+$$
+lim_{n\to\infty}x_n=a$ ，$\forall \varepsilon > 0 \\
    当 n> N时，有|x_n-a|< \varepsilon
-   $$
+$$
 
 2. 取$\epsilon = \frac{a}{2} > 0,\exist N \in N_+,当n>N时，有$
 
