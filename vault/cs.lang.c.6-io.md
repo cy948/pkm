@@ -562,3 +562,222 @@ int main (void)
 }
 ```
 
+在程序中，`sum_ints` 是变参函数，用于累加传入的整数，**C语言规定每个函数的参数数量上限不小于127个**。
+
+在基于32位Intelx86平台处理器的系统中，C实现会确保变参函数的参数是按顺序传递并集中保存至一个特定的存储区里，函数嗲用着把需要传递的参数存放在这里，而函数也从这里取得参数的值（访问参数变量）。因此，只需要获得第一个参数的地址，就能访问剩余的参数；
+
+![image-20220813111131301](https://cdn.notcloud.net/static/md/cy948/202208131111345.png)
+
+#### 手工获取可变参数
+
+- 生成一个指向第一个变量count的指针，并将这个指针移动到变量count之后，使其指向第一个可变参数，用来初始化变量var_start:
+
+```c
+int * var_start = (int *) & count + 1;
+```
+
+先来看初始化器`(int *) & count + 1`， 一元`&` 运算符的优先级最高，转型运算符次之，加性运算符`+` 的优先级最低。表达式`& count` 是生成一个指针，指向值为2的参数变量。这个指针+1就得到一个新指针，指向第一个参数变量；
+
+指针的类型决定了能从所指向变量里读取什么样的值，表达式`& count` 的类型是指向`unsigned int` 的指针，但我们需要一个指向`int` 的指针，因为后面的变参都是`int`类型。为此，需要用转型表达式将表达式`& count` 的值从指向`unsigned int`类型的指针转换为指向`int`的指针；
+
+```c
+while (count --) sum += * var_start ++;
+```
+
+`while` 语句用于利用使用者指定的参数个数依次读取参数并进行计算；
+
+#### 通过stdarg库获取可变参数
+
+但上述方法存在问题，没有考虑到跨平台的兼容性，先不说每个可变参数是否是挨在一起，变量的对齐也是一个问题。stdarg库符合POSIX标准，提供了获取可变参数的实现；下面将使用该库改善可移植性：
+
+```c
+/*****************c0607.c****************/
+# include <stdarg.h>
+
+typedef long long int VARF (unsigned int, ...);
+
+int main (void)
+{
+    long long int x, y, z, m, n;
+
+    VARF sum_ints;
+    x = sum_ints (2, 100, 200);
+    y = sum_ints (0);
+    z = sum_ints (5, 10, -10, 30, 600, -300);
+}
+
+long long int sum_ints (unsigned int count, ...)
+{
+    long long int sum = 0;
+
+    va_list ap;
+    va_start(ap, count);
+    while (count --) sum += va_arg(ap, int);
+    va_end(ap);
+
+    return sum;
+}
+
+```
+
+在该程序中，源文件包含指令`# include`的用法和前面的不一样：
+
+```c
+# include "iotool.h"
+```
+
+这里用的是双引号，而当前程序中用的是尖括号。预处理指令`# include` 指明了要包含的文件，预处理器需要知道文件的位置。C实现都会提供一些流行的函数库，有针对Unix和类Unix 的POSIX函数库等等，这些库文件的头文件会出现在特定位置，由C实现定义的位置；
+
+- 如果由`<>`围住的，C实现将找到这个实现定义的位置去寻找它；
+- 如果是由`""` 围住的，则C实现会用别的方法寻找它，如：在当前目录下寻找，如果找不到再当成`<>`围起来的文件名处理；
+
+可移植性：我们知道C语言具有非凡的可移植性，用它编写的程序，能够在不同的计算机系统上翻译和执行。但是，说白了，所谓的可移植性，就是在那种计算机系统上有可用的C实现，能够将程序翻译成符合那个计算机系统的可执行程序。
+
+>  所谓C语言具有很强的可移植性，无非就是有很多好事者为各种不同的计算机系统编写了大量的C实现。
+
+定制性：C实现也是程序，为一种计算机系统提供的C实现不能在另一种不同的计算机系统上工作。就像你不能把windows上的Word文字处理软件拿到Linux上运行一样，为Windows提供的C实现不能在Linux上运行；GCC的Linux版本也不能直接拿到Windows操作系统上运行；Gcc的64位Linux版本也不能拿到32位的Linux操作系统上开工。
+
+> 所以，C实现具有“定制性”的特征，你要安装C实现，第一步就是选择适合你当前计算机系统的那个版本。由于这个原因，不同的C实现就可以针对它所运行的计算机系统来定制一些内容。
+
+##### 类型定义
+
+```c
+long long int sum_ints (unsigned int count, ...)
+{
+    long long int sum = 0;
+
+    va_list ap;
+    va_start(ap, count);
+    while (count --) sum += va_arg(ap, int);
+    va_end(ap);
+
+    return sum;
+}
+```
+
+在`sum_ints`函数中，先声明了一个`va_list`类型的变量`ap`，用来保存指向参数的指针，相当于我们前面的`var_start`。不同的计算机系统上有不同的C实现，而`va_list`的定义则随C实现的不同而有所变化。在基于32位intelx86处理器的计算机系统上，C实现有可能将它定义为：
+
+```c
+typedef char * va_list;
+```
+
+`typedef`是C语言的关键字，它唯一的作用是类型定义，也就是将一个标识符定义位它被声明的那种类型。完成类型定义后，可以使用这个类型变量：
+
+```c
+va_list vla; // 等价于 char * vla;
+va_list func(va_list); // 等价于 char * func(char *);
+```
+
+可以定义任何类型的别名。如：
+
+```c
+typedef int DWORD;
+typedef DWORD dWord;
+typedef char * PCHAR;
+typedef int ARRAY [255];
+typedef int FUNC (int, int);
+```
+
+以上：
+
+- 第一行是将标识符DWORD定义为int类型的别名；
+- 第二行是将标识符`dWord`定义为`DWORD`类型的别名，实际上也是`int`的别名；
+- 第三行是将标识符`PCHAR`定义为`char *` 类型的别名；
+- 第四行是将标识符`ARRAY` 定义为数组类型`int [255]`的别名；
+- 第五行是将标识符`FUNC`定义为函数类型`int (int,int)`的别名；
+
+下面将用这些类型声明变量和函数：
+
+```c
+DWORD x; // int x;
+ARRAY a,b [20]; // a[255], b [20] [255]
+FUNC f;
+```
+
+#### 声明临时数组、激活使用、结束使用
+
+类型`va_list`是在头文件`<stdarg.h>`中定义。在不同的C实现上定义不同，但我们包含并使用它即可。
+
+`va_start` 是一个宏，也是在头文件`<stdarg.h>`中定义的，用来指使`ap`指向变参函数中最后一个已知参数（从右往左数的第一个已知参数），从而为访问后面的变参做准备。该宏具有两个参数，第一个参数是那个被声明为`va_list`类型的变量；第二个参数则是标识符，它必须是变参函数中最后那个已知参数的名字；
+
+```c
+long long int sum_ints 
+    (unsigned int count, ...){
+    /*...*/
+    va_list ap;
+    va_start(ap, count);
+    while (count --) sum += va_arg(ap, int);
+    va_end(ap);
+    /*...*/
+}
+```
+
+为了获得变参的值，这里使用了另一个宏`va_arg`，它同样是在头文件`<stdarg.h>`中定义的。该宏具有两个参数，第一个参数被声明为`va_list`类型的变量；第二个参数则是类型名；在程序翻译时，这个宏会被拓展为一个表达式，所以它可以直接作为运算符`+=`的右操作数；
+
+```c
+sum += va_arg(ap, int);
+```
+
+一开始，我们令`va_list`类型的变量`ap`指向最后一个已知参数。此后，每调用一次`va_arg`，都会使`ap`指向下一个参数（变参）并取得（计算出）它的值。
+
+```c
+va_end(ap);
+```
+
+最后，宏`va_end`将修改变量`ap`使它不再可用，它同样是在头文件`<stdarg.h>`中定义的。如果一个函数里曾使用`va_start`引用过变参，则它必须调用`va_end`才能保证返回时一切正常。如果没有，则行为是未定义的；
+
+回到开头，定义了一个类型`VARF`
+
+```c
+typedef long long int VARF (unsigned int, ...);
+```
+
+如果没有关键字`typedef` 这是声明了一个函数`VARF`因为有关键字`typedef` 这是将标识符`VARF`定义为它被声明的类型，即，将函数`VARF` 定义为函数类型`long long int`。也就是说，`VARF` 现在是一种函数类型的名字，别名；
+
+```c
+VARF sum_ints;
+// 等价于
+// long long int sum_ints(unsigned int,)
+```
+
+#### Checkpoint6.4
+
+1. 如果F是“指向‘有两个int类型的参数且返回类型是int的函数’的指针”的别名，请问F是如何定义的？编写一个程序，用类型F声明一个指向函数的指针，并用这个指针调用它所指向的函数。
+
+```c
+typedef int F (int, int);
+```
+
+```c
+typedef int F(int, int);
+int main(void){
+    F func;
+    int res = func(1,2);
+}
+int func(int a, int b){
+    return a + b;
+}
+```
+
+
+
+2. 在下面的程序里，函数`var sum`是个变参函数。参数`fmt`用于接受一个字符串，字符串的内容用于指示对应的变参的类型。比如，“1”表示对应的变参是longint类型；“i”表示对应的变参是int类型；“I”表示对应的变参是指向int的指针；“L”表示对应的变参是指向1 ong int的指针。
+   - 函数var sum的任务是依据参数fmt来取得各个变参的值，或者，变参是指针的，取得它所指向的变量的值，然后返回累加的结果。
+   - 在main函数里，我们调用了var sum函数，传入的字符串是“1IiiL”,后面的5个参数对应于这个字符串的指示。
+     现在，请将函数var sum补充完整，并在你的机器上翻译和调试，以检验自己写的是否正确。
+
+```c
+# include <stdarg.h>
+int var_sum(char * fmt, ...){
+    // fill in
+}
+
+int main(void){
+    int x = 50, r;
+    long int y = 3;
+    r = vs_sum("lIiiL", 5L, & x, 6, 7, & y);
+}
+```
+
+### 认识逐位与、
+
