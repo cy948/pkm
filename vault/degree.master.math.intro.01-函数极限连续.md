@@ -20,7 +20,7 @@ created: 1660527336244
 
 即：
 $$
-\slim_{x\to\infty} \frac{1}{n} = 0
+\lim_{x\to\infty} \frac{1}{n} = 0
 $$
 
 #### 严格定义：
@@ -454,4 +454,62 @@ $$
 ![image-20220815194600483](https://cdn.notcloud.net/static/md/cy948/202208151946514.png)
 
 需要考虑数列的单调性；
+
+##### 例1.6
+
+有数列如下：
+$$
+\sqrt{2}, \sqrt{2+\sqrt{2}}, \sqrt{2+\sqrt{2+\sqrt{2}}},...
+$$
+证明数列的极限存在。
+
+1. 使用数学归纳法证明：$\forall n \in N_+, x_n < 2$
+
+- 当$n=1时，x_1=\sqrt{2} < 2，成立$
+- 当$n=k时，结论成立，即x_k<2$
+- 当$n=k+1时，x_{k+1}=\sqrt{2+x_k} < \sqrt{2+2} = 2$
+
+$\therefore 由数学归纳法知：\forall n \in N_+, x_n < 2$
+
+2. 证明数列单调递增：
+
+需证明：$x_{n+1} - x_n \ge 0 或 \frac{x_{n+1}}{x_n} \ge 1$
+$$
+x_{n+1}-x_n = \sqrt{2+x_n} - x_n \\
+= \frac{(\sqrt{2+x_n}-x_n) + (\sqrt{2+x_n}+x_n)}{\sqrt{2+x_n}+x_n} \\
+= \frac{- {x_n}^2+x_n+2}{\sqrt{2+x_n}+x_n} \\
+= \frac{- ({x_n}^2-x_n-2)}{\sqrt{2+x_n}+x_n} \\
+= \frac{- (x_n+1)(x_n-2)}{\sqrt{2+x_n}+x_n} \\
+$$
+即证明：
+$$
+\frac{- (x_n+1)(x_n-2)}{\sqrt{2+x_n}+x_n} >0 \\
+$$
+证明如下：
+$$
+\because x_n < 2 \& x_n > 1\\
+\therefore - (x_n+1)(x_n-2) > 1 \\
+
+\because x_n > 0 \\
+\therefore \sqrt{2+x_n}+x_n > 0 \\
+
+\therefore \frac{- (x_n+1)(x_n-2)}{\sqrt{2+x_n}+x_n} > 0 \\
+\\
+\therefore x_{n+1}>x_{n} \\
+\therefore \{ x_n \} 单调 \\
+$$
+
+$$
+\therefore 由单调有界准则知，\lim_{n\to\infty}x_n存在 \\
+\\
+令\lim_{n\to\infty}x_n=A，\\
+在x_{n+1}=\sqrt{2+x_n}两边同取n\to\infty \\
+\lim_{n\to\infty}x_{n+1}=\lim_{n\to\infty}\sqrt{2+x_n} \\
+\therefore A=\sqrt{2+A} \\
+\therefore A^2-A-2=0 \\
+\therefore (A-2)(A+1)=0 \\
+\therefore A=2;
+$$
+
+数列极限存在
 
