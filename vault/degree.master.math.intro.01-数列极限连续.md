@@ -1,6 +1,6 @@
 ---
 id: ek862reo0vix5s1qk17r3aa
-title: 01 函数极限连续
+title: 01 数列极限连续
 desc: ''
 updated: 1660527438749
 created: 1660527336244
@@ -271,10 +271,10 @@ a. 从某项起，即 $\exists E \in N+，当n>N时，有y_n \leq x_n \leq z_n$�
 b. $lim_{n\to\infty}y_n = lim_{n\to\infty}z_n = A$;
 
 > 此处条件中，需要分别推$lim_{n\to\infty}y_n=A$ $lim_{n\to\infty}z_n=A$，因此，如果替换成更specific,更弱的限制条件：
-> $$
-> \lim_{n\to\infty}(y_n-z_n)=0 \\
-> \lim_{n\to\infty}\frac{y_n}{z_n}=1
-> $$
+$$
+\lim_{n\to\infty}(y_n-z_n)=0 \\
+\lim_{n\to\infty}\frac{y_n}{z_n}=1
+$$
 > 则不成立；
 
 那么数列$\{x_n\}$的极限存在，且$lim_{n\to\infty}x_n=A$
@@ -293,10 +293,10 @@ $设ln x_n \leq lny_n \leq lnz_n(n=1,2...)且lim_{n\to\infty} \frac{z_n}{x_n}=1�
 
 > 1. 假设有：
 >
-> $$
-> x_n = n, y_n = n + \frac{1}{n},z_n=n+ \frac{2}{n} \\
+$$
+x_n = n, y_n = n + \frac{1}{n},z_n=n+ \frac{2}{n} \\
 > x_n \leq y_n \leq z_n
-> $$
+$$
 >
 > 且能满足条件：
 > $$
@@ -318,7 +318,7 @@ $设ln x_n \leq lny_n \leq lnz_n(n=1,2...)且lim_{n\to\infty} \frac{z_n}{x_n}=1�
 >
 > 且能满足条件：
 > $$
-> \lim_{n\to\infty} \frac{z_n}{x_n} = \lim_{n\to\infty} \frac{1+\frac{2}{n}}{1} = 1 
+> \lim_{n\to\infty} \frac{z_n}{x_n} = \lim_{n\to\infty} \frac{1+\frac{2}{n}}{1} = 1
 > $$
 > 但$lim_{n\to\infty}y_n=1, lim_{n\to\infty}ln y_n=0$
 
