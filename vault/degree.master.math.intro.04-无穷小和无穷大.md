@@ -170,4 +170,277 @@ $$
 = \lim_{x\to 0} 0 \ \lim_{x\to 0} 0 = 0\\
 $$
 
-- [ ] (C)
+- [x] (C) $o(x^2)+o(x^2)=o(x^2)$
+
+将左边整体当作$\beta$，右边整体当作$o(a)$；
+$$
+\lim_{x\to 0} \frac{o(x^2) \ o(x^2)}{x^2}\\
+= \lim_{x\to 0} (\frac{o(x^2)}{x^2} +\frac{o(x^2)}{x^2})\\
+= \lim_{x\to 0} 0 + \lim_{x\to 0} 0 = 0\\
+$$
+
+- [ ] (D) $o(x)+o(x^2)=o(x^2)$
+
+将左边整体当作$\beta$，右边整体当作$o(a)$；
+$$
+\lim_{x\to 0} \frac{o(x) \ o(x^2)}{x^2}\\
+= \lim_{x\to 0} (\frac{o(x)}{x^2} +\frac{o(x^2)}{x^2})\\
+= ? + \lim_{x\to 0} 0 = ?\\
+无法求解
+$$
+
+### 无穷小性质
+
+#### 定理：有限个无穷小的和也是无穷小
+
+#### *定理：有界函数与无穷小的乘积也是无穷小
+
+如：$lim_{x\to\infty}e^{-x}\sin x=0$
+
+![image-20220818110312004](https://cdn.notcloud.net/static/md/cy948/202208181103039.png)
+
+#### 定理：$\beta$与$\alpha$是等价无穷小的充分必要条件为$\beta=\alpha+o(\alpha)$
+
+#### *定理：$\alpha \sim \alpha', \beta \sim \beta',且\lim \frac{\beta'}{\alpha'}存在，则\lim \frac{\beta}{\alpha}=\lim\frac{\beta'}{\alpha'}$
+
+$$
+若\alpha \sim \alpha',\beta \sim \beta'\\
+且\lim \frac {\alpha'} {\beta'}存在\\
+则\lim \frac{\alpha}{\beta} = \lim \frac{\alpha'}{\beta'}\\
+\because \lim \frac{\alpha}{\beta} = \lim \frac{\alpha'}{\beta'}\\
+\therefore \lim \frac{\alpha}{\beta} = \lim \frac{\alpha}{\alpha'} \frac{\alpha'}{\beta}\\
+此处\frac {\alpha} {\alpha'}的结果是1，因为他们是等价的\\
+\therefore \lim \frac{\alpha}{\beta} = \lim \frac{\alpha'}{\beta}
+$$
+
+### 常见的等价无穷小
+
+当$x\to0$时，以下 $\sim x$
+$$
+\sin x, \tan x, \arcsin x, \arctan x,\\
+e^x-1, \ln(1+x)
+$$
+除此之外：
+$$
+1-\cos x \sim \frac{1}{2}x^2 \\
+(1+x)^\alpha-1 \sim \alpha x
+$$
+使用示例：
+$$
+\lim_{x\to0} \frac{x(e^x-1)}{\frac{1}{2}{x^2}} = \\
+\lim_{x\to0} \frac{x \ x}{\frac{1}{2}{x^2}} = 2\\
+\\
+\lim_{x\to0} \frac{x \ \ln(1+2x)}{\cos x - 1} = \\
+=\lim_{x\to0} \frac{x \ 2x}{\cos x - 1} \\
+= \lim_{x\to0} \frac{x \ 2x}{-\frac{1}{2}x^2} = -4\\
+$$
+
+#### 例1.15
+
+设$\alpha_1=x(\cos \sqrt{x} - 1)$，$\alpha_2=\sqrt{x} ln(1+\sqrt[3]{x})$，$\alpha_3=\sqrt[3]{x+1}-1$当$x\to0^+$时，以上3个无穷小从低阶到高阶的排序是：$\alpha_2,\alpha_3,\alpha_1$
+$$
+\alpha_1=x(\cos \sqrt{x} - 1)\\
+= -x(1- \cos \sqrt{x})\\
+\sim -x \ \frac1 2 (\sqrt{x})^2
+= - \frac 1 2 x^2\
+\\
+\alpha_2=\sqrt{x} \ ln(1+\sqrt[3]{x}) \\
+=\sqrt{x} \ \sqrt[3]{x} \\
+= x^{\frac 1 2} \ x^{\frac 1 3} \\
+= x^{\frac 5 6}\\
+\\
+\alpha_3=\sqrt[3]{x+1}-1\\
+= (1+x)^{\frac 1 3}-1\\
+=\frac 1 3 x
+$$
+
+#### 例1.16
+
+$$
+\lim_{x\to \infty} x(\sin \ln(1+\frac 3 x)-\sin \ln(1+\frac 1 x))
+$$
+
+
+$$
+原式 \\ 
+= \lim_{x\to \infty} \frac{ \sin \ln(1+\frac 3 x)-\sin \ln(1+\frac 1 x)}{\frac 1 x}\\
+令t=\frac 1 x，则\\
+= \lim_{t\to 0} \frac{ \sin \ln(1+3t)-\sin \ln(1+t)}{t}\\
+其中\\
+1. \ \lim_{t\to 0} \frac{ \sin \ln(1+3t)}{t}\\
+= \lim_{t\to 0} \frac{ \ln(1+3t)}{t}\\
+= \lim_{t\to 0} \frac{ 3t }{t} = 3\\
+\\
+2. \ \lim_{t\to 0} \frac{ \sin \ln(1+t)}{t}\\
+= \lim_{t\to 0} \frac{ \ln(1+t)}{t}\\
+= \lim_{t\to 0} \frac{ t }{t} = 1\\
+\\
+原式=3-1=2
+$$
+
+#### 例1.19
+
+$$
+\lim_{x\to 0}\frac{e^{x^2}-1}{\ln(1+x) \sin 2x}
+$$
+
+
+$$
+原式 \\
+= \lim_{x\to 0}\frac{x^2}{\ln(1+x) \sin 2x}\\
+= \lim_{x\to 0}\frac{x^2}{x \ 2x} = \frac 1 2\\
+$$
+
+#### 例1.20
+
+$$
+\lim_{x\to 0}\frac{\ln(1+x^3)}{x(1-\cos x)}
+$$
+
+
+
+将$ln(1+x) \sim x$推广得 $\ln (1+\square) \sim \square$，前提是$\square$趋向于0
+
+![image-20220818123849052](https://cdn.notcloud.net/static/md/cy948/202208181238096.png)
+
+
+$$
+原式\\
+=\lim_{x\to 0}\frac{x^3}{x \ \frac 1 2 x^2} = 2\\
+$$
+
+#### 例1.21
+
+$$
+lim_{x\to0}\frac{\sin x-\tan x}{(\sqrt[3]{1+x}-1)(\sqrt{1+\sin x}-1}
+$$
+
+
+
+>  注意，进行等价无穷小变换时，需要保证他们能够被独立拆分的
+
+$$
+原式\\
+= lim_{x\to0}\frac{\tan x \ \cos x -\tan x}{({(1+x)}^{\frac 1 3}-1)(({1+\sin x})^{\frac 1 2}-1}\\
+= lim_{x\to0}\frac{-\tan x (1- \cos x)}{\frac 1 3 x \ \frac 1 2 \sin x} \\
+= lim_{x\to0}\frac{-\frac 1 2 x^2}{\frac 1 3 x \ \frac 1 2 x} = -3\\
+$$
+
+#### 例1.22
+
+$$
+lim_{x\to0}\frac{e-e^{\cos x}}{\sqrt[3]{1+x^2}-1}
+$$
+
+
+$$
+原式\\
+= \lim_{x\to0}\frac{e^{\cos x}(e^{1- \cos x}-1)}{(1+x^2)^{\frac 1 3} -1}\\
+= e \ \lim_{x\to0}\frac{1- \cos x}{\frac 2 3 x^2 -1}\\
+= e \ \lim_{x\to0}\frac{\frac 1 2 x^2}{\frac 2 3 x^2} = \frac 3 2 e\\
+$$
+
+#### 例1.23
+
+$$
+\lim_{x\to0}\frac{3\sin x+x^2 \ \cos \frac 1 x}{(1+\cos x) \ \ln(1+x)}
+$$
+
+解：
+$$
+原式 \\
+=\lim_{x\to0}\frac{1}{1+\cos x} \ \lim_{x\to0}\frac{3\sin x+x^2 \ \cos \frac 1 x}{\ln(1+x)}\\
+= \frac 1 2 \lim_{x\to0}\frac{3\sin x+x^2 \ \cos \frac 1 x}{\ln(1+x)}\\
+= \frac 1 2 \lim_{x\to0}\frac{3\sin x+x^2 \ \cos \frac 1 x}{x}\\
+= \frac 1 2 (\lim_{x\to0}\frac{3\sin x}{x} + \lim_{x\to0} \frac{x^2 \cos \frac 1 x} x)\\
+此处利用重要极限\frac {\sin x}{x} = 1\\
+= \frac 1 2 (3+x \ \cos \frac 1 x)\\
+x \ \cos \frac 1 x 中 \cos x 有界，表达式结果趋于0\\
+= \frac 3 2
+$$
+
+### 抓大头
+
+抓大头：一般看到上下都有很多个$x$，且上下的$x$乘起来差不多次方，则上下同时除以$x$的最大次方。
+
+![image-20220818154030355](https://cdn.notcloud.net/static/md/cy948/202208181540405.png)
+
+#### 例1.24
+
+$$
+\lim_{n\to \infty} \frac {1+2+...+(n-1)}{n^2}
+$$
+
+> 属于有限项多项式$\frac {\infty} {\infty}$型极限，不能直接得出值，看到有$n^2$优先考虑抓大头
+
+解：
+$$
+原式 = \lim_{n\to \infty} \frac {\frac {(1+n-1)(n-1)}{2}} {n^2}\\
+= \frac 1 2 \lim_{n\to \infty}(1-\frac 1 n) = \frac 1 2\\
+$$
+
+#### 例1.25
+
+$$
+\lim_{x\to\infty} \frac{(x+1)(2x-1)(x+3)}{x^2 \ (3x+1)}
+$$
+
+$$
+实际上，利用抓大头的公式可得结果：\\
+\frac {x \ 2x \ x}{x^2 \ 3x} = \frac 2 3
+$$
+
+解：
+$$
+= \lim_{x\to\infty} \frac{(x+1)(2x-1)(x+3)}{x^2 \ (3x+1)}\\
+\lim_{x\to\infty} \frac{(\frac 1 x+1)(2\frac 1 x-1)(\frac 1 x+3)}{3 + \frac 1 x}\\
+= \frac {1-1+3}{3}
+$$
+
+### 求极限时，先分别检查分子分母极限
+
+#### 例1.17
+
+若：
+$$
+\lim_{x\to0} \frac {\sin x(\cos x - b)}{e^x-a} = 5
+$$
+则a=? b=?
+
+>  求极限时，养成先分别检查分子分母的极限的习惯
+
+$$
+\because \lim_{x\to0} \sin x(\cos x - b)=0\\
+\therefore \lim_{x\to0} (e^x-a)=\lim_{x\to0} \frac {\sin x(\cos x -b)}{\frac {\sin x(\cos x -b)}{e^x-a}}\\
+因为\lim_{x\to0} \frac {\sin x(\cos x - b)}{e^x-a} = 5\\
+= \frac 0 5 = 0\\
+\therefore \lim_{x\to0}(e^x-a)\\
+= \lim_{x\to0}e^x-\lim_{x\to0}a\\
+= 1-a = 0\\
+\therefore a =5\\
+\therefore 原式=\lim_{x\to0} \frac {\sin x(\cos x - b)}{e^x-1}\\
+=\lim_{x\to0} \frac {\sin x(\cos x - b)}{x}\\
+=\lim_{x\to0} \frac {x(\cos x - b)}{x}\\
+= 1-b=5\\
+\therefore b = -4
+$$
+
+#### 例1.18
+
+$$
+设a>0，且\lim_{x\to0}\frac{x^2}{(b-\cos x)\sqrt{a+x}}=1\\
+则a=? b=?
+$$
+
+解：
+$$
+\because x^2 = 0 \\
+\therefore \lim_{x\to0} (b-\cos x)\sqrt{a+x} \\
+= \lim_{x\to0} \frac{x^2}{ \frac{x^2}{(b-\cos x)\sqrt{a+x}}} = \frac 0 1 = 0\\
+\therefore (b-1) \ \sqrt{a} = 0\\
+\because a > 0 \therefore b=1\\
+\because 原式=\lim_{x\to0}\frac{x^2}{(1-\cos x)\sqrt{a+x}}\\
+= \lim_{x\to0}\frac{x^2}{\frac 1 {2} x^2 \sqrt{a+x}}\\
+= \lim_{x\to0}\frac {2}{\sqrt{a+x}} = 1\\
+\therefore a=4
+$$
