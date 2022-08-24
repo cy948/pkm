@@ -2,31 +2,32 @@
 id: 9w0hvtea9v3ixnvv35yk3aq
 title: 01 Legislation
 desc: ''
-updated: 1661184978957
+updated: 1661351436227
 created: 1661158924371
 ---
 
 ## 课前
-(1)territory        （1） 领土
-(2)domestic         （2） 国内的
-(3)rigid            （3） 僵硬的
-(4)compel           （4） 强迫
-(5)impulsive        （5） 冲动的
-(6)monarchy         （6） 君主制
-(7)imperative       （7） 命令
-(8)conservative     （8） 保守的
-(9)representative   （9） 代表
-(10)evade           （10） 逃避
-(11)intervene       （11） 干预
-(12)election        （12） 选举
-(13) veto           （13） 否决权
-(14) eligible       （14） 合格的
-(15) sovereign      （15） 君主
-(16) dispute        （16） 争论
-(17) liberate       （17） 解放
-(18) regulate       （18） 调节
-(19) border         （19） 边界
-(20) defense        （20） 防御
+- [x] (1)territory        （1） 领土
+- [x] (2)domestic         （2） 国内的
+- [x] (3)rigid            （3） 僵硬的
+- [x] (4)compel           （4） 强迫
+- [x] (5)impulsive        （5） 易冲动的;凭冲动行事的
+- [x] (6)monarchy         （6） 君主制
+- [x] (7)imperative       （7） 重要紧急的; 迫切的; 急需处理的;
+- [x] (8)conservative     （8） 保守的
+- [x] (9)representative   （9） 代表
+- [x] (10)evade          （10）逃避; 躲避; 逃脱; 躲开
+- [x] (11)intervene       （11）干预; 介入; 出面;
+- [x] (12)election        （12） 选举
+- [x] (13) veto           （13） 否决权
+- [x] (14) eligible       （14） 有资格的; 合格的; 具备条件的;
+- [x] (15) sovereign      （15） 君主
+- [x] (16) dispute        （16） 争论
+- [x] (17) liberate       （17） 解放
+- [x] (18) regulate       （18） 调节
+- [x] (19) border         （19） 边界
+- [x] (20) defense        （20） 防御
+
 
 
 # 政治类
