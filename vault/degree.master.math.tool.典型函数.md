@@ -2,7 +2,7 @@
 id: 23goqoa5ewca8m1q1jm2isc
 title: 典型函数
 desc: ''
-updated: 1660952705538
+updated: 1661522399048
 created: 1660952705538
 ---
 
@@ -113,6 +113,15 @@ created: 1660952705538
 **倍角公式**
 
 ![img](https://pic4.zhimg.com/80/v2-78cbe64c4b821d9769ad9ce209594e87_720w.jpg)
+$$
+\sin^2 α + \cos^2 α = 1 \\ \tan^2 α + 1 = \sec^2 α \\
+\sin 2α = 2 \sin α \cos α. \\
+\cos 2α = \cos^2 α − \sin^2 α = 2 \cos^2 α − 1 = 1 − 2 \sin^2 α\\
+\tan 2α = \frac {2 \tan α} {1 − \tan^2 α}\\
+\sin(α ± β) = \sin α \cos β ± \sin β \cos α \\
+\cos(α ± β) = \cos α \cos β ∓ \sin α \sin β
+$$
+
 
 ## 反三角函数
 
@@ -128,12 +137,3 @@ created: 1660952705538
 
 ![img](https://pic2.zhimg.com/80/v2-10f1cc1daaad8d4d7680996923011b81_720w.jpg)
 
-
-
-y=f(x) 中, x不能一对多，可以有多个y对应1个x
-
-老师， 我在上节课之前需要做：
-
-1. 证明 f(x)和g(x) 的单调性；
-2. 证明 f(x)和g(x) 的奇偶性；
-3. 背泰勒展开式；

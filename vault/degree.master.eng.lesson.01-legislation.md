@@ -58,9 +58,7 @@ senator 参议院
 
 
 
-house of representatives 中医院
-
-
+house of representatives 众议院
 
 #### legislate v. 立法
 
@@ -401,6 +399,8 @@ violence 暴力
 > dome=home=家 -> domestic 家庭的；国内的
 >
 > domestic brand 国产品牌
+>
+> dominate 在家的地位 -> 主导
 
 violent adj.强烈的
 
@@ -564,5 +564,209 @@ in charge of 负责
 
 把责任加载某人上面
 
+#### defendant n. 被告
 
 
+
+### 审判
+
+#### trial n. 审判；试验；考验；磨练
+
+>  tri = try -> 真金不怕火炼 -> 审判、磨练
+
+a fair trial  一次公平的审判
+
+
+
+#### rule v. 裁定
+
+the court rules that	法院裁定，...
+
+- ruling n. 法院的裁决，裁定
+
+
+
+#### verdict n. 法庭的裁决，裁定
+
+> dict = 说 
+>
+> 法官说 -> 裁定
+>
+> [ˈ vɜːrdɪkt] n. 法庭的裁决，裁定 
+
+It is **against that background** that the information commissioner, Elizabeth  Denham, has **issued** her damning **verdict** against the Royal Free hospital  trust under the NHS, which handed over to DeepMind the records of 1.6  million patients in 2015 on the basis of a **vague** agreement which **took far  too little account of** the patients’ rights and their expectations of **privacy**. 
+
+正是在这种背景下，英国信息官员伊丽莎白·德纳姆对 NHS 旗下的伦 敦皇家自由医院信托 会做出了定罪裁决，因其于 2015 年根据一份含 糊的协议向 DeepMind 提供了 160 万名患 者的医疗记录，该协议严重 忽视了患者的权利和对(保护)隐私的期望。
+
+- predict v. 预测
+
+>  pre = 提前 
+>
+> 提前说 -> 预测
+
+- indicate v. 暗示，表明
+
+> in = 里面
+>
+> 在里面说，隐晦的说 -> 暗示，表明
+
+- contradict v. 反驳，相矛盾
+
+> contra = 相反的
+>
+> 反着说 -> 反驳
+
+
+
+### 无罪
+
+#### innocent adj. 无罪的
+
+> noc = 不知道
+>
+> 不知者无罪
+
+
+
+### 驳回
+
+#### overturn v. 推翻，撤销（判决）
+
+> over = 翻过来
+>
+> 推翻
+>
+> overturn the prior decision 推翻之前的决定
+
+- overrule v. 否决
+
+overrule a pair of decades-old decision 否决两项几十年来的决定
+
+### 有罪
+
+#### guilty adj. 内疚的；有罪的
+
+- guilt n. 内疚；罪行
+
+
+
+As the hacking **trial** concludes—finding **guilty** one ex-editor of the News  of the World, Andy Coulson, for **conspiring** to hack phones, and finding his  predecessor, Rebekah Brooks, **innocent** of the same **charge**—the wider  **issue** of **dearth** of **integrity** still stands. 
+
+随着窃听案审判的判决出炉——认定《世界新闻报》的前编 辑安迪·库尔森因密谋窃听电话有罪，认定他的前任丽贝 卡·布鲁克斯在相同的指控下无罪——有关诚信缺失的更广 泛的问题依然存在。
+
+- conspiring v. 密谋;图谋;
+- integrity 
+  - teg / tag / tect = touch 触摸
+  - in -> 里面；+ tag + ate 两者在里面充分接触，充分接触 -> 融合
+  - in -> 否定； 否定 -> 接触 -> 出淤泥而不染 -> 正直
+
+#### criminal adj. 有罪的
+
+criminal offences 刑事犯罪
+
+- crime v. 犯罪
+
+commit a crime 犯罪
+
+the fight against crime 与犯罪活动的斗争
+
+
+
+### 定罪
+
+#### convict v. 宣判…有罪
+
+- conviction n. 定罪
+
+In a rare unanimous ruling, the US Supreme Court has overturned the  corruption conviction of a former Virginia governor, Robert McDonnell. (2017-E1) 
+
+美国最高法院罕见地一致裁定，推翻了对前弗吉尼亚州州长 罗伯特·麦克唐纳的腐败指控。
+
+### 处罚
+
+#### penal adj. 刑罚的
+
+> pen = pun (punish) -> 惩罚
+
+- penalty n. 处罚 
+- penalize v. 处罚
+
+College **officials** tend to **emphasize** that the goal of grade  forgiveness is less about the grade itself and more about encouraging  students to retake courses critical to their degree program and  graduation without **incurring** a big **penalty**. 
+
+高校官员倾向于强调，“分数宽容”政策并非针对成绩本身， 更多的是鼓励学生重修那些对其 学位课程和毕业至关重要的 课程，避免招致严重处罚
+
+- official n. 官员
+
+- tend to 往往…
+
+- emphasize v. 强调
+  - emphasis n. 强调（place emphasis on … 重视…）
+
+- grade n. 年级；成绩
+
+- A incur B vt. 招致【理解为A使B发生了】
+
+【联想occur vi. 发生】
+
+
+
+#### prison n. 监狱
+
+- imprison v. 监禁，禁锢 
+
+They were imprisoned for possession of drugs. 
+
+- imprisonment n. 监禁，禁锢 
+
+life imprisonment
+
+- jail n. 监狱
+
+He was jailed for twenty years. 他被监禁了20年
+
+
+
+#### sentence n. 句子；n. 判决；v. 判决，宣判
+
+be sentenced to 10 life sentences 
+
+被判了10年的处刑
+
+For example, he theorised that a **judge** fearful of appearing too soft  on **crime** might be more likely to send someone to prison if he had  already **sentenced** five or six other **defendants** only to forced  community service on that day. 
+
+例如，西蒙松博士从理论上推测，如果一位担心对犯罪行为表现得太 过仁慈的法官在一天当 中已经对五六名被告只判处了强制性社区服务， 那么他更有可能会将接下来的被告送进监狱。
+
+
+
+#### deprive v. 剥夺
+
+> de = 减少 priv 拥有
+>
+> 减少拥有 -> 剥夺
+
+be deprived of political right 
+
+被剥夺政治权利
+
+- private adj. 个人的，私人的
+- privacy n. 隐私
+
+
+
+#### execute v. 处决，执行
+
+> ex = 往外  cute = cut 切
+>
+> 拖出去斩了 -> 处决
+
+execute the hostage 处死人质
+
+execute the plan 执行计划
+
+
+
+#### fine n. 罚金
+
+Under the law, using a fashion model that does not meet a  government-**defined** index of body mass could **result in** a  $85,000 **fine** and six months in **prison**. 
+
+根据这项法律，使用不符合政府定义的体重指数的时装模特，可能会面临8.5万美元的罚款和6个月的监禁。
