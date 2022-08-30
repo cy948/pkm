@@ -1695,6 +1695,130 @@ PSSTUD header = malloc(sizeof (SSTUD));
 
 ![image-20220828010025246](https://cdn.notcloud.net/static/md/cy948/202208280100285.png)
 
+申请完变量，用完后还需要用`free`函数释放：
 
+```c
+void free(void * ptr);
+```
 
 #### 成员选择符“->”
+
+`->` 操作符的左操作数必须是指针类型的值，比如指向结构类型的指针，右操作数是成员的名字。同样的，成员选择运算符“->”用于得到那个成员；
+
+运算符需要一个指针类型的左操作数，所以表达式`pstd -> name` 求值时，左值`pstd`先执行左值转换，得到指针类型的值。进一步地，运算符`->`得到这个值所指向的那个结构变量的`name`成员。也就是说，`pstd -> name`就代表`name`本身。
+
+#### 实例
+
+```c
+/**********************c0631.c*********************/
+# include <stdio.h>
+# include <stdlib.h>
+
+typedef struct ss {
+    char name [20];
+    char gender [7];		//F/M 或者 Female/Male
+    unsigned int age;
+    char grade [10];		//freshman/sophomore/junior/senior
+    float score;
+    struct ss * next;
+} SSTUD, * PSSTUD;
+
+void destroy_stud_info (PSSTUD pps)
+{
+    PSSTUD tmp;
+    while (pps != NULL)
+        tmp = pps, pps = pps -> next, free (tmp);
+}
+
+PSSTUD get_stud_info (void)
+{
+    FILE * pf = fopen ("students.dat", "r");
+    if (pf == NULL)
+    {
+        printf ("File open failed.\n");
+        return NULL;
+    }
+
+    PSSTUD pstd = malloc (sizeof (SSTUD));
+    if (pstd == NULL)
+    {
+        printf ("Memory allocated failed.\n");
+        return NULL;
+    }
+
+    if (fscanf (pf, "%s%s%u%s%f", pstd -> name, pstd -> gender,\
+                  & pstd -> age, pstd -> grade, & pstd -> score)\
+                  == EOF)
+    {
+        printf ("Empty file.please append some records.\n");
+        free (pstd);
+        return NULL;
+    }
+
+    pstd -> next = NULL;
+
+    PSSTUD temp = pstd;
+    do {
+        if (temp -> next != NULL) temp = temp -> next;
+        if ((temp -> next = malloc (sizeof (SSTUD))) == NULL)
+        {
+            printf ("Memory allocated failed.\n");
+            destroy_stud_info (pstd);
+            return NULL;
+        }
+        temp -> next -> next = NULL;
+    } while (fscanf (pf, "%s%s%u%s%f", temp -> next -> name,\
+               temp -> next -> gender, & temp -> next -> age,\
+               temp -> next -> grade, & temp -> next -> score) != EOF);
+
+    free (temp -> next);
+    temp -> next = NULL;
+    fclose (pf);
+
+    return pstd;
+}
+
+void print_stud_info (PSSTUD pps)
+{
+    printf ("%-20s%5s%5s%15s%10s\n",\
+             "NAME", "GENDR", "AGE", "GRADE", "SCORE");
+    printf ("------------"\
+             "-------------------------------------------\n");
+
+    int total = 0;
+    float sum = 0.0f;
+
+    while (pps != NULL)
+    {
+        total ++;
+        sum += pps -> score;
+        printf ("%-20s%5s%5u%15s%10.2f\n", pps -> name, pps ->\
+                  gender, pps -> age, pps -> grade, pps -> score);
+        pps = pps -> next;
+    }
+
+    printf ("-------------"\
+             "------------------------------------------\n");
+    printf ("%-20s%35u\n", "Total:", total);
+    printf ("-------------"\
+             "------------------------------------------\n");
+    printf ("%-20s%35.2f\n", "Sum:", sum);
+    printf ("-------------"\
+             "------------------------------------------\n");
+    printf ("%-20s%35.2f\n", "Average:", sum / total);
+}
+
+int main (void)
+{
+    PSSTUD pstd = get_stud_info ();
+
+    if (pstd != NULL)
+    {
+        print_stud_info (pstd);
+        destroy_stud_info (pstd);
+    }
+    else
+        printf ("No students information to print.\n");
+}
+```
+
