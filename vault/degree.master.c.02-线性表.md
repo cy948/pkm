@@ -605,5 +605,134 @@ Node * LinkedListDeleteMin(Node * head){
 
 逆置一般要求就地逆置
 
-#### 公共节点
+#### 寻找
+
+##### 公共节点
+
+先移动到距离祖先节点相同的位置，再进行比较；
+
+```c
+int getLength(Node * head){
+        int count = 0;
+        Node * curr = head->next;
+        while(curr != NULL){
+                ++count;
+                curr = curr->next;
+        }
+        return count;
+}
+
+Node * findAncestor(Node * head1, Node * head2){
+        int len1 = getLength(head1), len2 = getLength(head2), needToMove = len1 - len2;
+        Node * L1 = head1, * L2 = head2;
+        // 比较大小，将较大的赋值到L1上
+        if(len2 > len1) {
+                L1 = head2, L2 = head1;
+                needToMove = len2 - len1;
+        }
+        while(needToMove --){
+                L1 = L1->next;
+        }
+        while(L1 != L2){
+                L1 = L1->next, L2 = L2->next;
+        }
+        return L1;
+}
+```
+
+#### 合并
+
+##### 合并两个有序链表
+
+- 递归
+
+```c
+Node * mergeLinkedList(Node * head1, Node * head2){
+    if(head1 == NULL) return head2;
+    if(head2 == NULL) return head1;
+    if(head1->data > head2->data){
+        head2->next = 
+            mergeLinkedList(head1, head2->next);
+        return head2;
+    }
+    head1->next = 
+        mergeLinkedList(head1->next, head2);
+    return head1;
+}
+```
+
+- 双指针
+
+思路，双指针，不断比较；
+
+
+
+## 附录
+
+### 公共祖先节点——测试用例
+
+```c
+_Bool testAncestor(){
+        Node * head1 = malloc(sizeof (Node)),\
+        * head2 = malloc(sizeof (Node)), \
+        * ancestor = malloc(sizeof (Node));
+
+        // 以下为这些头节点进行初始化
+        {
+                Node * an4 = malloc(sizeof (Node));
+                an4->data = 9;
+                Node * an3 = malloc(sizeof (Node));
+                an3->data = 8;
+                an3->next = an4;
+                Node * an2 = malloc(sizeof (Node));
+                an2->data = 7;
+                an2->next = an3;
+                Node * an1 = malloc(sizeof (Node));
+                an1->data = 4;
+                an1->next = an2;
+                ancestor->next = an1;
+        }
+
+        // 为head1链接节点
+        {
+                Node * n13 = malloc(sizeof (Node));
+                n13->data = 3;
+                n13->next = ancestor->next;
+                Node * n12 = malloc(sizeof (Node));
+                n12->data = 2;
+                n12->next = n13;
+                Node * n11 = malloc(sizeof (Node));
+                n11->data = 1;
+                n11->next = n12;
+                head1->next = n11;
+        }
+
+        // 为head2链接节点
+        {
+                Node * n22 = malloc(sizeof (Node));
+                n22->data = 6;
+                n22->next = ancestor->next;
+                Node * n21 = malloc(sizeof (Node));
+                n21->data = 5;
+                n21->next = n22;
+                head2->next = n21;
+        }
+
+        // 展示head1 head2
+        LinkedListPrint(head1);
+  printf("\n===\n");
+        LinkedListPrint(head2);
+  Node * res = findAncestor(head2, head1);
+  printf("res:%d", res->data);
+        return 1;
+}
+```
+
+```log
+NULL ->1 ->2 ->3 ->4 ->7 ->8 ->9 ->
+===
+NULL ->5 ->6 ->4 ->7 ->8 ->9 ->res:4
+```
+
+
 
