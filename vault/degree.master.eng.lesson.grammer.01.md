@@ -2,12 +2,11 @@
 id: wmi12ccwbpyytbtbv0gne53
 title: '简单句找主干'
 desc: ''
-updated: 1661422107084
+updated: 1662863447207
 created: 1661422107084
 ---
 
 # 简单句找主干
-
 
 
 ## 简单句主干
