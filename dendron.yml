@@ -103,5 +103,5 @@ publishing:
         editBranch: main
         editViewMode: tree
     enablePrettyLinks: true
-    siteUrl: ''
-    theme: dark
+    siteUrl: 'g2a.cc'
+    theme: light
