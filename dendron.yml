@@ -19,6 +19,7 @@ commands:
     insertNoteIndex:
         enableMarker: false
     copyNoteLink: {}
+    enableSmartRefs: true
 workspace:
     vaults:
         -
