@@ -96,13 +96,14 @@ publishing:
             - vault
     writeStubs: false
     seo:
-        title: g2a.cc
+        title: pkm
         description: Personal knowledge space
     github:
         enableEditLink: true
         editLinkText: Edit this page on GitHub
         editBranch: main
         editViewMode: tree
+        editRepository: https://github.com/cy948/pkm
     enablePrettyLinks: true
-    siteUrl: 'g2a.cc'
+    siteUrl: 'https://notcloud.net'
     theme: light

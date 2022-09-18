@@ -582,3 +582,70 @@ LevelOrder:
 
 此处举例从“后序遍历”和“前序遍历”中构造二叉树：
 
+```c
+BiTNode * buildTree(int* inorder, int inorderSize, int* postorder, int postorderSize){
+    printf("\ni:%d, iS:%d, p:%d, pS:%d\n", inorder, inorderSize, postorder, postorderSize);
+    if(inorderSize < 1) return NULL;
+    // 在后序数组中找到当前中结点的值
+    int midVal = postorder[postorderSize - 1];
+    // 设置中结点
+    BiTNode * mid = malloc(sizeof(BiTNode));
+    // 初始化中结点
+    mid->data = midVal;
+    mid->lchild = NULL, mid->rchild = NULL;
+    // 如果只有一个元素，直接返回即可
+    if(inorderSize == 1) return mid;
+
+    int midValIndex = 0;
+    // 在中序数组中寻找中结点元素的下标
+    while(inorder[midValIndex] != midVal) midValIndex++;
+
+    printf("\nmidV:%d, midVI:%d\n");
+
+    // 切割中序数组
+        // 产生中序左数组
+    int lInorderSize = midValIndex, * lInorder = inorder;
+        // 产生中序右数组
+        // 此处右中序数组的起始指针计算是难点
+        // 右中序起始 = 中序数组开始 + 中结点下标 + 1
+    int rInorderSize = inorderSize - 1 - lInorderSize,
+        * rInorder = inorder + midValIndex + 1;
+    printf("\nlIS:%d, lI:%d, rIS:%d, rI:%d\n", lInorderSize, lInorder, rInorderSize, rInorder);
+
+    // 根据切割长度对后序数组进行切割
+        // 产生后序左数组
+    int lPostorderSize = lInorderSize, * lPostorder = postorder;
+        // 产生后序右数组
+    int rPostorderSize = rInorderSize, * rPostorder = lPostorder + lPostorderSize;
+    printf("\nlPS:%d, lP:%d, rPS:%d, rP:%d\n", lInorderSize, lInorder, rInorderSize, rInorder);
+
+    mid->lchild = buildTree(lInorder, lInorderSize, lPostorder, lPostorderSize);
+    mid->rchild = buildTree(rInorder, rInorderSize, rPostorder, rPostorderSize);
+
+    return mid;
+}
+```
+
+测试用例：
+
+```c
+void testBuildTree(){
+    int postorder [] = {9,15,7,20,3}, inorder [] = {9,3,15,20,7};
+    BiTNode * root = buildTree(inorder, 5, postorder, 5);
+
+    printf("\nPreOrder:\n");
+    PreOrderStack(root);
+    printf("\n===\n");
+
+}
+
+/*
+PreOrder:
+3 9 20 15 7
+*/
+```
+
+完成后，可以完成LC.106[从中序与后序遍历序列构造二叉树 - 力扣（LeetCode）](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+
+改一些细节，即可完成LC.105：[从前序与中序遍历序列构造二叉树 - 力扣（LeetCode）](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+

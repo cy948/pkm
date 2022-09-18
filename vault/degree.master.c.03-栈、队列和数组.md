@@ -2,7 +2,7 @@
 id: erapkzyajwhbfxzhaepk0rc
 title: 03 栈、队列和数组
 desc: ''
-updated: 1663244400436
+updated: 1663476133318
 created: 1661916919059
 ---
 
@@ -330,7 +330,9 @@ $$
 
 $$
 LOC(a_{i,j})=LOC(a_{0,0})+[j*(h_1+1)+i]*L
-$$ ^ey83614twvnw
+$$
+
+^ey83614twvnw
 
 
 
