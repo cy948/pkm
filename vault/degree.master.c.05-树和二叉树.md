@@ -16,12 +16,11 @@ created: 1663119714743
 
 ### 规范
 
-#### 指针使用的三种可能
+#### 指针创建的三种可能
 
 避免未初始化指针的使用，指针的使用只有三种可能：
 
 ```c
-
 int main(){
     // 初始化为空指针
     BiTNode * node = NULL, other;
@@ -31,6 +30,39 @@ int main(){
     BiTNode * nodeHeap = malloc(sizeof(BiTNode));   
 }
 ```
+
+#### 指针使用的几种规范
+
+1. 作为函数参数时：
+
+- 作为形参时，传入方法的实际上是原值的一个副本，修改副本不影响原值；
+
+- 不修改该指针本身，因为不生效；
+
+```c
+void asParams(BiTNode * e){
+    BiTNode * inHeap = malloc(sizeof(BiTNode));
+    e = inHeap;
+}
+```
+
+2. 作为参数返回值时：
+
+- 只能返回在堆中分配的地址，或者传入的地址；
+- 不返回当前方法栈中的地址；
+
+```c
+void * asRetValue(){
+	BiTNode inFuncStack = {1, NULL, NULL};
+	// return & inFuncStack // 不要返回这种指针；
+    BiTNode * inHeap = malloc(sizeof(BiTNode));
+    // 应该返回inHeap
+    return inHeap;
+}
+
+```
+
+
 
 #### 内存分配和释放规则
 
@@ -42,23 +74,25 @@ int main(){
 > 注意，在函数调用中修改指针是没有用的
 
 ```c
-void GetNode(BiTNode * e){
+BiTNode * GetNode(BiTNode * e){
     /*some magic*/
     // 实际上，此种方法在！返回值不为BiTNode *时！造成无法回收的问题
-    BiTNode * inFuncStack = malloc(sizeof(BiTNode));
+    BiTNode * inHeap = malloc(sizeof(BiTNode));
     
     // 如果返回值不为BiTNode，推荐：
     BiTNode inFuncStack = {1, NULL, NULL};
+    // 对应地，这种方法下不能返回方法栈中的地址
+    // return & inFuncStack;
     
     // 可以通过传入的指针修改所指向的内存区域
     // 这个操作有前提，那就是该区域必须是可用的，已被分配的；
-    * e = * inFuncStack;
+    * e = * inHeap;
     
     // 在方法中单纯地修改指针是无效的
     // 因为传入方法时，是拷贝的形参，单纯地对形参修改无法达到效果；
     // 以下因此，这句话的作用仅限于在方法GetNode内，对外界无影响
-    e = inFuncStack
-    return;
+    e = inHeap;
+    return inHeap;
 }
 int mian(){
     
@@ -821,3 +855,28 @@ ThreadNode * FirstNode(ThreadNode * root){
 }
 ```
 
+#### 寻找中结点p在中序序列下的后继
+
+```c
+ThreadNode * NextNode(ThreadNode * p){
+    // 如果有右子树，则寻找右子树在中序遍历下输出的第一个结点
+    // 也就是其直接后继
+    if(p->ltag == 0) return FirstNode(p-rchild);
+    // 如果有直接后继，那返回其指针即可
+    else return p->rchild;
+}
+```
+
+#### 不含头结点的中序线索二叉树的中序遍历方法
+
+```c
+void InOrder(ThreadNode * T){
+    for(
+        ThreadNode * p = FirstNode(T);
+        p != NULL;
+        p = NextNode(p);
+    ) VisitNode(p);
+}
+```
+
+ 

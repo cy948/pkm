@@ -2,11 +2,21 @@
 id: ik5Bi5OCTsmfKfq5JQtEB
 title: Root
 desc: ''
-updated: 1658932863029
+updated: 1663690976783
 created: 1637610830605
 ---
 # Welcome to Dendron
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e7d55491-d2ea-4139-808a-936b502c46d6/deploy-status)](https://app.netlify.com/sites/hilarious-liger-5b05ef/deploys)
 
-This is the root of your dendron vault. If you decide to publish your entire vault, this will be your landing page. You are free to customize any part of this page except the frontmatter on top. 
+[cy948](https://github.com/cy948)的个人知识库开源部分，主要包含板块：
+
+- C [[cs.lang.c]]
+
+- C 数据结构 [[degree.master.c]]
+
+- 前端相关 [[cs.fe]]
+
+- ASM （待上线）
+
+若有问题欢迎通过页面最下方 `Edit on github` 进行提醒修改，无需提交规范；
