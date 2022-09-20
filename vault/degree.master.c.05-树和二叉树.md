@@ -10,6 +10,81 @@ created: 1663119714743
 
 # 树和二叉树
 
+## 前言
+
+最近被很多好朋友批评指针使用不规范，指针错误使用，常引发[SIGSEGV](https://baike.baidu.com/item/SIGSEGV/7360054)；于是重学指针、`malloc` `free`，得出的规范如下：
+
+### 规范
+
+#### 指针使用的三种可能
+
+避免未初始化指针的使用，指针的使用只有三种可能：
+
+```c
+
+int main(){
+    // 初始化为空指针
+    BiTNode * node = NULL, other;
+    // 初始化为其他指针
+    BiTNode * nodeOther = & other;
+    // 为指针分配堆内存
+    BiTNode * nodeHeap = malloc(sizeof(BiTNode));   
+}
+```
+
+#### 内存分配和释放规则
+
+- 有`malloc`必有`free`；如果handle消失，该内存板块将无法被GC；
+- 有`free`必有`NULL`；如果handle所指区域已被free后无法再次写入，如果不置为`NULL` 标记为失效容易产生`SIGSEGV`;
+
+####  综合实例：“传递一个引用进方法，通过引用返回数据” 
+
+> 注意，在函数调用中修改指针是没有用的
+
+```c
+void GetNode(BiTNode * e){
+    /*some magic*/
+    // 实际上，此种方法在！返回值不为BiTNode *时！造成无法回收的问题
+    BiTNode * inFuncStack = malloc(sizeof(BiTNode));
+    
+    // 如果返回值不为BiTNode，推荐：
+    BiTNode inFuncStack = {1, NULL, NULL};
+    
+    // 可以通过传入的指针修改所指向的内存区域
+    // 这个操作有前提，那就是该区域必须是可用的，已被分配的；
+    * e = * inFuncStack;
+    
+    // 在方法中单纯地修改指针是无效的
+    // 因为传入方法时，是拷贝的形参，单纯地对形参修改无法达到效果；
+    // 以下因此，这句话的作用仅限于在方法GetNode内，对外界无影响
+    e = inFuncStack
+    return;
+}
+int mian(){
+    
+    BiTNode e; 
+    //在程序参数栈中分配一个变量e的空间；
+    GetNode(& e);
+    Visit(& e);//可以正常被使用
+    
+    // 以下则不能，因为指针所指向的地方未被分配空间
+//    BiTNode * foo; //也不合法
+    BiTNode * foo = NULL;
+//    GetNode(foo); //无法访问到
+    
+    * foo = malloc(sizeof(BiTNode));
+    GetNode(foo); //此处可行,因为空间已被分配
+    //有malloc必有free
+    if(foo != NULL) {
+        free(foo);
+        //有free必有NULL
+        foo = NULL;
+    }
+}
+```
+
+
+
 ## 树
 
 ### 定义
@@ -246,7 +321,7 @@ typedef struct BiTNode{
 } BiTNode;
 ```
 
-## 二叉树的遍历和线索二叉树
+## 二叉树的遍历
 
 遍历前需要引入之前的栈
 
@@ -463,6 +538,20 @@ int* preorderTraversal(struct TreeNode* root, int* returnSize){
 }
 ```
 
+#### 标记法应用——寻找二叉树最近公共结点
+
+先读题目[236. 二叉树的最近公共祖先 - 力扣（LeetCode）](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/)；读完后，整个流程应该是很容易理解的，直观上的步骤：
+
+- 寻找左边的结点，然后接着寻找右边结点；
+- 找到后，从下往上寻找他们的最近祖先结点；
+
+思路：
+
+- 既然要遍历，需要选择一种合适的遍历方法，一旦寻找到两个数值，就停止遍历；  
+- 使用标记法遍历时，需要记录栈的最小长度和最小长度时的中结点，因为只有中结点才能称为祖先，**栈最小长度时的祖先**就是最近公共祖先，这句话先不用理解，做完就懂了；
+
+
+
 #### 递归
 
 递归实际上是使用了调用时的隐性栈，如果能理解上面的话，此处不进行解释了。
@@ -505,21 +594,21 @@ void LevelOrder(BiTNode * root){
 
     int size = 1;
 
-    while(!QueueEmpty(queue)){
-        int i, levelSize = size; //levelSize 是指本层的父结点个数
+    BiTNode node;
 
+    while(!QueueEmpty(queue)){
+        int i, levelSize = size;
         size = 0;
-        BiTNode * node;
 
         for(i = 0; i < levelSize; i++){
-            deQueue(queue, node);
-            VisitNode(node);
-            if(node->lchild) {
-                enQueue(queue, * node->lchild);
+            deQueue(queue, & node);
+            VisitNode(& node);
+            if(node.lchild) {
+                enQueue(queue, * node.lchild);
                 ++size;
             }
-            if(node->rchild) {
-                enQueue(queue, * node->rchild);
+            if(node.rchild) {
+                enQueue(queue, * node.rchild);
                 ++size;
             }
         }
@@ -648,4 +737,87 @@ PreOrder:
 完成后，可以完成LC.106[从中序与后序遍历序列构造二叉树 - 力扣（LeetCode）](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
 
 改一些细节，即可完成LC.105：[从前序与中序遍历序列构造二叉树 - 力扣（LeetCode）](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+
+
+
+## 线索二叉树
+
+> 在上述二叉树的遍历中，我们经常遇到一个遍历时的问题： 不能借助树本身的field返回上一个遍历结点和下一个遍历结点，线索二叉树的产生为了解决这个问题；
+
+### 概念
+
+线索二叉树增加了两个子数据作为标签，充分利用结点左右空闲指针，定位其前继和后继结点；
+
+与上面二叉树不同，在结构体field内添加两个属性：
+
+```c
+typedef struct ThreadNode{
+    ElemType data;
+    struct BiTNode * left, * right;
+    int ltag, rtag;
+} ThreadNode;
+```
+
+在建立线索二叉树时：
+
+- 若无左子树 `lchild == NULL ` 。则设置 `ltag = 1`，并把`lchild` 设置为其前置结点的指针；
+- 若无右子树 `rchild == NULL ` 。则设置 `rtag = 1`，并把`rchild` 设置为其后置结点的指针；
+
+构造该二叉树时，需要先建立该树，再将该树线索化：
+
+### 构造
+
+中序二叉树线索化：
+
+```c
+void inThread(ThreadNode * root, ThreadNode * prev){
+    if(root != NULL){
+        // DFS线索化二叉树
+        // 递归左结点
+        inThread(p->lchild, prev);
+        // 如果左孩子为空，将其设置为上一个结点
+        if(p->lchild == NULL){
+            // 将左孩子设置为前置结点
+            p->lchild = prev;
+            p->ltag = 1;
+        }
+        
+        if(prev != NULL && prev->rchild == NULL){
+            // 将上一个结点的右孩子设置为当前结点
+            prev->rchild = root;
+            prev->ltag = 1;
+        }
+        // 递归右结点
+        prev = root;
+        inThread(root->rchild, prev);
+    }
+}
+```
+
+主过程：
+
+```c
+void CreateInThread(ThreadNode * root){
+	ThreadNode * prev = NULL;
+    if(root != NULL){
+        inThread(root, prev);
+        prev->rchild = NULL;
+        prev->rtag = 1;
+    }
+}
+```
+
+### 遍历
+
+#### 寻找中序序列下的第一个结点
+
+寻找中序遍历下第一个输出的结点，也就是寻找最左边的结点，即寻找第一个`ltag != 0`的结点；
+
+```c
+ThreadNode * FirstNode(ThreadNode * root){
+    ThreadNode * p = root;
+    while(p->ltag = 0) p = p->lchild;
+    return p;
+}
+```
 
