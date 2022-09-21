@@ -196,7 +196,7 @@ The BIO recently held a convention which included sessions to coach lawyers on t
 
 【主题词汇】 
 
-[1] convention n. 集会 
+[1] convention n. 集会 12
 
 [2] session n. 会议 
 

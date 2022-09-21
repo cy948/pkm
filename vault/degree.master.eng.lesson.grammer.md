@@ -1,9 +1,44 @@
 ---
 id: p84hgy0dr6a9j7jaqlhzpni
-title: Grammer
+title: 语法
 desc: ''
-updated: 1663491391910
+updated: 1663770329474
 created: 1663487083940
 ---
 
-# Grammer
+# 语法
+
+## 介绍
+
+首先需要明白语法是什么，学习的意义，怎么考，学习的方法，学习目的等。
+
+**是什么？** 单词是肌肉，语法就像骨架。
+
+**考什么？** 阅读、翻译：英译中、写作
+
+**目的** 看得懂英文句子
+
+**分类**
+
+```mermaid
+graph LR
+O[英语句子的分类]-->|简单句|A[She is beautiful]
+O-->|非简单|B1[并列句 She is beautiful, and she is my friend]
+O-->|非简单|B2[复合句 She is a girl who enjoys music]
+```
+
+## 句式
+
+### 简单句
+
+简单句 = 主干 + 修饰
+
+读懂句子第一步，找主干
+
+简单句详情[[degree.master.eng.lesson.grammer.01简单句]]
+
+速查
+
+![[degree.master.eng.lesson.grammer.01简单句#速查:#^206sqywvw787]]
+
+
