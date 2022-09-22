@@ -23,10 +23,11 @@
   command = "chmod +x build.sh && ./build.sh"
 
   # Optional: Designate a specific NODE_VERSION
-  environment = { NODE_VERSION = "16.13.2" }
+  # environment = { NODE_VERSION = "16.13.2" }
 
 [build.environment]
 NETLIFY_NEXT_PLUGIN_SKIP = "true"
+NODE_VERSION = "16.13.2"
 
 [[plugins]]
   # Installs the Lighthouse Build Plugin for all deploy contexts
