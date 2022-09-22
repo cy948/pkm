@@ -2,7 +2,7 @@
 id: p84hgy0dr6a9j7jaqlhzpni
 title: 语法
 desc: ''
-updated: 1663770329474
+updated: 1663852112962
 created: 1663487083940
 ---
 
@@ -27,9 +27,7 @@ O-->|非简单|B1[并列句 She is beautiful, and she is my friend]
 O-->|非简单|B2[复合句 She is a girl who enjoys music]
 ```
 
-## 句式
-
-### 简单句
+## 简单句
 
 简单句 = 主干 + 修饰
 
@@ -41,4 +39,14 @@ O-->|非简单|B2[复合句 She is a girl who enjoys music]
 
 ![[degree.master.eng.lesson.grammer.01简单句#速查:#^206sqywvw787]]
 
+## 并列结构
 
+[[degree.master.eng.lesson.grammer.02并列结构]]
+
+## 同位语
+
+[[degree.master.eng.lesson.grammer.03同位语]]
+
+## 从句
+
+[[degree.master.eng.lesson.grammer.04从句]]

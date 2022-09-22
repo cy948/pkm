@@ -2,12 +2,12 @@
 id: ik5Bi5OCTsmfKfq5JQtEB
 title: Root
 desc: ''
-updated: 1663690976783
+updated: 1663778463292
 created: 1637610830605
 ---
 # Welcome to Dendron
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e7d55491-d2ea-4139-808a-936b502c46d6/deploy-status)](https://app.netlify.com/sites/hilarious-liger-5b05ef/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e7d55491-d2ea-4139-808a-936b502c46d6/deploy-status)](#welcome-to-dendron)
 
 [cy948](https://github.com/cy948)的个人知识库开源部分，主要包含板块：
 

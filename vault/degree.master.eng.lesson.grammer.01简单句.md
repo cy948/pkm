@@ -2,7 +2,7 @@
 id: wmi12ccwbpyytbtbv0gne53
 title: 01简单句
 desc: ''
-updated: 1663770289511
+updated: 1663850090820
 created: 1661422107084
 ---
 
@@ -54,7 +54,9 @@ graph LR
 O[非谓语动词] --> A[doing 一般动作 主动 进行中]
 O --> B[done 被动 完成]
 O --> C[to do 目的 将来]
-```
+``` 
+
+^7sc8m6reqimo
 
 ## 三态一否
 
@@ -409,7 +411,18 @@ With the Church's teachings and ways of thinking being eclipsed by the Renaissan
     </p>
 随着文艺复兴使得教堂的教育以及思考方式的差异变得黯然失色，中世纪和现代之间的差距已经被弥合。
 </details>
+#### 强调
 
+Nevertheless, the word “amateur” does carry a connotation that the person concerned is not fully integrated into the scientific community. 
+
+[英语一2001 Text 1] 
+
+<details>
+    <p>
+        does carry
+    </p>
+    然而，“业余人员”一词**的确****包含着**这样的意义：此人并非科学界的一员。
+</details>
 
 
 
