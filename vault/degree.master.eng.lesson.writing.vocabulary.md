@@ -2,7 +2,7 @@
 id: 4jleylzesupw2ndirma9ptp
 title: Vocabulary
 desc: ''
-updated: 1663769128108
+updated: 1663842732223
 created: 1663766370695
 ---
 
@@ -44,7 +44,7 @@ created: 1663766370695
  ^96bukp7r3gbj
 
 
-话题三、两代关系
+话题三、两代关系 ^etxfquniszls
 
 | **1. 代 沟**            | The generation gap                             |
 | ----------------------- | ---------------------------------------------- |
@@ -74,7 +74,7 @@ created: 1663766370695
 | **9. 经济援助**   | Financial/economic aid/assistance |
 | **10. 作贡献**    | Make  contribute                  |
 
-
+ ^jpqj06f1bzb4
 
 话题五、环境类
 
