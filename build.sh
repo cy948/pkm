@@ -27,4 +27,4 @@ echo 'init dendron next' && yarn dendron publish init
 yarn dendron publish export
 
 # Move generated website to docs directory in workspace root
-mv .next/out docs
+cp .next/out docs
