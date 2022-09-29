@@ -1,7 +1,7 @@
 {
     "dependencies": {},
     "scripts": {
-        "build": "chmod +x dendron-publish-site.sh && ./dendron-publish-site.sh",
+        "build": "./dendron-publish-site.sh",
         "dev": "dendron publish dev"
     },
     "name": "cc-g2a",

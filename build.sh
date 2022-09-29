@@ -23,6 +23,7 @@ yarn
 # (test -d .next) && (echo 'updating dendron next...' && cd .next && git reset --hard && git pull && yarn && cd ..) || (echo 'init dendron next' && yarn dendron publish init)
 
 # Generate static site with nextjs
+echo 'init dendron next' && yarn dendron publish init
 yarn dendron publish export
 
 # Move generated website to docs directory in workspace root
