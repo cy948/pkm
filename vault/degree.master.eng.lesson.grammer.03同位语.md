@@ -2,7 +2,7 @@
 id: 0vtljslkwx221xls7o2clnh
 title: 03同位语 插入语
 desc: ''
-updated: 1663847938331
+updated: 1664422481553
 created: 1663847938331
 ---
 
@@ -17,7 +17,7 @@ created: 1663847938331
 Last month, Howard Schmidt, <u>the nation’s cyber-czar,</u> offered the federal government a proposal to make the Web a safer place — a “voluntary trusted identity” system.
 
 该<u>同位语</u>从句译文：美国政府网络安全协调员（这一职务也被媒体称为‘网络沙皇’）
-
+ ^ernngqhoz881
 
 
 ## 插入语

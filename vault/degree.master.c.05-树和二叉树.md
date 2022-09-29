@@ -205,7 +205,18 @@ $$
 m^h = n(m-1)+1 \\
 \therefore h = \log_{m}[n(m-1)+1]
 $$
+- **空指针数**：在含 *n*个结点的二叉树中有 *n+1* 个空指针：
+
+> 符号：$n_{number}$ 表示 有 number 个子结点的结点数量
+
+因为：叶子结点有 *2* 个空指针，读为 *1* 的结点有 *1* 个空指针，空指针总数为 $2n_0+n_1$ ；
+
+又因为：$n_0=n_2+1$ ；
+
+所以：总数 $n_0+n_1+n_2+1=n+1$ 
+
  ^v25hp7lycs3k
+
 ## 二叉树
 
 ### 定义
@@ -659,6 +670,114 @@ LevelOrder:
 ===
 ```
 
+思考：如果反过来从下往上，从右往左输出结点呢？
+
+```diff
+void levelOrderReverse(BiTNode * root){
+    Stack * s = malloc(sizeof(Stack));
+    SqQueue * q = malloc(sizeof(SqQueue));
+    initQueue(q);
+    InitStack(s);
+    BiTNode tmp;
+    enQueue(q, * root);
+    while(!QueueEmpty(q)){
+        deQueue(q, & tmp);
+-		VisitNode(& node);
+// 只需在此处将输出改为入栈即可
++        Push(s, tmp);
+        if(tmp.lchild) enQueue(q, * tmp.lchild);
+        if(tmp.rchild) enQueue(q, * tmp.rchild);
+    }
+    while(!StackEmpty(s)){
+        Pop(s, & tmp);
+        VisitNode(& tmp);
+    }
+    //记得回收内存 DestoryStack(s), DestoryQueue(q);
+}
+```
+
+#### 求树高度
+
+通过非递归BFS的方式，下面附上LC[104. 二叉树的最大深度 - 力扣（LeetCode）](https://leetcode.cn/problems/maximum-depth-of-binary-tree/)版
+
+```c
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+struct QueueNode {
+    struct TreeNode * tree;
+    struct QueueNode * next;
+};
+
+struct QueueNode * newQueueNode(struct TreeNode * tree, struct QueueNode * next){
+    struct QueueNode * q = malloc(sizeof(struct QueueNode));
+    q->tree = tree;
+    q->next = next;
+    return q;
+}
+
+int maxDepth(struct TreeNode* root){
+    if(root == NULL) return 0;
+    struct QueueNode * q = newQueueNode(root, NULL), * head = q, * tail = q, tmpQueueNode, * tmpTogc;
+    struct TreeNode tmp;
+    int height = 0, size = 1;
+    while(head != NULL){
+        // 遍历每一层的结点
+        int i, levelSize = size;
+        // 重置大小
+        size = 0;
+        for(i = 0; i < levelSize; i++){
+            // 出队
+            tmpQueueNode = * head;
+
+            tmp = * tmpQueueNode.tree;
+            if(tmp.left) {
+                tail->next = newQueueNode(tmp.left, NULL);
+                tail = tail->next;
+                
+                ++size;
+            }
+            if(tmp.right) {
+                tail->next = newQueueNode(tmp.right, NULL);
+                tail = tail->next;
+
+                ++size;
+            }
+            
+            //当层完成，回收队列结点内存，并完成上述的出队操作
+            tmpTogc = head;
+            head = head->next;
+            free(tmpTogc);
+        }
+        // 遍历完一层，高度增加1
+        ++height;
+    }
+    return height;
+}
+```
+
+当然还有递归的方式：
+
+```c
+int maxDepth(struct TreeNode* root){
+    if(root == NULL) return 0;
+    return fmax(maxDepth(root->left), maxDepth(root->right)) + 1;
+}
+```
+
+每次递归时：
+
+- 终止条件：当指针为空；
+- 返回：左子树和右子树高度中最大的一个并 + 1；
+
+
+
 ### 构造二叉树（前/后 + 中序）
 
 > 看完标题之后，你可能会想，为什么只能是前或后序和中序构造二叉树，不能是前序和后序构造二叉树？这就要回到x序遍历的本质了；
@@ -805,28 +924,29 @@ typedef struct ThreadNode{
 
 ```c
 void inThread(ThreadNode * root, ThreadNode * prev){
-    if(root != NULL){
-        // DFS线索化二叉树
-        // 递归左结点
-        inThread(p->lchild, prev);
-        // 如果左孩子为空，将其设置为上一个结点
-        if(p->lchild == NULL){
-            // 将左孩子设置为前置结点
-            p->lchild = prev;
-            p->ltag = 1;
-        }
+    if(root != NULL) return;
+    // DFS线索化二叉树
+	// 递归左结点
+	inThread(p->lchild, prev);
+	// 如果左孩子为空，将其设置为上一个结点
+	if(p->lchild == NULL){
+		// 将左孩子设置为前置结点
+		p->lchild = prev;
+		p->ltag = 1;
+	}
         
-        if(prev != NULL && prev->rchild == NULL){
-            // 将上一个结点的右孩子设置为当前结点
-            prev->rchild = root;
-            prev->ltag = 1;
-        }
-        // 递归右结点
-        prev = root;
-        inThread(root->rchild, prev);
-    }
+	if(prev != NULL && prev->rchild == NULL){
+    	// 将上一个结点的右孩子设置为当前结点
+        prev->rchild = root;
+        prev->ltag = 1;
+	}
+    // 递归右结点
+    prev = root;
+    inThread(root->rchild, prev);
 }
 ```
+
+
 
 主过程：
 

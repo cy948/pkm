@@ -334,6 +334,8 @@ In most of the homeless gardens of New York City the actual cultivation of plant
 <details>
     在纽约市大多数无家之园中种植花草树木并不可行，然而尽管如此，这些作品往往体现了一种唤起植物精神与动物生命的尝试，哪怕只是象征性地借助树丛的布置、色彩的运用，以及小水池、常见的花瓣、落叶和毛绒玩具。
 </details>
+
+
 ## 介词 
 
 ### 倒译补的
