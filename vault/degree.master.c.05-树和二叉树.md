@@ -1000,3 +1000,348 @@ void InOrder(ThreadNode * T){
 ```
 
  
+
+## 高级操作
+
+
+
+### 二叉树
+
+> 标题带 `*` 的为应试题目，不要求实现，了解过程思路即可
+
+#### 判断完全二叉树
+
+> 我们在上面说过，完全二叉树是对应相同高度的满二叉树的缺失最下层最右边的一些连续叶子结点的树。
+
+可采用层序遍历的办法，在上述层次遍历的代码中稍微进行改动，在遍历的过程中：
+
+- 如结点为空，则往队列中加入空结点；
+- 若读取二叉树时读取到空指针，则将队列的结点逐一出队，看看是否存在非空结点；
+  - 若存在则为非完全二叉树
+  - 不存在，正常遍历后返回
+
+```c
+_Bool isComplete(BiTNode * root){
+    SqQueue * queue = malloc(sizeof(SqQueue));
+    initQueue(queue);
+    BiTNode nullNode = {INT_MAX, NULL, NULL}, tmp;
+
+    enQueue(queue, * root);
+    while(!QueueEmpty(queue)){
+        deQueue(queue, & tmp);
+        // 改动 1
+        if(tmp.data == nullNode.data){
+            // 读取到空结点，即到最后一层，开始清空队列
+            while(!QueueEmpty(queue)){
+                deQueue(queue, & tmp);
+                if(tmp.data != nullNode.data) return 0;
+            }
+            break;
+        }
+        // 改动2
+        if(tmp.lchild){
+            enQueue(queue, * tmp.lchild);
+        }else{
+            enQueue(queue, nullNode);
+        }
+        if(tmp.rchild){
+            enQueue(queue, * tmp.rchild);
+        }else{
+            enQueue(queue, nullNode);
+        }
+    }
+    return 1;
+}
+```
+
+
+
+#### 判断双分支结点数
+
+和求高度类似。
+
+递归：
+
+```c
+int getDualNodes(BiTNode * root){
+    if(root == NULL) return 0;
+    int curr = 0;
+    // 如果当前是双分支结点，将curr设为1
+    if(root->lchild != NULL && root->rchild != NULL) curr = 1;
+    return getDualNodes(root->lchild) + getDualNodes(root->rchild) + curr;
+}
+```
+
+
+
+#### 交换左右子树
+
+递归顺序是：
+
+- 交换左子树的左右子树
+- 交换右子树的左右子树
+- 交换当前结点的左右子树
+
+自然而然想到后序遍历
+
+```c
+void swapBTree(BiTNode * root){
+    if(root == NULL) return;
+    swapBTree(root->lchild);
+    swapBTree(root->rchild);
+    BiTNode * tmp = root->lchild;
+    root->lchild = root->rchild;
+    root->rchild = tmp;
+}
+```
+
+
+
+#### 输出前序遍历的第 k 个结点值
+
+其实就是多传递三个变量：
+
+- 当前遍历次数的地址
+- 目标次数
+- 返回值的地址
+
+每次遍历时：
+
+- 判断是否终止
+  - 为空终止
+  - 已经遍历完成，修改返回值，终止
+- 修改当前遍历次数
+
+```c
+void PreOrderWithCount(BiTNode * root, int * count, int target, int * res){
+    // 如果当前指针为空或已经递归完毕（* count == -1）
+    if(root == NULL || * count == -1) return;
+    // 达到次数时
+    if(* count == target) {
+        * res = root->data;
+        * count = -1;
+        return;
+    }
+    ++(* count);
+    PreOrderWithCount(root->lchild, count, target, res);
+    PreOrderWithCount(root->rchild, count, target, res);
+}
+```
+
+
+
+#### * 删除每个以元素值为 x 的结点为根的子树
+
+采用层序遍历的方法
+
+```c
+void PreOrderWithDelete(BiTNode * root, BtreeElemType data){
+    if(root == NULL) return;
+    // 队列存放指针
+    SqQueue * q = malloc(sizeof(SqQueue));
+    initQueue(q);
+    // 将头元素入队
+    enQueue(q, root);
+    // 如果根结点为目标结点，删除整颗树
+    if(root->data == data){
+        DestoryTree(root);
+        root = NULL;
+        return;
+    }
+
+    while(!QueueEmpty(q)){
+        // 出队
+        BiTNode * curr = deQueue(q);
+        
+        // 遍历左右子树
+        if(curr->lchild){
+            // 如果左子树需要删除
+            if(curr->lchild->data == data){
+                DestoryTree(curr->lchild);
+                curr->lchild = NULL;
+            }else{
+                enQueue(q, curr->lchild);
+            }
+        }
+        if(curr->rchild){
+            // 如果左子树需要删除
+            if(curr->rchild->data == data){
+                DestoryTree(curr->rchild);
+                curr->lchild = NULL;
+            }else{
+                enQueue(q, curr->lchild);
+            }
+        }
+    }
+}
+```
+
+ 
+
+## 树、森林 
+
+### 树的存储结构
+
+#### 双亲表示法（找孩子麻烦）
+
+有以下的树，对于每个结点（除根结点外），都有唯一的双亲。
+
+```mermaid
+graph
+R-->A
+R-->B
+R-->C
+A-->D
+A-->E
+C-->F
+F-->G
+F-->H
+F-->K
+```
+
+于是用一个数组进行表示，得
+
+| index | data | parent |
+| ----- | ---- | ------ |
+| 0     | R    | -1     |
+| 1     | A    | 0      |
+| 2     | B    | 0      |
+| 3     | C    | 0      |
+| 4     | D    | 1      |
+| 5     | E    | 1      |
+| 6     | F    | 3      |
+| 7     | G    | 6      |
+| 8     | H    | 6      |
+| 9     | K    | 6      |
+
+数据结构描述如下：
+
+```c
+#define MAX_TREE_SIZE 100
+typedef struct {
+    ElemType data; // 数据域
+    int parent; // 双亲下标域
+} PTNode;
+typedef struct {
+    PTNode nodes[MAX_TREE_SIZE]; // 树的双亲表示数组
+    int length; //结点数量
+} PTree;
+```
+
+那上述的表格所代表的数组就是该数据结构`PTree.nodes`
+
+区别于顺序存储结构于二叉树的顺序储存结构。
+
+- 在树的顺序存储结构中，**数组下标**代表**结点编号**，下标对应的**数组元素**中所存的内容指示了**结点之间的关系**。
+- 而在二叉树的顺序存储结构中， 数组下标既代表了结点的**编号**，又指示了二叉树中各结点之间的**关系**。
+
+> 如何理解这两句话？ 只需要明白：二叉树的结构只能存二叉树，里面可以存入数字 0，下标代表唯一位置；树的存储结构中，下标仅代表结点编号；
+
+二叉树属于树，因此二叉树都可以用树的存储结构来存储，但树不一定能用二叉树的存储结构存储。
+
+**优缺点**：**容易**获得结点的双亲结点，**难以**求一个结点的孩子，求一个结点的孩子往往需要遍历整个数组。
+
+#### 孩子表示法（找双亲麻烦）
+
+孩子表示法存储普通树采用的是 "**顺序表+链表**" 的组合结构。数组中存储的内容：
+
+- 元素值
+- 指向存储有孩子结点信息的链表：
+  - 链表存储：孩子结点在数组中的下标；
+  - 链表存储：指向下一个孩子的指针；
+
+![v2b6ca66e4da4805250306ddc85e811593_720w.webp (720×254) (zhimg.com)](https://pic4.zhimg.com/80/v2-b6ca66e4da4805250306ddc85e811593_720w.webp)
+
+因此，*n* 个结点就有 *n* 个孩子链表，此种方法找孩子的非常容易，但找双亲需要遍历 *n* 个结点中的孩子链表指针域所指向的  *n*  个孩子链表；
+
+
+
+#### 孩子兄弟表示法（找双亲麻烦）
+
+孩子兄弟表示法又称 *二叉树表示法*，即以二叉链表作为树的存储结构。孩子兄弟表示法使每个结点包含三部分内容：结点值、指向结点第一个孩子结点的指针，及指向结点下一个兄弟结点的指针。
+
+```c
+#define ElemType char
+typedef struct CSNode{
+    ElemType data;
+    struct CSNode * 
+        firstchild,*nextsibling;
+}CSNode,*CSTree;
+```
+
+![image-20220930171341445](https://cdn.notcloud.net/static/md/cy948/202209301713523.png)
+
+**优缺点**：**方便地将树转换为二叉树**。易于查找结点的孩子（沿着孩子指针域一直找就行），缺点是寻找双亲较难。
+
+
+
+### 树、森林与二叉树的转换
+
+如图所示：每一颗树按照上述的 [[.~degree.master.c.05-树和二叉树#孩子兄弟表示法找双亲麻烦]] 都可以建立一个唯一的二叉树
+
+![image-20220930171858977](https://cdn.notcloud.net/static/md/cy948/202209301718033.png)
+
+**森林转换二叉树**：
+
+- 先将森林中的每颗树转换为二叉树，由于任何一棵树和对应的二叉树右子树必为空
+
+> 如何理解 “任何一棵树和对应的二叉树右子树必为空”？
+>
+> 因为使用 [[.~degree.master.c.05-树和二叉树#孩子兄弟表示法找双亲麻烦]] 表示树时，左侧指针是指向孩子的，右侧指针是指向兄弟的，因为根节点没有双亲，所以根结点的右侧指针使用为空
+
+- 将森林中的第二颗树是为第一颗树的右兄弟，即将第二棵树对应的二叉树当作第一颗二叉树的右兄弟；同时将第三颗树当成第二课树的右兄弟；
+
+结果如图：
+
+![image-20220930173713664](https://cdn.notcloud.net/static/md/cy948/202209301737716.png)
+
+
+
+### 树和森林的遍历
+
+#### 树
+
+- 先根遍历。若树非空：
+
+  - 访问根结点；
+
+  - 遵循先根后子树，依次遍历根节点的每颗子树；
+
+> 其遍历序列与这棵树对应的二叉树先序遍历相同；
+
+- 后根遍历。若树非空：
+  - 访问子树；
+  - 遵循先子树后根，依次遍历根节点的每颗子树；
+  - 访问根结点；
+
+> 其遍历序列与这棵树相应的二叉树中序序列相同
+
+![image-20220930171858977](https://cdn.notcloud.net/static/md/cy948/202209301718033.png)
+
+如图：先根遍历序列：`A B E F C D G` 后根遍历序列： `E F B C G D A` ;
+
+#### 森林
+
+- 先序遍历森林。若森林为非空：
+  - 访问森林中第一棵树的根结点；
+  - 先序遍历第一棵树中根节点的子树森林；
+  - 先序遍历剩余树（第二、三...）这样；
+
+- 中序遍历森林。若森林为非空：
+  - 中序遍历森林中第一颗树的根结点的子树森林；
+  - 访问第一颗树的根结点；
+  - 中序遍历除去第一棵树之后剩余的树构成的森林；
+
+![image-20220930173713664](https://cdn.notcloud.net/static/md/cy948/202209301737716.png)
+
+先序遍历序列为：`A B C D E F G H I` 中序遍历序列为 `B C D A F E H I G`
+
+> 其实中根遍历和后根遍历，都是最后才访问中结点，称中根遍历是相对其二叉树而言的，可以理解为同一种遍历方法。
+
+对应关系：
+
+| 树       | 森林     | 二叉树   |
+| -------- | -------- | -------- |
+| 先根遍历 | 先序遍历 | 先序遍历 |
+| 后根遍历 | 中序遍历 | 中序遍历 |
+
