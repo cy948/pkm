@@ -6,13 +6,13 @@ updated: 1663842732223
 created: 1663766370695
 ---
 
+# 写作词汇
 
-
-**考研写作六大主题通关词【务必背熟****！】**
+## 六大主题
 
  ^ky6u4y2vmig1
 
-话题一．文化
+### 话题一．文化
 
 | **1.  文化交流与融合** | Cultural exchange and integration |
 | ---------------------- | --------------------------------- |
@@ -28,7 +28,7 @@ created: 1663766370695
 
  
 
-话题二、青年与社会
+### 话题二、青年与社会
 
 | **1. 温室花朵**           | Flower in greenhouse                           |
 | ------------------------- | ---------------------------------------------- |
@@ -44,7 +44,10 @@ created: 1663766370695
  ^96bukp7r3gbj
 
 
-话题三、两代关系 ^etxfquniszls
+
+### 话题三、两代关系 
+
+^etxfquniszls
 
 | **1. 代 沟**            | The generation gap                             |
 | ----------------------- | ---------------------------------------------- |
@@ -60,7 +63,7 @@ created: 1663766370695
 
  
 
-话题四、爱与希望
+### 话题四、爱与希望
 
 | **1. 希望工程**   | The  Hope Project                 |
 | ----------------- | --------------------------------- |
@@ -76,7 +79,9 @@ created: 1663766370695
 
  ^jpqj06f1bzb4
 
-话题五、环境类
+
+
+### 话题五、环境类
 
 | **1. 环境污染**    | Environment pollution    |
 | ------------------ | ------------------------ |
@@ -92,7 +97,7 @@ created: 1663766370695
 
  
 
-话题六、健康
+### 话题六、健康
 
 | **1. 身心健康**      | Physical and mental health       |
 | -------------------- | -------------------------------- |
@@ -107,3 +112,214 @@ created: 1663766370695
 | **10. 养成良好习惯** | Develop  good habits             |
 
  
+
+## 俗词替换
+
+#### 重要的
+
+替换 important necessary
+
+| 替换词                    | 意义                   | 用法                  |
+| ------------------------- | ---------------------- | --------------------- |
+| crucial / vital           | 至关重要的             | = extremely important |
+| significant               | 重要的；重大的         | 和important最接近     |
+| essential / indispensable | 必不可少的；不可或缺的 | 替换 necessary        |
+
+**示例**：
+
+A 对 B 非常重要
+
+A is important to B
+
+替换：
+
+- play a vital role in ...
+- be of the utmost importance to ...
+
+造句：
+
+相互沟通对父母与孩子的关系来说非常重要
+
+Mutual communication is **of the utmost importance** to the relationship between parents and children.
+
+
+
+#### 有利于
+
+替换 beneficial
+
+用法：be conducive to
+
+**示例**：
+
+合作有利于克服困难。
+
+Cooperation **is conducive to** overcoming / conquering difficulties / setback.
+
+
+
+#### 便利
+
+替换 make ... convenient
+
+用法：facilitate
+
+**示例**：
+
+手机大大地便利了我们的日常生活
+
+Mobile phones have facilitate our daily life greatly / significantly / tremendously.
+
+
+
+#### 促进
+
+促进， 增进， 推进， 宣传
+
+promote
+
+| 常用搭配          | 英语表达                    |
+| ----------------- | --------------------------- |
+| 促进 ... 的发展   | promote the development of  |
+| 增进 ... 的友谊   | promote the friendship      |
+| 推进 ... 的进步   | promote the advances of     |
+| 宣传 ... 的重要性 | promote the significance of |
+
+**示例**:
+
+旅游业能够促进我国经济的发展
+
+Tourism / The tourist  industry can promote the economic development of China.
+
+
+
+#### 有害的
+
+替换 harmful
+
+detrimental adj. 
+
+**用法**：
+
+be detrimental to
+
+**示例**：
+
+The excessive use / overuse of the Internet is detrimental to physical and mental health.
+
+
+
+#### 导致
+
+- 替换 cause -> `trigger`
+
+- 替换 lead to ->  `give rise to`
+
+**示例**：
+
+青少年对明星盲目的崇拜引发了激烈的讨论
+
+Teenagers' blind worship of stars has triggered / given rise to heated.
+
+
+
+#### 许多
+
+替换 many / much / a lot of
+
+- ` a host of / a vast number of` + 可数名词复数
+
+- `a walth of / a vast amount of`  + 不可数名词
+
+
+
+#### 越来越多
+
+替换 more and more 
+
+- an increasing number of + 可数名词
+- increasingly + adj. 
+
+
+
+#### 表示人
+
+| 老人            | 年轻人                 | 学生                           |
+| --------------- | ---------------------- | ------------------------------ |
+| the elderly     | teenager / adolescent  | university / college  students |
+| senior citizens | youngster              | undergraduate / postgraduate   |
+|                 | the younger generation | graduate                       |
+
+
+
+#### 如今
+
+替换 nowadays
+
+副词：currently
+
+短语： in this day and age
+
+**示例**：
+
+如今，越来越多的人认为，健康是十分重要的。
+
+In this day and age, an increasing number of people opinion that health is of the utmost importance.
+
+
+
+#### 对...构成威胁
+
+替换 be bad to
+
+pose a threat to sth.
+
+**示例：**
+
+污染对鱼类构成威胁。
+
+Pollution poses a threat to fish. 
+
+
+
+#### 解决
+
+替换：solve
+
+| 替换词  | 意义                     | 搭配                        |
+| ------- | ------------------------ | --------------------------- |
+| tackle  | 处理；解决（难题、局面） | crime / pollution / traffic |
+| address | 设法解决；处理           | the problem / issue of ...  |
+
+
+
+#### 培养
+
+替换：develop
+
+cultivate vt. 培养、养成、树立
+
+foster vt. 培养、助长
+
+| 汉语表达         | 英语表达                       |
+| ---------------- | ------------------------------ |
+| 培养独立自主     | cultivate independence         |
+| 培养阅读习惯     | foster the habit of reading    |
+| 培养独立思考能力 | cultivate the ability to think |
+
+过度砍伐森林对生态系统的平衡有害
+
+Excessive deforestation is detrimental to the balance of ecosystem.
+
+共享单车大大地便利了人们的日常生活
+
+Shared bicycles have facilitate people's daily life greatly / significantly / tremendously.
+
+垃圾分类有利于保护环境
+
+Garbage sorting is conducive to environmental protection.
+
+偶像崇拜引起了青少年价值观的改变
+
+Idol worship has triggered the change in / of teenager's values.
+
