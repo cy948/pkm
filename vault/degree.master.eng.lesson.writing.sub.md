@@ -140,3 +140,66 @@ My suggestions are as follows.
 
 #### 第三段 套话
 
+Thank you so much for your due attention to my letter. I am looking forward to your reply at your earliest convenience.
+
+<p align="right">
+Yours sincerely，         
+</p>
+<p align="right">
+Li Ming        
+</p>
+
+### 练习
+
+#### 2015
+
+**Directions**:
+You are going to host a club reading session. Write an email of
+about 100 words recommending a book to the club members.
+You should state reasons for your recommendation.
+
+Dear sir or Madam, 
+
+​		I'm Li Ming, host of club reding session. I am writing this letter to recommend a book, *Martin's Family* , to you. 
+
+​		The details are as follows.
+
+​		To begin with, in this book, there are a number of features worth noticing, such as scenes, figures, and so on.
+
+​		In addition, this book is characterized by it's metaphors, a host of relationships between characters are present implicitly, given that it is highly recommend  you to read it in detail.
+
+​		Last but not least, it is advisable to markup the roles in books which contributes to the result that it would facilitate you to 
+
+​		Thank you so much for your due attention to my letter. I am looking forward to your reply at your earliest convenience.
+
+<p align="right">
+    Your sincerely, <br>
+    Li Ming
+</p>
+
+
+
+#### 2014
+
+Write a letter of about 100 words to the president of your university.
+suggesting how to improve students' physical condition.
+You should include the details you think necessary.
+
+Dear Sir or Madam,
+
+​		I am Li Ming, an undergraduate in our university. I am writing this letter to make suggestions on students' physical condition promoting.
+
+​		My suggestions are as follows.
+
+​		To begin with, it would be conducive if the school could purchase more sport equipments, given that it facilitate students to exercise.
+
+​		In addition, it's highly recommend that provide training lessons for the reason that it would prevent our students sustain an injury in workout. 
+
+​		Last but not least, it is advisable to maintain strict order, which contributes to the result that everyone could share the public facilities.
+
+​		Thank you for your due attention to my letter. I'm looking forward to your earliest convenience.
+
+<p align="right">
+    Your sincerely, <br>
+    Li Ming
+</p>

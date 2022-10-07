@@ -115,6 +115,44 @@ created: 1663766370695
 
 ## 俗词替换
 
+### 逻辑连接词
+
+#### 导致
+
+- 替换 cause -> `trigger`
+
+- 替换 lead to ->  `give rise to`
+
+**示例**：
+
+青少年对明星盲目的崇拜引发了激烈的讨论
+
+Teenagers' blind worship of stars has triggered / given rise to heated.
+
+####  因为
+
+= because + 主 + 动
+
+, given that 
+
+, for the reason that 
+
+#### 许多
+
+替换 many / much / a lot of
+
+- ` a host of / a vast number of` + 可数名词复数
+
+- `a walth of / a vast amount of`  + 不可数名词
+
+#### 结果
+
+as a result 
+
+, which contribute to the result that + 主语 + 谓语
+
+### 感情词
+
 #### 重要的
 
 替换 important necessary
@@ -191,7 +229,11 @@ promote
 
 Tourism / The tourist  industry can promote the economic development of China.
 
+#### 非凡的
 
+marvelous 非凡的
+
+fantastic 极好的
 
 #### 有害的
 
@@ -209,29 +251,19 @@ The excessive use / overuse of the Internet is detrimental to physical and menta
 
 
 
-#### 导致
+#### 对...构成威胁
 
-- 替换 cause -> `trigger`
+替换 be bad to
 
-- 替换 lead to ->  `give rise to`
+pose a threat to sth.
 
-**示例**：
+**示例：**
 
-青少年对明星盲目的崇拜引发了激烈的讨论
+污染对鱼类构成威胁。
 
-Teenagers' blind worship of stars has triggered / given rise to heated.
+Pollution poses a threat to fish. 
 
-
-
-#### 许多
-
-替换 many / much / a lot of
-
-- ` a host of / a vast number of` + 可数名词复数
-
-- `a walth of / a vast amount of`  + 不可数名词
-
-
+### 数量
 
 #### 越来越多
 
@@ -252,6 +284,8 @@ Teenagers' blind worship of stars has triggered / given rise to heated.
 
 
 
+### 时间
+
 #### 如今
 
 替换 nowadays
@@ -266,21 +300,7 @@ Teenagers' blind worship of stars has triggered / given rise to heated.
 
 In this day and age, an increasing number of people opinion that health is of the utmost importance.
 
-
-
-#### 对...构成威胁
-
-替换 be bad to
-
-pose a threat to sth.
-
-**示例：**
-
-污染对鱼类构成威胁。
-
-Pollution poses a threat to fish. 
-
-
+### 其他
 
 #### 解决
 

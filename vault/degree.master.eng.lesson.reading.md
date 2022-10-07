@@ -137,3 +137,62 @@ reveal（揭示）, illustrate（阐明）, shed light on（阐明）, demonstra
 - 从词汇的角度
 - 从技巧的角度
 
+
+
+## 态度题
+
+
+
+1. 划关键词 两个对象 xx 人 对 xx 事情的态度；
+
+![image-20221007112959509](https://cdn.notcloud.net/static/md/cy948/202210071129544.png)
+
+2. 用关键词定位：
+   1. 如果提问的是**作者的观点**，**独白处**即作者的观点（如果没有特别说明是某人说的话，即作者的观点）
+   2. 如果提问 **作者** 对 **某人观点** 的态度，**先找到某人观点，观点可以不读，继续往下看作者的评论**。
+
+3. 判断态度
+
+- 只有，仅仅：
+
+only mere  merely
+
+- 太 ...
+
+too excessive over-dressed
+
+- 鲁莽的
+
+reckless regrettably
+
+![image-20221007114530164](https://cdn.notcloud.net/static/md/cy948/202210071145188.png)
+
+#### 态度
+
+![image-20221007114918867](https://cdn.notcloud.net/static/md/cy948/202210071149890.png)
+
+中立的：
+
+impartial 中立的
+
+indifferent 无所谓
+
+证明的：
+
+![image-20221007114747474](https://cdn.notcloud.net/static/md/cy948/202210071147506.png)
+
+负面的：
+
+![image-20221007114800892](https://cdn.notcloud.net/static/md/cy948/202210071148916.png)
+
+
+
+![image-20221007114840645](https://cdn.notcloud.net/static/md/cy948/202210071148669.png)
+
+
+
+![image-20221007114906258](https://cdn.notcloud.net/static/md/cy948/202210071149281.png)
+
+干扰词：
+
+![image-20221007115225161](https://cdn.notcloud.net/static/md/cy948/202210071152187.png)
