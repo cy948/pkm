@@ -197,7 +197,7 @@ Dear Sir or Madam,
 
 ​		Last but not least, it is advisable to maintain strict order, which contributes to the result that everyone could share the public facilities.
 
-​		Thank you for your due attention to my letter. I'm looking forward to your earliest convenience.
+​		Thank you for your due attention to my letter. I'm looking forward to reply at your earliest convenience.
 
 <p align="right">
     Your sincerely, <br>

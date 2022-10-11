@@ -2,7 +2,7 @@
 id: lgep2cfay5c9yv9g0bxm6uo
 title: 05 树和二叉树
 desc: ''
-updated: 1663244511709
+updated: 1665332495216
 created: 1663119714743
 ---
 
@@ -1332,7 +1332,7 @@ typedef struct CSNode{
   - 访问第一颗树的根结点；
   - 中序遍历除去第一棵树之后剩余的树构成的森林；
 
-![image-20220930173713664](https://cdn.notcloud.net/static/md/cy948/202209301737716.png)
+·![image-20220930173713664](https://cdn.notcloud.net/static/md/cy948/202209301737716.png)
 
 先序遍历序列为：`A B C D E F G H I` 中序遍历序列为 `B C D A F E H I G`
 
@@ -1351,3 +1351,11 @@ typedef struct CSNode{
 
 > 重头戏
 
+### 要求
+
+- 掌握构建方法：
+  - 表示方法、WPL计算；
+  - 构建方法；
+- 特性：
+  - 结点数量计算；
+  - 应用：压缩、并查集；

@@ -343,3 +343,11 @@ Garbage sorting is conducive to environmental protection.
 
 Idol worship has triggered the change in / of teenager's values.
 
+### 应用
+
+Today, more and more people have realized that health is very important. In order to keep healthy,every one of us should take exercise.
+
+改为：In this day and age, an increasing number of people have realized the health is of the utmost importance. For the purpose of maintaining healthy, every one of us should go in for physical training.
+
+
+
