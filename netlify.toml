@@ -42,7 +42,8 @@ NETLIFY_NEXT_PLUGIN_SKIP = "true"
 # Branch Deploy context: all deploys that are not from a pull/merge request or
 # from the Production branch will inherit these settings.
 [context.branch-deploy]
-  command = "chmod +x build.sh && ./build.sh"
+#  command = "chmod +x build.sh && ./build.sh"
+  command = "chmod +x dendron-publish-site.sh && ./dendron-publish-site.sh"
 [context.branch-deploy.environment]
   NODE_ENV = "development"
 
