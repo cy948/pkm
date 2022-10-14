@@ -16,7 +16,7 @@ created: 1660616348354
 
 $$
 \lim_{n\to\infty}f(x)=A \\
-\forall \varepsilon > 0, \exist x>0,当|x|>X时，|f(x)-A|<\varepsilon \\
+\forall \varepsilon > 0, \exist x>0,\text{当|x|>X时}，|f(x)-A|<\varepsilon \\
 $$
 
 注：
@@ -24,10 +24,10 @@ $$
 ![image-20220816103753525](https://cdn.notcloud.net/static/md/cy948/202208161037546.png)
 $$
 \lim_{n\to\infty}f(x)=A \\
-\forall \varepsilon > 0, \exist x>0,当x>X时，|f(x)-A|<\varepsilon \\
+\forall \varepsilon > 0, \exist x>0\text{,当x>X时，}|f(x)-A|<\varepsilon \\
 \\
 \lim_{n\to-\infty}f(x)=A \\
-\forall \varepsilon > 0, \exist x>0,当x>-X时，|f(x)-A|<\varepsilon \\
+\forall \varepsilon > 0, \exist x>0,\text{当x>-X时，}|f(x)-A|<\varepsilon \\
 $$
 示例：
 
@@ -44,20 +44,20 @@ $$
 $$
 \lim_{n\to\infty}f(x)=A \\
 \forall \varepsilon > 0,\exist \delta >0\\
-当0<|x-x_0|< \delta时，|f(x)-A|<\varepsilon \\ \\ 左右邻域：\\
+\text{当}0<|x-x_0|< \delta\text{时}，|f(x)-A|<\varepsilon \\ \\ \text{左右邻域：}\\
 \lim_{x\to {x_0}^+}f(x)=A ：\\
 \forall \varepsilon >0,\exist \delta > 0,\\
-当x_0<x<x_0+\delta 时，|f(x)-A|<\varepsilon \\
+\text{当}x_0<x<x_0+\delta \text{时，}|f(x)-A|<\varepsilon \\
 \\
 \lim_{x\to{x_0}-}f(x)=A：\\
 \forall \varepsilon>0 \exist \delta > 0 \\ 
 
-当x_0-\delta<x<x_0时|f(x)-A|<\varepsilon \\
+\text{当}x_0-\delta<x<x_0\text{时}|f(x)-A|<\varepsilon \\
 
 \\
-默认情况下，\lim_{x\to x_0}f(x)=A 是指 \\
+\text{默认情况下，}\lim_{x\to x_0}f(x)=A \text{是指} \\
 
-从两边靠近x_0都=A：\\
+\text{从两边靠近}x_0\text{都}=A：\\
 \lim_{x\to {x_0}^+}f(x)=A \\
 \lim_{x\to {x_0}^-}f(x)=A
 $$
@@ -92,35 +92,35 @@ $$
 如果$lim_{x\to x_0}f(x)=A$，那么存在常数$M>0和\delta>0$，使得当$0<|x-x_0|<\delta时，有|f(x)| \le M$
 $$
 \lim_{x\to x_0}f(x)=A \\
-\forall \varepsilon > 0，当0<|x-x_0|<\delta 时，\\
-有|f(x)-A|<\varepsilon \\
-取：\varepsilon = 1：|f(x)-A| \le 1\\
+\forall \varepsilon > 0，\text{当}0<|x-x_0|<\delta \text{时}，\\
+\text{有}|f(x)-A|<\varepsilon \\
+\text{取：}\varepsilon = 1：|f(x)-A| \le 1\\
 \\
 |f(x)| = |f(x)-A+A| \\
 = |f(x)-A|+|A| \\
-< 1 + |A| 
+< 1 + |A|
 $$
 
 ### 定理：函数极限的局部保号性
 
 如果$lim_{x\to x_0}f(x)=A,且A>0(或A<0)$那么存在常数$\delta>0$，使得当$0<|x-x_0|<\delta$时，有$f(x)>0或(f(x)<0)$
 $$
-证明： \\
+\text{证明：} \\
 \because \lim_{x\to x_0}f(x)=A \ :\\ \forall \varepsilon > 0,\exist \delta >0, 
-当0<|x-x_0|<\delta时,|f(x)-A|<\varepsilon \\
-设：A>0,取\varepsilon>0，\\
-当0<|x-x_0|<\delta时，|f(x)-A|<\frac{A}{2}\\
+\text{当}0<|x-x_0|<\delta\text{时},|f(x)-A|<\varepsilon \\
+    \text{设：}A>0,\text{取}\varepsilon>0，\\
+\text{当}0<|x-x_0|<\delta\text{时，}|f(x)-A|<\frac{A}{2}\\
 \therefore -\frac{A}{2}<f(x)-A<\frac{A}{2} \\
 = \frac{A}{2}<f(x)<\frac{3}{2}A \\
-与f(x)同号
+\text{与f(x)同号}
 $$
 
 ### 定理：保号性推论
 
 如果$lim_{x\to x_0}f(x)=A(A \ne 0)$，那么就存在着$x_0$的某一去心邻域$U (x_0)$，当$x\in U(x_0)$时，就有$|f(x)|>\frac{|A|}2 $
 $$
-取\varepsilon=\frac A 2 >0，\exist \delta>0，\\
-当0<x<|x-x_0|，|f(x)- A| \le \frac A 2  \\
+\text{取}\varepsilon=\frac A 2 >0，\exist \delta>0，\\
+\text{当}0<x<|x-x_0|，|f(x)- A| \le \frac A 2  \\
 |f(x)| \\
 = |f(x)-A+A| \\
 \therefore |f(x)| > \frac {|A|}2
@@ -134,12 +134,12 @@ $$
 - 对于任意的$x\in (-\delta,0)$，$f(x)$ ？ $f(x)$
 
 $$
-\exist \delta > 0,当0<|x-0|<\delta时\\
+\exist \delta > 0,\text{当}0<|x-0|<\delta\text{时}\\
 \frac{f(x)-f(0)}x<0 \\
-即：\\
-\because 0<x<\delta时，\frac{f(x)-f(0)}x<0 \\
+\text{即：}\\
+\because 0<x<\delta\text{时，}\frac{f(x)-f(0)}x<0 \\
 \therefore f(x)<f(0) \\
-\because -\delta<x<0时，\frac{f(x)-f(0)}x<0 \\
+\because -\delta<x<0\text{时}，\frac{f(x)-f(0)}x<0 \\
 \therefore f(x)>f(0) \\
 $$
 
@@ -165,7 +165,7 @@ $$
 (2)\lim [f(x) \ g(x)] \\
 =\lim f(x) \ \lim g(x) = A \ B \\
 \\
-(3)若又有B:\\ \ne 0，则\lim \frac{f(x)}{g(x)} =\frac{\lim f(x)}{\lim g(x)}\\
+(3)\text{若又有}B:\\ \ne 0，则\lim \frac{f(x)}{g(x)} =\frac{\lim f(x)}{\lim g(x)}\\
 = \frac{A}{B}(B \ne 0)
 $$
 
@@ -173,12 +173,12 @@ $$
 
 若$lim[f(x)+g(x)]$存在，$\lim f(x)$及$\lim g(x)$是否存在？$\lim [f(x) + g(x)]$及$\lim g(x)$存在，是否一有$\lim f(x)$存在？
 $$
-1. 不一定：\\
-取：f(x)=\lim_{x\to\infty}[x+(-x)]=0 \\
-但 \lim_{x\to\infty}x=\infty 不存在 \\
-取：f(x)=\lim_{x\to\infty}[x+(-x)]=0 \\
+1. \text{不一定：}\\
+\text{取：}f(x)=\lim_{x\to\infty}[x+(-x)]=0 \\
+\text{但} \lim_{x\to\infty}x=\infty \text{不存在} \\
+\text{取：}f(x)=\lim_{x\to\infty}[x+(-x)]=0 \\
 \\
-2. 一定：\\
+2. \text{一定：}\\
 f(x) = [f(x)+g(x)]-g(x)
 $$
 ![image-20220816161738356](https://cdn.notcloud.net/static/md/cy948/202208161617394.png)

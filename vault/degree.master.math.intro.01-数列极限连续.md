@@ -45,7 +45,7 @@ $$
 上述的定理可以表述为：
 $$
 \lim_{n\to\infty} x_n = a \leftrightarrow \\
-\forall \varepsilon > 0 \exists N \in N_+, 当n > N时，|X_n - a| < \varepsilon
+\forall \varepsilon > 0 \exists N \in N_+, \text{当n > N时，}|X_n - a| < \varepsilon
 $$
 
 #### 示例1.1
@@ -54,7 +54,7 @@ $$
 \lim_{n\to\infty} \frac{1}{n} = 0
 $$
 
-$假设： \varepsilon = 0.1 = \frac{1}{10} \exists N = 10，当n > N = 10时，|\frac{1}{n} - 0| < \frac{1}{10}$
+$\text{假设： }\varepsilon = 0.1 = \frac{1}{10} \exists N = 10，\text{当n > N = 10时，}|\frac{1}{n} - 0| < \frac{1}{10}$
 
 可以发现$n$从$10$开始，都会小于$\frac{1}{10}$，且越来越接近$0$；
 
@@ -66,9 +66,9 @@ $假设： \varepsilon = 0.1 = \frac{1}{10} \exists N = 10，当n > N = 10时，
 
 (B) $\{ x_n y_n \}$ 必发散；
 
-> 如果: $x_n = \frac{1}{n}, y_n=n 则 x_n y_n=1成立$，则$lim_{n\to\infty}x_ny_n=1$ 收敛；B不成立；
+> 如果: $x_n = \frac{1}{n}, y_n=n $ 则 $ x_n y_n=1成立$，则$lim_{n\to\infty}x_ny_n=1$ 收敛；B不成立；
 >
-> 如果: $x_n = \frac{1}{n}, y_n=n^2 则 x_n y_n=1成立$，则$lim_{n\to\infty}x_ny_n=n$ ；A不成立；
+> 如果: $x_n = \frac{1}{n}, y_n=n^2 $ 则 $ x_n y_n=1成立$，则$lim_{n\to\infty}x_ny_n=n$ ；A不成立；
 
 (C) $\{ x_n + y_n \}$ 必收敛；
 
@@ -100,9 +100,9 @@ $$
 
 数列有界即：$ \exist M > 0 , \forall \varepsilon \in N_+ $ 有：$ | x_n | \leqq m$ ；
 
-收敛即：$lim_{n\to\infty} x_n = a \leftrightarrow \exist N \in N_+ 当 n > N 时，|x_n-a|< \varepsilon$
+收敛即：$lim_{n\to\infty} x_n = a \leftrightarrow \exist N \in N_+ \text{当 n > N 时，}|x_n-a|< \varepsilon$
 
-取：$ \varepsilon =1, \exists N \in N_+ 当 n > N时，有|x_n -a|<1$
+取：$ \varepsilon =1, \exists N \in N_+ \text{当 n > N时，有}|x_n -a|<1$
 
 1. 得到$|x_n -a|<1$的推论
 
@@ -124,7 +124,7 @@ $$
 2. 令$M=\max \{ |x_1|, |x_2|, ..., |a| + 1 \}$
 
 $$
-\forall n \in N_+ : |x_n| \leqq M 有界
+\forall n \in N_+ : |x_n| \leqq \text{M 有界}
 $$
 
 ##### 例1.1
@@ -138,8 +138,8 @@ $$
 > \begin{equation}
 > x_n=\left\{
 > 	\begin{aligned}
-> 		n, n为奇数 \\
-> 		0, n为偶数
+> 		n, \text{n为奇数} \\
+> 		0, \text{n为偶数}
 > 	\end{aligned}
 > \right.
 > \end{equation}
@@ -149,8 +149,8 @@ $$
 > \begin{equation}
 > y_n=\left\{
 > 	\begin{aligned}
-> 		0, n为奇数 \\
-> 		n, n为偶数
+> 		0, \text{n为奇数} \\
+> 		n, \text{n为偶数}
 > 	\end{aligned}
 > \right.
 > \end{equation}
@@ -177,8 +177,8 @@ $$
 > \begin{equation}
 > x_n=\left\{
 > 	\begin{aligned}
-> 		n, n为奇数 \\
-> 		0, n为偶数
+> 		n, \text{n为奇数} \\
+> 		0, \text{n为偶数}
 > 	\end{aligned}
 > \right.
 > \end{equation}
@@ -188,8 +188,8 @@ $$
 > \begin{equation}
 > y_n=\left\{
 > 	\begin{aligned}
-> 		0, n为奇数 \\
-> 		n, n为偶数
+> 		0, \text{n为奇数} \\
+> 		n, \text{n为偶数}
 > 	\end{aligned}
 > \right.
 > \end{equation}
@@ -245,15 +245,15 @@ $$
 1. 因为数列收敛，有：
 
 $$
-lim_{n\to\infty}x_n=a$ ，$\forall \varepsilon > 0 \\
-   当 n> N时，有|x_n-a|< \varepsilon
+lim_{n\to\infty}x_n=a,\forall \varepsilon > 0 \\
+   \text{当 n> N时，有}|x_n-a|< \varepsilon
 $$
 
 2. 取$\epsilon = \frac{a}{2} > 0,\exist N \in N_+,当n>N时，有$
 
 $$
 |x_n-a|<\frac{a}{2} \\
-所以：a-\frac{a}{2} < x_n < a + \frac{a}{2} 
+\therefore a-\frac{a}{2} < x_n < a + \frac{a}{2}
 $$
 
 3. 所以$x_n > a - \frac{a}{2} > 0$
@@ -261,14 +261,14 @@ $$
 ##### 推论：如果数列$\{ x_n \}$从某项起有$x_n > 0$（或$x_n \leq 0$，且$lim_{n\to\infty}=a$，那么$a>0$或$a \leq 0$
 
 如：
-- 若$\exist N \in N_+ ，当n>N时，有x_n > 0，且lim_{n\to\infty}x_n = a$，则：$a \geq 0$
-- 若$\exist N \in N_+ ，当n>N时，有x_n < 0，且lim_{n\to\infty}x_n = a$，则：$a \leq 0$
+- 若$\exist N \in N_+ \text{，当n>N时，有}x_n > 0，\text{且}lim_{n\to\infty}x_n = a$，则：$a \geq 0$
+- 若$\exist N \in N_+ \text{，当n>N时，有}x_n < 0\text{，且}lim_{n\to\infty}x_n = a$，则：$a \leq 0$
 
 #### 定理：（夹逼准则）
 
 如果数列$\{x_n \} \{y_n\}及\{z_n\}$满足以下条件
 
-a. 从某项起，即 $\exists E \in N+，当n>N时，有y_n \leq x_n \leq z_n$；
+a. 从某项起，即 $\exists E \in N+\text{，当n>N时，有}y_n \leq x_n \leq z_n$；
 
 b. $lim_{n\to\infty}y_n = lim_{n\to\infty}z_n = A$;
 
@@ -342,7 +342,7 @@ $$
 - 放大：
 
 $$
-原式 \le \lim_{n\to\infty}n(
+\text{原式} \le \lim_{n\to\infty}n(
 \frac{1}{n^2+ \pi}+
 \frac{1}{n^2+ \pi}+
 ...+
@@ -363,7 +363,7 @@ $$
 ) \\
 = \lim_{n\to\infty} n\frac{n}{n^2+ n\pi} \\
 = \lim_{n\to\infty} \frac{n^2}{n^2+ n\pi} 
-\le 原式
+\le \text{原式}
 $$
 
 因为：
@@ -401,7 +401,7 @@ $$
 
 $$
 2^0 + 2^n \leq 2^n+2^n = 2*2^n \\
-代入原式求值得：\\ 
+\text{代入原式求值得：}\\ 
 \lim_{n\to\infty} \sqrt[n]{2*2^n} \\
 =\lim_{n\to\infty} 2^{\frac{1}{n}}*2 \\
 = 2
@@ -413,7 +413,7 @@ $$
 
 $$
 2^n \leq 1+2^n \\
-代入原式求值得：\\
+\text{代入原式求值得：}\\
 \lim_{n\to\infty} \sqrt[n]{2^n} = \lim_{n\to\infty} 2 = 2
 $$
 
@@ -441,8 +441,8 @@ $$
 - 单调递增有上界：
 
 $$
-\exist N，当n>N时： \\
-x_n \le x_{n+1} \le ... \le M \rightarrow \lim_{x\to\infty}x_n存在
+\exist N\text{，当n>N时：} \\
+x_n \le x_{n+1} \le ... \le M \rightarrow \lim_{x\to\infty}x_n\text{存在}
 $$
 
 ![image-20220815194550129](https://cdn.notcloud.net/static/md/cy948/202208151945159.png)
@@ -450,8 +450,8 @@ $$
 - 单调递减有下界：
 
 $$
-\exist N，当n>N时： \\
-x_n \ge x_{n+1} \ge ... \ge M \rightarrow \lim_{x\to\infty}x_n存在
+\exist N\text{，当n>N时：} \\
+x_n \ge x_{n+1} \ge ... \ge M \rightarrow \lim_{x\to\infty}x_n\text{存在}
 $$
 
 ![image-20220815194600483](https://cdn.notcloud.net/static/md/cy948/202208151946514.png)
@@ -499,14 +499,14 @@ $$
 \therefore \frac{- (x_n+1)(x_n-2)}{\sqrt{2+x_n}+x_n} > 0 \\
 \\
 \therefore x_{n+1}>x_{n} \\
-\therefore \{ x_n \} 单调 \\
+\therefore \{ x_n \} \text{单调} \\
 $$
 
 $$
-\therefore 由单调有界准则知，\lim_{n\to\infty}x_n存在 \\
+\therefore \text{由单调有界准则知，}\lim_{n\to\infty}x_n\text{存在} \\
 \\
-令\lim_{n\to\infty}x_n=A，\\
-在x_{n+1}=\sqrt{2+x_n}两边同取n\to\infty \\
+\text{令}\lim_{n\to\infty}x_n=A，\\
+\text{在}x_{n+1}=\sqrt{2+x_n}\text{两边同取}n\to\infty \\
 \lim_{n\to\infty}x_{n+1}=\lim_{n\to\infty}\sqrt{2+x_n} \\
 \therefore A=\sqrt{2+A} \\
 \therefore A^2-A-2=0 \\
