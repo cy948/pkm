@@ -88,6 +88,8 @@ The decision **of the New York Philharmonic** **to hire Alan Gilbert** **as its 
 
 ## 定语从句
 
+> 定语是用来修饰、限定、说明名词或代词的品质与特征的。
+
 按功能区分，修饰可以分为两种
 
 - 修饰、限定名词的 : 定语；
@@ -242,6 +244,8 @@ She is no longer the little girl she used to be.
 
 ## 同位语从句
 
+
+
 ![[degree.master.eng.lesson.grammer.03同位语#同位语:#^ernngqhoz881]]
 
 
@@ -290,6 +294,8 @@ She is no longer the little girl she used to be.
 
 ## 表语从句
 
+> 说明主语的身份、性质、品性、特征和状态的从句
+
 1. 由 **that** 引导 **that**不具有意义
 
 The real death is that no one in the world remembers you. 
@@ -319,6 +325,8 @@ For Williams, these activities become what he calls “electronic heroin.”
  对于威廉而言，这些活动变成了他所谓的“电子海洛因”
 
 ## 状语从句
+
+> 从情况、时间、处所、方式、条件、对象、肯定、否定、范围和程度等方面对谓语中心词进行修饰、限制。
 
 ![image-20220929151030651](https://cdn.notcloud.net/static/md/cy948/202209291510684.png)
 

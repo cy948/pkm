@@ -157,7 +157,7 @@ reveal（揭示）, illustrate（阐明）, shed light on（阐明）, demonstra
 
 **共同点**：找4个选项的出处，比对。不同点：
 
-### 做题步骤：
+**做题步骤**：
 
 （1）    审题，判断推理题
 
@@ -248,7 +248,7 @@ reckless regrettably
 
 ![image-20221007114530164](https://cdn.notcloud.net/static/md/cy948/202210071145188.png)
 
-#### 态度
+#### 态度词
 
 ![image-20221007114918867](https://cdn.notcloud.net/static/md/cy948/202210071149890.png)
 
@@ -279,6 +279,39 @@ indifferent 无所谓
 ![image-20221007115225161](https://cdn.notcloud.net/static/md/cy948/202210071152187.png)
 
 
+
+## 语义题
+
+**辅助技能**： （根据句子的逻辑）
+
+- 没有转折词的时候，色彩一致；
+
+**特征**：
+
+- The word "xxx" is closest in **meaning** to ?
+- The expression "xxx" is closest in **meaning** to ? 
+- The word "xxx" is probably **means** ?
+
+
+
+## 例证题
+
+**示例：**
+
+xx is quoted to indicate that?
+
+**步骤：**
+
+- 划关键词
+- 找定位句
+  - 定位例子
+  - 一件事、某人的话
+- 锁定论点，根据例子位置
+  - 首段：作用是引出文章主题，论点在例子后；
+  - 非手段：作用是证明上文观点，论点在例子前；
+- 比对选项
+  - ✔️正确选项：同义替换（简单）；符合主题/态度（难）；
+  - ❌错误选项：依然在描述例子本身（选项的字眼来自于例子部分）；
 
 ## 检查
 
