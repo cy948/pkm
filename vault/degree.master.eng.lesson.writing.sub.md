@@ -291,7 +291,40 @@ Dear Sir or Madam,
 
 Suppose you are working for the “Aiding Rural Primary School” project of your university. Write an email to answer the inquiry from an international student volunteer, specifying the details of the project.
 
+
+
 Dear Sir or Madam,
 
-​		
+​		For the purpose of offering assistance to people in need. Our university intends to hold a “Aiding Rural Primary School” project on May 25th in Guangzhou, China. This project will involve a series of activities, including the opening speech of president, talent shows and debate.
 
+​		The details for volunteer are as follows. To begin with, he or she should have excellent command of oral English, for the reason that it is essential to teach English lessons. In addition, teamwork spirit and cheerful personality are the qualities we desire. Last but not lease, students who with previous working experience will be given priority.
+
+​		Thank you so much for your due attention. If interested, please sign up with the monitor of class before this weekend. We looking forward to your coming!
+
+<p align="right">Student Union </p>
+<p align="right">
+May 1st , 2022
+</p>
+
+
+
+#### 2008
+
+Directions:
+
+ You have just come back from Canada and found a music CD in your luggage that you forgot to return to Bob, your landlord there. Write him a letter to make an apology, and suggest a solution.
+
+
+
+Dear Bob,
+
+​		How is everything going with you? I'm writing to make an apology for the mistake that forget to return the CD to you, and provide some suggestions to address the issue. My suggestions are as follows.
+
+​		To begin with, it would be conducive if you could accept my financial pay back, given that it could significantly save our time. In addition, it is highly recommend that you could provide me more detail on the CD, for the reason that I could purchase a new one for you. Last but not least, it is advisable to tell me your mail address and value announcement of the CD if the CD play a vital role to your life which facilitate me to select a insurance for your CD.
+
+​		Thank you for your due attention. I am looking forward to your reply at your earliest convenience.
+
+<p align="right">Li Ming</p>
+<p align="right">
+May 1st , 2022
+</p>
