@@ -2,7 +2,7 @@
 id: iz9f7qg6rjn99fvkjhxiwgv
 title: 06 图
 desc: ''
-updated: 1665488380638
+updated: 1665809181576
 created: 1665485620254
 ---
 
@@ -272,6 +272,12 @@ w_{ij},& \text{若} (v_i,v_j) \text{或}<v_ i,v_j> \ \text{是}E(G)\text{中的�
 \end{cases}
 \end{equation}
 $$
+> 一般情况下，二维数组使用列优先存储， *i* 是行 *j* 是列；
+>
+> ![[degree.master.c.03-栈、队列和数组#二维数组:#^ey83614twvnw]]
+>
+> 
+
 图的邻接矩阵存储结构定义如下：[^varsnaming]
 
 ```c
@@ -313,6 +319,8 @@ typedef struct {
 > 补充：设图 *G* 的邻接矩阵为 $A$ ， $A^n$ 的元素 $A^n[ i ][ j ]$ 等于由顶点 *i* 到顶点 *j* 的长度为 *n* 的路径的数目[^matrixn]；
 
 [^matrixn]: 仅供参考 [如何直观理解邻接矩阵的 k 次幂可以表示长度为 k 的有向路数目？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/360206722)
+
+🅿️此处考点很多，需要动手画一画。
 
 ### 邻接表法
 
@@ -404,7 +412,7 @@ typedef struct {
 - 容易找到以 $V_i$ 为尾的弧，又容易找到 $V_i$ 为头的弧，因而容易求出顶点的 *出度* 和 *入度* ；
 - 图的十字链表示法不是唯一的，但一个十字链表表示确定一个图；
 
-> 此处非常不容易理解，建议打开[processon](https://www.processon.com/)选择流程图
+> 此处非常不容易理解，建议打开[processon](https://www.processon.com/)选择流程图，然后[从模板创建](https://www.processon.com/view/634963ec7d9c080c425735fb?fromnew=1)
 
 <details>
     <summary>查看流程大图</summary>
@@ -431,7 +439,61 @@ typedef struct {
 
 #### 表示方法
 
-与 *十字链表* 相似，在 *邻接多重表* 中
+与 *十字链表* 相似，在 *邻接多重表* 中，每条边用一个结点表示，其结构如下：
 
+![image-20221015111210112](https://cdn.notcloud.net/static/md/cy948/202210151112156.png)
+
+- `mark` 标志域：可以用来标记该边是否被搜索过；
+- `ivex` 和 `jvex` 为该边依附的两个顶点在图中的位置；
+- `ilink` 指向第一条依附于顶点 `ivex` 的边；
+- `jlink` 指向第一条依附于顶点 `jvex` 的边；
+- `info` 指向和边相关的各种信息的指针域；
+
+每个顶点也用一个结点表示，它由如下所示的两个域组成。
+
+![image-20221015112257388](https://cdn.notcloud.net/static/md/cy948/202210151122429.png)
+
+- `data` 存储该顶点的相关信息；
+
+- `firstedge` 域指示第一条依附于该顶点的边；
+
+在邻接多重表中，所有依附于同一顶点的边串联在同一链表中，由于每条边依附于两个顶点在图中的位置，因此每个边结点2可以同时链接在两个链表中。对于无向图而言，其邻接多重表和邻接表的差别仅在于：同一条边在邻接表中用两个结点表示，而在邻接多重表只有一个结点。
+
+
+
+![image-20221015124912595](https://cdn.notcloud.net/static/md/cy948/202210151249654.png)
+
+> 此处同样建议使用所提供[模板]()进行练习
 #### 特点
+
+- 快速找到边并对边进行操作；
+
+
+
+### 基本操作
+
+图的基本操作是独立于图的存储结构的。而对于不同的存储方式，操作算法的具体实现会有着不同的性能，设计具体算法时应考虑效率；
+
+图的基本操作主要包括（抽象考虑，忽略类型的ADT[^adt]定义）：
+
+- `CreateGraph(&G, V, E)` ：从顶点集 *V* 和 边集 *E* 中为图 *G* 创建图；
+- `DeatroyGraph(&G)` ：销毁图 *G* ；
+- `Adjacent(&G, x, y)` ：判断 *G* 是否存在边 *<x,y>* 或 *(x,y)*；
+- `Neighbors(&G,x)` ：列出图 *G* 中与结点 *x* 邻接的边；
+- `InsertVertex(&G, x)` ：在图中插入顶点 *x* ；
+- `DeleteVertex(&G, x)` ：在图中删除顶点 *x* ；
+- `InsertEdge(&G, x, y)` ：若无向边 *(x,y)* 或有向边*<x,y>*不存在，则向图 *G* 添加该边；
+- `DeleteEdge(&G, x, y)` ：若无向边 *(x,y)* 或有向边*<x,y>*存在，则从图 *G* 中删除该边；
+- `FirstNeighbor(&G, x, y)` ：求图 *G* 中顶点 *y* 是顶点 *x* 的一个邻接点，若有则返回顶点号。若  *x* 没有邻接点或图中不存在 *x* ，则返回 *-1* ；
+- `NextNeighbor(&G, x, y)` ： 假设图 *G* 顶点 *y* 是顶点 *x* 的一个邻接点，返回除 *y* 外顶点 *x* 的第一个邻接点的顶点号；若 *y* 是 *x* 的最后一个邻接点，则返回 *-1* ；
+- `DFS(G, v)` 
+- `BFS(G, v)` 
+
+
+
+[^adt]:[Abstract Data Types - GeeksforGeeks](https://www.geeksforgeeks.org/abstract-data-types/)
+
+
+
+## 图的遍历
 

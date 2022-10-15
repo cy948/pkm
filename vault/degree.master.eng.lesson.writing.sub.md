@@ -19,6 +19,19 @@ created: 1663767056150
 |通知| 2022 2019 2018 2016 2013 2010 |
 |其他| 2008道歉信|
 
+❗注意：
+
+- 增加形容词修饰；
+- 注意句子之间的连接；
+  - 连词(and but)；
+  - 逻辑关系词(given that等)；
+- 三个观点不要太重复；
+- 使用模板时注意细节：
+  - 模板后的从句结构(如主语从句)；
+  - 谓语动词形式；
+
+
+
 
 
 ## 建议信
@@ -149,26 +162,101 @@ Yours sincerely，
 Li Ming        
 </p>
 
-### 练习
+
+## 通知
+
+### 正文
+
+（2015 英二） Suppose your university is going to host a summer camp for high school students. Write a notice to 
+
+1) briefly introduce the camp activities, and  介绍活动 
+2) call for volunteers. 对志愿者的要求
+
+#### 介绍活动
+
+**介绍时间地点：**
+
+For the purpose of (_原因_ ), *our university* (_主体_)  intends to hold a + (活动名称 )+ on May  25th (时间) *on our campus* (地点).
+
+*常考的活动*：
+
+高中生夏令营、全球化国际会议、慈善义卖、 演讲比赛、 歌唱比赛、 援助农村小学、 辩论赛
+
+*活动目的：*
+
+- cultivating students’ abilities  
+- enriching their after-class lives 
+- offering assistance to people in need
+
+**介绍活动流程：**
+
+This event will involve a series of activities，including , and .  这个活动将会包含一系列流程，包括…
+
+*常见的活动流程：*
+
+- 开幕致辞 the opening speech 
+- 才艺表演 talent shows 
+- 颁奖典礼 the awarding ceremony 
+- 娱乐活动 recreating activities 
+- 研讨会 the seminar 
+- 讲座lecture 
+- 辩论 debate  
+
+**真题演练：** 
+
+2015英语二 a summer camp for high school students
+
+<center>
+    <p>
+    Notice
+    </p>
+</center>
+
+For the purpose of **cultivating high school students’ abilities  and enriching their after-class lives**, **our university** intends to hold **a  summer camp** on **May 25th on our campus**. This event will involve a  series of activities，including **the opening speech of the  president , talent shows and debate.**
+
+
+
+#### 对志愿者的要求
+
+The requirements for volunteers are as follows.  
+
+To begin with, *sb.*(对象) should have an excellent command *of oral English*, communication skills and professional knowledge. 
+
+In addition, *teamwork spirit and cheerful personality* are qualities  (that) we desire.  
+
+Last but not least, *students*(对象群体) with previous working experience will be  given priority
+
+
+
+### 结尾段
+
+Thank you so much for your due attention. If interested, please sign up *with the monitor of your class* before *this weekend*. We are looking forward to your coming!  
+
+感谢大家的关注。 如有兴趣，请于本周之前到各班班长处报名。 期待你的到来！ 
+
+<p align="right">
+Student Union 
+</p>
+<p align="right">
+May 25th , 2022
+</p>
+
+## 练习
+
+
+
+### 建议信
 
 #### 2015
 
 **Directions**:
-You are going to host a club reading session. Write an email of
-about 100 words recommending a book to the club members.
-You should state reasons for your recommendation.
+You are going to host a club reading session. Write an email of about 100 words recommending a book to the club members. You should state reasons for your recommendation.
 
 Dear sir or Madam, 
 
-​		I'm Li Ming, host of club reding session. I am writing this letter to recommend a book, *Martin's Family* , to you. 
+​		I'm Li Ming, host of club reding session. I am writing this letter to recommend a book, *Martin's Family* , to you. The details are as follows.
 
-​		The details are as follows.
-
-​		To begin with, in this book, there are a number of features worth noticing, such as scenes, figures, and so on.
-
-​		In addition, this book is characterized by it's metaphors, a host of relationships between characters are present implicitly, given that it is highly recommend  you to read it in detail.
-
-​		Last but not least, it is advisable to markup the roles in books which contributes to the result that it would facilitate you to 
+​		To begin with, in this book, there are a number of features worth noticing, such as scenes, figures, and so on. In addition, this book is characterized by it's metaphors, a host of relationships between characters are present implicitly, given that it is highly recommend  you to read it in detail. Last but not least, it is advisable to markup the roles in books which contributes to the result that it would facilitate you to 
 
 ​		Thank you so much for your due attention to my letter. I am looking forward to your reply at your earliest convenience.
 
@@ -181,21 +269,13 @@ Dear sir or Madam,
 
 #### 2014
 
-Write a letter of about 100 words to the president of your university.
-suggesting how to improve students' physical condition.
-You should include the details you think necessary.
+Write a letter of about 100 words to the president of your university. suggesting how to improve students' physical condition. You should include the details you think necessary.
 
 Dear Sir or Madam,
 
-​		I am Li Ming, an undergraduate in our university. I am writing this letter to make suggestions on students' physical condition promoting.
+​		I am Li Ming, an undergraduate in our university. I am writing this letter to make suggestions on students' physical condition promoting. My suggestions are as follows.
 
-​		My suggestions are as follows.
-
-​		To begin with, it would be conducive if the school could purchase more sport equipments, given that it facilitate students to exercise.
-
-​		In addition, it's highly recommend that provide training lessons for the reason that it would prevent our students sustain an injury in workout. 
-
-​		Last but not least, it is advisable to maintain strict order, which contributes to the result that everyone could share the public facilities.
+​		To begin with, it would be conducive if the school could purchase more sport equipments, given that it facilitate students to exercise. In addition, it's highly recommend that provide training lessons for the reason that it would prevent our students sustain an injury in workout. Last but not least, it is advisable to maintain strict order, which contributes to the result that everyone could share the public facilities.
 
 ​		Thank you for your due attention to my letter. I'm looking forward to reply at your earliest convenience.
 
@@ -203,3 +283,15 @@ Dear Sir or Madam,
     Your sincerely, <br>
     Li Ming
 </p>
+
+
+### 通知
+
+#### 2019
+
+Suppose you are working for the “Aiding Rural Primary School” project of your university. Write an email to answer the inquiry from an international student volunteer, specifying the details of the project.
+
+Dear Sir or Madam,
+
+​		
+

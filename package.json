@@ -2,7 +2,7 @@
     "dependencies": {},
     "scripts": {
         "build": "./dendron-publish-site.sh",
-        "dev": "dendron publish dev"
+        "dev": "yarn dendron publish export"
     },
     "name": "cc-g2a",
     "version": "0.0.0",
