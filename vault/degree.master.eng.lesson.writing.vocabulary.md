@@ -113,6 +113,138 @@ created: 1663766370695
 
  
 
+## 写作话题词
+
+### 科技
+
+1. rely on 依赖
+
+2. face-to-face communication 面对面交流
+
+3. alienate 疏远
+
+4. surf the Internet 网上冲浪
+
+
+
+![img](https://cdn.notcloud.net/static/md/cy948/202210192159127.jpg) 
+
+真题例句：(2009 英语一)
+
+
+
+许多人过于依赖网络交流以至于他们无意识间减少了在现实生活中与人面对面交流的时间，而这将会使我们与朋友和家人越来越疏远。
+
+Many people **are relying on** the virtual net to communicate so much that they unconsciously reduce the time of **face-to-face communication** in the real life, which will **alienate** our friends and family. 
+
+ 
+
+面对面交流与通过网络与人交流一样重要。
+
+It is as essential to have **face-to-face communication** as to get in touch with others through the Internet. 
+
+ 
+
+网上冲浪在我们的日常生活中已经变得非常普遍了。
+
+**Surfing the Internet** has become immensely prevalent in our daily lives.
+
+ 
+
+5. indulge in/be buried in 沉迷
+
+6. virtual network 虚拟网络
+
+7. prevalence of smart phones 智能手机的流行
+
+8. excessive reliance 过度依赖
+
+9. invade  入侵
+
+10. the establishment of harmonious relationship 建立和谐的人际关系
+
+
+
+![img](https://cdn.notcloud.net/static/md/cy948/202210192159131.jpg) 
+
+真题例句：(2015 英语一)
+
+
+
+许多年轻人正沉迷于使用手机和虚拟的网络，而忽视了现实生活。
+
+Many youngsters are **indulging in** using cell phones and **virtual network** and are ignoring the real life. 
+
+智能手机的普及给现代生活带来了便利。人们可以利用手机进行阅读，在线玩游戏，和世界上任何地方的任何人进行实时交流。
+
+**The prevalence of smart phones** brings convenience to the modern life. People can do some reading, play online games and have immediate communication with anyone anywhere in the world.
+
+ 
+
+### 人的品质
+
+**1.** optimistic 乐观 
+
+**2.** pessimistic 悲观
+
+ 
+
+真题例句：（2012 英语一）
+
+乐观的人是充满希望和积极的。 他们往往看向光明的一面，而那些持悲观态度的人则**悲观沮丧**。 他们会**责怪命运**和其他人。
+
+People with an optimistic attitude/Optimists are hopeful and positive. They tend to look on the bright side, while those with a pessimistic attitude /**pessimists** are **gloomy and depressed**. They will **blame fate** and other people. 
+
+ 
+
+3. a committed will and spirit 坚定的意志和净胜
+
+![未标题-1_01_3](https://cdn.notcloud.net/static/md/cy948/202210192201865.jpg)
+
+真题例句：（2019 英语一）
+
+只有那些保持坚定的意志和精神的人才会**通过自身的努力**取得成功。
+
+Only those with a committed will and spirit can achieve success **through their own endeavors**. 
+
+ 
+
+4. through their own endeavors 通过自身的努力
+
+5. gloomy and depressed. 悲观沮丧
+
+6. blame fate 责怪命运
+
+真题例句：（2012 英语一）
+
+**结果**，悲观者**注定**被挫折彻底**击败**，而乐观者则在困境中坚持了下来。
+
+**Consequently**, pessimists **are doomed to** **be overwhelmed** b**y obstacles**, while optimists survive. 
+
+ 
+
+7. Consequently 结果
+
+8. be doomed to be 注定
+
+9. Overwhelm 击败
+
+10. obstacle 挫折，困难
+
+neither underestimate our abilities nor overestimate the problems 不低估自身能力，也不能高估困难
+
+**![图示  描述已自动生成](https://cdn.notcloud.net/static/md/cy948/202210192201866.jpg)**
+
+真题例句：（2007英语一）
+
+要在竞争激烈的环境中生存下来并获得成功，我们必须积极面对摆在我们面前的问题。也就是说，我们既不能低估个人能力，也不能高估困难。
+
+In order to survive and succeed in this fiercely competitive social environment, we must possess an optimistic attitude towards the problems confronting us. That is, we should **neither underestimate our abilities nor overestimate the problems.** 
+
+ 
+
+
+
 ## 俗词替换
 
 ### 逻辑连接词

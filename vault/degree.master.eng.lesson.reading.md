@@ -2,21 +2,19 @@
 id: 5ihzx4zqulp26yblepsg3k2
 title: Reading
 desc: ''
-updated: 1663668997386
+updated: 1666185349877
 created: 1663668997386
 ---
 
 # 阅读
 
+> 技巧固然重要，但单词、逻辑和对主题的把握才是根本；在此技巧中会通过不同的题型（场景）去介绍一个个模块化的，可单独使用的技巧；例如：找主题句的技巧、找重点内容的技巧和正确选项的特征； 
+
 ## 细节题
-
-
 
 ### 划关键词
 
 **题目**的大写、数字、名词（难替换）、动词的时态；选项的名词去定位，比对选项和出处句有何不同）
-
-
 
 方法：
 
@@ -24,9 +22,7 @@ created: 1663668997386
 
 > **确保定位句包含题目要求的所有关键词**，特别重视题目里的程度词（**most, more, primary, sometimes, usually**）、时间词（**previous, current, traditional**）
 
-（2）    关注名词，比对定位句和选项的名词;
-
-
+（2）    关注名词，比对定位句和选项的名词；
 
 万用做题路线：
 
@@ -41,9 +37,6 @@ B --> C[标记选项中的名词 对原因进行比对]
 
 
 ### 找定位句
-
-```mermaid
-```
 
 - 顺序原则：定大致的段落；
 - 关键词：定具体的句子；
@@ -69,7 +62,11 @@ A（果）源于B（因）：derive from, originate from, result from
 
 A归因给B：we can attribute A（果） to B（因）；A（果） can be attributed to B（因）
 
-### 读定位句
+### 读定位句（抓重点）
+
+> 此处要把握的是如何找到句子要表达的重点内容
+
+**步骤：**
 
 - 比名词
 - 划主干
@@ -86,11 +83,11 @@ A归因给B：we can attribute A（果） to B（因）；A（果） can be attr
 
 转折关系：（重点是转折词后面的内容）
 
-但是but, 
+但是 but, 
 
-然而however, yet, still
+然而 however, yet, still
 
-相反rather, instead, on the contrary, 
+相反 rather, instead, on the contrary, 
 
 不幸的是 unfortunately, sadly
 
@@ -98,7 +95,7 @@ A归因给B：we can attribute A（果） to B（因）；A（果） can be attr
 
 尽管：although, though, while, whereas …（从句）, …（主句）
 
- 
+> 逻辑关系 [[degree.master.eng.lesson.reading.vocabulary]]
 
 #### 人物观点句（人物介绍略读，人物观点重读）
 
@@ -108,7 +105,7 @@ A归因给B：we can attribute A（果） to B（因）；A（果） can be attr
 
 #### 研究结果句（重读结果，略读过程）
 
-
+> 看问题问的是结论还是过程，问结论的就在文中找结论
 
 **研究结论词**：
 
@@ -145,7 +142,7 @@ reveal（揭示）, illustrate（阐明）, shed light on（阐明）, demonstra
 
 
 
-## 推理题
+## 推理题（逻辑+主题）
 
 题目：
 
@@ -220,7 +217,7 @@ reveal（揭示）, illustrate（阐明）, shed light on（阐明）, demonstra
 
 
 
-## 态度题
+## 态度题（逻辑）
 
 
 
@@ -280,7 +277,7 @@ indifferent 无所谓
 
 
 
-## 语义题
+## 语义题（逻辑）
 
 **辅助技能**： （根据句子的逻辑）
 
@@ -294,7 +291,7 @@ indifferent 无所谓
 
 
 
-## 例证题
+## 例证题（找主题 + 抓重点）
 
 **示例：**
 
@@ -312,6 +309,27 @@ xx is quoted to indicate that?
 - 比对选项
   - ✔️正确选项：同义替换（简单）；符合主题/态度（难）；
   - ❌错误选项：依然在描述例子本身（选项的字眼来自于例子部分）；
+
+
+
+## 主旨题（找主题句）
+
+例如： 
+
+best title, mainly about
+
+
+
+- 找中心句
+  - 直接给出；
+  - 包含转折：
+    - 通过转折词；
+    - 时间对比：以前 / 现在；
+    - 先例子后观点；
+- 用串联法检查
+- 排除局部中心
+  - 选项的关键词是否与主题一致；
+  - 是否仅描述了一个分论点；
 
 ## 检查
 
