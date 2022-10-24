@@ -1,5 +1,5 @@
 ---
-id: 4jleylzesupw2ndirma9ptp
+  id: 4jleylzesupw2ndirma9ptp
 title: Vocabulary
 desc: ''
 updated: 1663842732223
@@ -183,9 +183,9 @@ Many youngsters are **indulging in** using cell phones and **virtual network** a
 
 ### 人的品质
 
-**1.** optimistic 乐观 
+1. **optimistic** 乐观 
 
-**2.** pessimistic 悲观
+2. **pessimistic** 悲观
 
  
 
@@ -195,9 +195,10 @@ Many youngsters are **indulging in** using cell phones and **virtual network** a
 
 People with an optimistic attitude/Optimists are hopeful and positive. They tend to look on the bright side, while those with a pessimistic attitude /**pessimists** are **gloomy and depressed**. They will **blame fate** and other people. 
 
- 
+3. **gloomy and depressed**. 悲观沮丧
 
-3. a committed will and spirit 坚定的意志和净胜
+4. **blame fate** 责怪命运
+
 
 ![未标题-1_01_3](https://cdn.notcloud.net/static/md/cy948/202210192201865.jpg)
 
@@ -205,15 +206,10 @@ People with an optimistic attitude/Optimists are hopeful and positive. They tend
 
 只有那些保持坚定的意志和精神的人才会**通过自身的努力**取得成功。
 
-Only those with a committed will and spirit can achieve success **through their own endeavors**. 
+Only those with **a committed will and spirit** can achieve success **through their own endeavors**. 
 
- 
-
-4. through their own endeavors 通过自身的努力
-
-5. gloomy and depressed. 悲观沮丧
-
-6. blame fate 责怪命运
+5. **a committed will and spirit** 坚定的意志和精神
+6. **through their own endeavors** 通过自身的努力
 
 真题例句：（2012 英语一）
 
@@ -221,15 +217,13 @@ Only those with a committed will and spirit can achieve success **through their 
 
 **Consequently**, pessimists **are doomed to** **be overwhelmed** b**y obstacles**, while optimists survive. 
 
- 
+7. **Consequently** 结果
 
-7. Consequently 结果
+8. **be doomed to be** 注定
 
-8. be doomed to be 注定
+9. **Overwhelm** 击败
 
-9. Overwhelm 击败
-
-10. obstacle 挫折，困难
+10. **obstacle** 挫折，困难
 
 neither underestimate our abilities nor overestimate the problems 不低估自身能力，也不能高估困难
 
@@ -241,7 +235,195 @@ neither underestimate our abilities nor overestimate the problems 不低估自�
 
 In order to survive and succeed in this fiercely competitive social environment, we must possess an optimistic attitude towards the problems confronting us. That is, we should **neither underestimate our abilities nor overestimate the problems.** 
 
- 
+ #### 人的品质测试
+
+1.乐观 
+
+<details>
+    optimistic
+</details>
+
+
+
+2.悲观 
+
+<details>
+    pessimistic
+</details>
+
+
+
+3.坚定的意志和精神 
+
+<details>
+    a committed will and spirit 
+</details>
+
+
+
+4.通过他们自身努力 
+
+<details>
+    through their endeavors 
+</details>
+
+
+
+5.悲观沮丧 
+
+<details>
+    gloomy and depressed
+</details>
+
+
+
+6.责怪命运 
+
+<details>
+    blame the fate
+</details>
+
+
+
+7.结果 
+
+<details>
+    consequently 
+</details>
+
+
+
+8.注定 
+
+<details>
+    be doomed to 
+</details>
+
+
+
+9.击败 
+
+<details>
+    overwhelm
+</details>
+
+
+
+10.困难 
+
+<details>
+    obstacle 
+</details>
+
+
+
+11.乐观的人是充满希望和积极的。他们往往看向光明的一面，而那些持悲观态度的人则悲观沮丧。他们会责怪命运和其他人。
+翻译：
+
+<details>
+    <p>
+        Optimists are hopeful and positive. They tend to look on the bright side while those pessimists are gloomy and depressed. They will blame fate and other people.
+    </p>
+</details>
+
+
+
+12.	只有那些保持坚定的意志和精神的人才会通过自身的努力取得成功。
+翻译：
+
+<details>
+    <p>
+        Only those with a committed will and spirit can achieve success through their own endeavors.
+    </p>
+</details>
+
+
+
+13.结果，悲观者注定被挫折彻底击败，而乐观者则在困境中坚持了下来。
+翻译：
+
+<details>
+    <p>
+        Consequently, pessimists are doomed to be overwhelmed by obstacles, while optimists survive.
+    </p>
+</details>
+
+
+
+14.要在竞争激烈的环境中生存下来并获得成功，我们必须积极面对摆在我们面前的问题。
+翻译：
+
+<details>
+    <p>
+        In order to survive and succeed in this fiercely competitive social environment, we must possess an optimistic attitude towards the problems confronting us. 
+    </p>
+</details>
+
+
+
+15.	也就是说，我们既不能低估个人能力，也不能高估困难。
+翻译：
+
+<details>
+    <p>
+        That is, we should nether underestimate our abilities nor overestimate the problems.
+    </p>
+</details>
+
+
+### 文化类
+
+1.	**cultural treasures** 文化瑰宝
+
+真题例句：(2002 英语一)
+中国古代服饰是中国光辉灿烂的文化瑰宝的一部分。
+The traditional Chinese costume is an integral part of the brilliant Chinese **cultural treasures**. 
+
+An American girl in traditional Chinese costume (服装)
+
+2.	**cultural diversity **文化多样性 
+3.	**cultural integration** 文化融合
+
+真题例句：(2010 英语一)
+一些人坚持认为，文化融合会对本土文化构成威胁，终将导致文化多样性的衰落。
+Some people insist that **cultural integration** poses a threat to our national culture and would ultimately lead to the decline in cultural diversity. 
+
+4.	**take the essence and discard the dregs** 取其精华、弃其糟粕
+5.	**alien culture** 外来文化
+
+真题例句：(2010 英语一)
+当面对外来文化时，我们应该取其精华、弃置糟粕。
+When confronted with **alien cultures**, we should **take the essence and discard the dregs**.
+
+6.	**cradle of civilization** 文明摇篮
+
+真题例句：(2005 英语一)
+中国作为世界上最古老的文明摇篮之一，以其诸多种美德而闻名。
+China, as one of the world’s oldest **cradles of civilization**, is famous for many of its **virtues**.
+
+7.	**idol worship** 偶像崇拜
+真题例句：(2006 英语一)
+偶像崇拜像一种传染病，在年轻人中快速传播。
+**Idol worship** is an infectious disease, spreading quickly among youngsters.
+
+8.	**spiritual and cultural needs** 精神文明需求
+
+真题例句 （2017 英语二）
+在我看来，满足这一精神文明需求的有效方式就是鼓励更多博物馆免费向公众开放。
+In my opinion, an effective approach to fulfilling the **spiritual and cultural** needs is to encourage more museums to be open to the public.  
+
+9.	**eagerness for quick success** 急功近利
+
+真题例句 (2018 英语一)
+大多数人可能会将问题归咎于年轻人急功近利的心态。
+Most of us may blame it simply on young people’s **eagerness for quick success**.
+
+10.	**all-round development** 全面发展
+
+真题例句 （2022 英语一）
+全面发展能使学生获得更多就业机会和更大的职业潜力。
+**All-round development** will enable students to have more job opportunities and greater career potential. 
+
 
 
 
