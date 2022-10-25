@@ -1,5 +1,5 @@
 ---
-  id: 4jleylzesupw2ndirma9ptp
+id: 4jleylzesupw2ndirma9ptp
 title: Vocabulary
 desc: ''
 updated: 1663842732223
@@ -377,7 +377,7 @@ In order to survive and succeed in this fiercely competitive social environment,
 
 真题例句：(2002 英语一)
 中国古代服饰是中国光辉灿烂的文化瑰宝的一部分。
-The traditional Chinese costume is an integral part of the brilliant Chinese **cultural treasures**. 
+The traditional Chinese **costume** is an integral part of the brilliant Chinese **cultural treasures**. 
 
 An American girl in traditional Chinese costume (服装)
 
@@ -423,6 +423,34 @@ Most of us may blame it simply on young people’s **eagerness for quick success
 真题例句 （2022 英语一）
 全面发展能使学生获得更多就业机会和更大的职业潜力。
 **All-round development** will enable students to have more job opportunities and greater career potential. 
+
+#### 测试
+
+1.	文化瑰宝
+2.	文化多样性
+3.	文化融合
+4.	取其精华，去其糟粕
+5.	外来文化
+6.	文化摇篮
+7.	偶像崇拜
+8.	精神文明需求
+9.	急功近利
+10.	全面发展
+11.	中国古代服饰是中国光辉灿烂的文化瑰宝的一部分。
+翻译：
+
+12.一些人坚持认为，文化融合会对本土文化构成威胁，终将导致文化多样性的衰落。
+翻译：
+
+
+13.中国作为世界上最古老的文明摇篮之一，以其诸多种美德而闻名。
+翻译：
+
+14.在我看来，满足这一精神文明需求的有效方式就是鼓励更多博物馆免费向公众开放。
+翻译：
+
+15.全面发展能使学生获得更多就业机会和更大的职业潜力。
+翻译：
 
 
 

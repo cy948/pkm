@@ -7,7 +7,7 @@
     "name": "cc-g2a",
     "version": "0.0.0",
     "devDependencies": {
-        "@dendronhq/dendron-cli": "0.115.1"
+        "@dendronhq/dendron-cli": "0.116.0"
     },
     "overrides": {
         "trim": "0.0.3"
