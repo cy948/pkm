@@ -462,3 +462,52 @@ grade：年级/成绩等级
 
 
 
+### 环保
+
+disposable：一次性的
+
+sustainable development：可持续发展
+
+trash separation rules：垃圾分类规则
+
+hazardous：有害的
+
+recyclable：可回收的
+
+household trash：家庭日常垃圾
+
+mandatory sorting scheme：强制分类方案
+
+comprehensively utilize：综合利用
+
+
+
+waste to energy plant：用垃圾生产能源的工厂
+
+waste-free city：无垃圾城市
+
+strain natural resources：过度利用自然资源
+
+mass-produced：大规模生产的
+
+curb their impact on labor and the environment：遏制对劳动力和环境的影响
+
+environment protection：环保
+
+environment pollution：环境污染
+
+
+
+tourist attractions/scenic spots：景点
+
+extinction：灭绝
+
+glacier melting：冰川融化
+
+global warming：全球变暖
+
+greenhouse gas emission：温室气体排放
+
+atmosphere：大气层
+
+man-made：人为的
