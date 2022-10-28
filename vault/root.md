@@ -2,7 +2,7 @@
 id: ik5Bi5OCTsmfKfq5JQtEB
 title: Root
 desc: ''
-updated: 1663778463292
+updated: 1666937026406
 created: 1637610830605
 ---
 # Welcome to Dendron
@@ -20,3 +20,16 @@ created: 1637610830605
 - ASM （待上线）
 
 若有问题欢迎通过页面最下方 `Edit on github` 进行提醒修改，无需提交规范；
+
+
+{% if CONTEXT == 'deploy-preview' %}
+  <h3>Preview:</h3>
+  <p>Current branch{{ BRANCH }}</p>
+{% endif %}
+
+
+{% if CONTEXT == 'production' %}
+  <h3>Production:</h3>
+  <p>Current branch{{ BRANCH }}</p>
+  <p>Version {{COMMIT_REF}} Head {{HEAD}}</p>
+{% endif %}

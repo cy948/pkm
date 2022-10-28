@@ -6,3 +6,5 @@ seeds
 docs/*
 .backup
 *.log
+# Local Netlify folder
+.netlify
