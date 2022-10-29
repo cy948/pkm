@@ -21,15 +21,3 @@ created: 1637610830605
 
 若有问题欢迎通过页面最下方 `Edit on github` 进行提醒修改，无需提交规范；
 
-
-{% if CONTEXT == 'deploy-preview' %}
-  <h3>Preview:</h3>
-  <p>Current branch{{ BRANCH }}</p>
-{% endif %}
-
-
-{% if CONTEXT == 'production' %}
-  <h3>Production:</h3>
-  <p>Current branch{{ BRANCH }}</p>
-  <p>Version {{COMMIT_REF}} Head {{HEAD}}</p>
-{% endif %}
