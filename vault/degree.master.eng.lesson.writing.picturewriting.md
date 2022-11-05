@@ -14,7 +14,7 @@ created: 1667527323029
 
 This cartoon/picture/drawing is simple but reveals a profound meaning.
 
-This cartoon/picture/drawing does mirror a common social phenomenon and is really thought-provoking. 
+This cartoon/picture/drawing does mirror a common social <u>phenomenon</u> and is really thought-<u>provoking</u>. 
 
 “如图所示” 
 
@@ -58,6 +58,7 @@ Finally, we must recognize that+原因3 produces a contributing effect upon the 
 ☆ 经济和社会的发展 the development of economy and society 
 
 **文化／教育**原因：
+
 大学扩招 expansion of university enrolment
 
 文化融合 cultural integration
@@ -71,7 +72,12 @@ Finally, we must recognize that+原因3 produces a contributing effect upon the 
 ☆人们日益增长的精神和文化需求 people’s growing spiritual and cultural needs 
 
 **科技／技术**原因：
-惊人的技术进步和创新 astonishing advancing rate of technological progress and innovation☆先进的科学技术 advances in science and technology技术升级 technological upgrading 
+
+惊人的技术进步和创新 astonishing advancing rate of technological progress and innovation
+
+☆先进的科学技术 advances in science and technology
+
+技术升级 technological upgrading 
 
 **政策**原因：
 
