@@ -532,27 +532,67 @@ B->left = A;
 
 3. **LR 平衡旋转（先左后右双旋转）**
 
+<img src="https://cdn.notcloud.net/static/md/cy948/202211082127193.gif" alt="localtestwithplugins" style="zoom:50%;" />
+
 结点 *A* 的左孩子B（*L* ）的右子树 *BR*（*R*）上插入的新结点 *C* 替换了 *BR*，新增了 *CL* 和 *CR*，高度分别为 *H* (H - 1 + 1) 、*H-1* (H - 1)，*A* 的平衡因子由 *1* 增至 *2*，导致以 *A* 为根的子树失去平衡，需要二次旋转操作。
 
-- 第一次旋转，形成上述 LL 型结构：
+<img src="https://cdn.notcloud.net/static/md/cy948/202211052248754.png" alt="image-20221105224844709" style="zoom: 80%;" />
 
-```c
-A->left = C;
-B->right = CL;
-C->left = B;
-```
+**手动模拟：**
 
-- 第二次进行 *LL* 旋转；
+- 插入 *C* ，*A* 失衡
 
-![image-20221105224844709](https://cdn.notcloud.net/static/md/cy948/202211052248754.png)
+![image-20221108214955954](https://cdn.notcloud.net/static/md/cy948/202211082149994.png)
+
+- **提C换B**。 为把 *C* “提”到 *B* 的位置，需要两步走：
+  - 分别断开 *A->B* 、*B->C*、*C->CL*，然后连接 *B->CL*，
+  - 然后将 *C* 提到 *B* 的位置；
+  - 连接 *A->C* 、*C->B*；
+
+
+<img src="https://cdn.notcloud.net/static/md/cy948/202211082221872.png" alt="image-20221108222140825" style="zoom:80%;" />
+
+- **LL**。
+  - 去掉 *A->C* 、*C->CR*，连接 *A->CR*；
+  - 将 *C* 向上提；
+  - 连接 *C->A* ；
+
+<img src="https://cdn.notcloud.net/static/md/cy948/202211082223677.png" alt="image-20221108222302629" style="zoom:80%;" />
 
 4. **RL 平衡旋转（先右后左双旋转）**
+
+<img src="https://cdn.notcloud.net/static/md/cy948/202211082131770.gif" alt="localtestwithplugins" style="zoom:50%;" />
 
 结点 *A* 的右孩子B（*R* ）的左子树 *BL*（*L*）上插入的新结点 *C* 替换了 *BL*，新增了 *CL* 和 *CR*，高度分别为 *H* (H - 1 + 1) 、*H-1* (H - 1)，*A* 的平衡因子由 *-1* 减至 *-2*，导致以 *A* 为根的子树失去平衡，需要二次旋转操作。
 
 ![image-20221105230100176](https://cdn.notcloud.net/static/md/cy948/202211052301226.png)
 
 > ❗注意，*LR* 和 *RL* 旋转时，上述新结点到底是插入 *C* 的左子树还是右子树不影响旋转过程
+>
+> 旋转的**命名规律**：命名即将失衡结点为 *A* ，插入 A 的左结点的左子树就是 LL，进行 *LL* 旋转、插入 *A* 的右结点的左子树树就是 *RL*，执行 *RL* 旋转；
+>
+> *LR&RL* 的旋转规律：以 *C* 为新的顶点，B换到对面，A往下移动；
 
 #### 插入过程
+
+- `d` ：插入 *7* 后，结点 `15` 平衡因子为 *2*，执行 `LR` 旋转；
+- `g` ：插入 *9* 后，结点 `15` 平衡因子为 *2* ，执行 `LL` 旋转；
+
+![image-20221108210422700](https://cdn.notcloud.net/static/md/cy948/202211082104750.png)
+
+
+
+#### 删除
+
+其实就是反过程，理解插入即可
+
+
+
+#### 查找
+
+同二分查找
+
+
+
+### 红黑树
 
