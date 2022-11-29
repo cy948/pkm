@@ -582,6 +582,12 @@ void HeapAdjust(SqList * L, int s, int m)
 
 
 
+#### 插入及删除
+
+插入时放在尾端，
+
+
+
 #### 性能分析
 
 
@@ -661,4 +667,73 @@ int* sortArray(int* nums, int numsSize, int* returnSize){
     return nums;
 }
 ```
+
+
+
+## 归并排序和基数排序
+
+### 归并排序
+
+>  归并排序与上述基于交换、选择的排序不同，“归并”的意义是将两个或以上的有序表组合成一个新的有序表。
+
+假定待排序表含有  *n* 个记录，则可将其视为 *n* 个有序的子表，每个长度为 *1* ，然后两两归并，得到$\lceil n/2 \rceil$ 个长度为 *2* 为 *1* 的有序表；继续两两归并 ... ... 如此重复直到合并成一个长度为 *n* 的有序表位置，这种排序方式才成为 *2* 路归并排序。
+
+![localtestwithplugins](https://cdn.notcloud.net/static/md/cy948/202211292157232.gif)
+
+如果直接对数组进行排序，上述的伪代码中有部分需要改动：也是[912. 排序数组 - 力扣（LeetCode）](https://leetcode.cn/problems/sort-an-array/)
+
+```c
+void MSort(int* nums, int low, int high);
+void Merge(int* nums, int low, int mid, int high);
+
+int* sortArray(int* nums, int numsSize, int* returnSize){
+    MSort(nums, 0, numsSize-1);
+    * returnSize = numsSize;
+    return nums;
+}
+
+void MSort(int* nums, int low, int high){
+    //只有一个元素时自然有序，无需再排
+    if(low == high) return;
+    
+    int mid = low + (high - low)/2;
+    MSort(nums, low, mid);//对左段进行排序
+    MSort(nums, mid+1, high);//对右段进行排序
+    Merge(nums, low, mid, high);//归并左右两段
+}
+
+void Merge(int* nums, int low, int mid, int high){
+    int toSofted[high+1], tmpLow;
+    // 复制待排序的元素到临时数组，使用从临时数组中选择元素覆盖到原数组的做法
+    for(tmpLow = low; tmpLow <= high; tmpLow++) toSofted[tmpLow] = nums[tmpLow];
+
+    // i指向待合并数组最左边的元素，j是右数组最左边的元素
+    // resIdx 是结果数组的指针
+    int i = low, j = mid+1, resIdx = low;
+
+    while(i <= mid && j <= high){
+        //复制左数组的元素到结果数组
+			//左边的元素小，复制左边的元素到临时数组中，
+	        //并移动指针指向左边的下一个元素起点
+        if(toSofted[i] <= toSofted[j]) nums[resIdx++] = toSofted[i++];
+        else nums[resIdx++] = toSofted[j++];
+    }
+
+    //处理剩余的元素
+    //左边数组元素未处理完，依次复制到结果数组
+    while(i <= mid) nums[resIdx++] = toSofted[i++];
+    while(j <= high) nums[resIdx++] = toSofted[j++];
+    //上面两个while只有一个会执行
+}
+```
+
+#### 性能分析
+
+**时间复杂度**
+        每一趟归并的时间复杂度为 $O(n)$，总共需进行 $\lceil \log_2 n \rceil$ 趟。故：对 n 个记录进行归并排序的时间复杂度为 $Ο(n\log_2 n)$ ；
+
+**空间复杂度**
+        `Merge()`方法中使用了的辅助数组 `toSofted` ，故空间复杂度是O(n).
+
+### 基数排序
 
