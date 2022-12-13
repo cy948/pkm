@@ -936,9 +936,10 @@ _Bool isComplete(BiTNode * root){
         // 改动 1
         if(tmp.data == nullNode.data){
             // 读取到空结点，即到最后一层，开始清空队列
+// 同时寻找队列中是否有空节点，有就说明不是完全二叉树
             while(!QueueEmpty(queue)){
                 deQueue(queue, & tmp);
-                if(tmp.data != nullNode.data) return 0;
+                if(tmp.data == nullNode.data) return 0;
             }
             break;
         }
