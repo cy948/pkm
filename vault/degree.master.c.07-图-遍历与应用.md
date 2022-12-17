@@ -61,7 +61,7 @@ void BFSTraverse(Graph * G){
     int v; 
     for(v = 0; v < G->vexnum; ++v){
         // 初始化已访问的初始数据
-        visited[v] = true;
+        visited[v] = false;
     }
     // 初始化队列
     InitQueue(q);
