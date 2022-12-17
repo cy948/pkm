@@ -2,7 +2,7 @@
 id: 148mt0uteo4vs2q3tzitzaq
 title: '07 图的遍历与应用'
 desc: ''
-updated: 1666698276161
+updated: 1671251123447
 created: 1666620258948
 ---
 
@@ -114,6 +114,9 @@ void BFS(Graph * G, int v, Queue q){
 - **邻接矩阵**：查顶点还是邻接点都需循环检测矩阵中的整整一行（ *n* 个元素），因此在 `BFSTraverse` 中耗时 *O(|V|)*，在`BFS()` 方法中查找邻接点的时间复杂度为 *O(|V|)*，最坏情况下总的时间复杂度为 $O(|V|^2)$；
 - **邻接表**： 在方法 `BFSTraverse` 中遍历每个顶点时，复杂度为 *O(|V|)* ，在 `BFS()` 中遍历每个顶点的邻接边总共耗时 *O(|E|)* (每条边最少会被经过一次)，加上访问 *n* 个头结点的时间，时间复杂度为 *O(|V|+|E|)*；
 
+> 其实这个复杂度就是 **遍历所有边** 的复杂度；
+
+
 #### 广度优先生成树
 
 在遍历过程中会产生一棵树，成为 *广度优先生成树* 。给定图的 *邻接矩阵* 是唯一的，产生唯一的广度优先生成树，但 *邻接表* 不是唯一的，生成的树也不唯一；
@@ -157,7 +160,7 @@ void DFSTraverse(Graph * G){
     int v;
     for(v = 0; v < G->vexnum; ++v){
         // 初始化已访问的初始数据
-        visited[v] = true;
+        visited[v] = false;
     }
     for(v = 0; v < G->vexnum; ++v){
         if(!visited[v]) DFS(G, v);
@@ -194,7 +197,7 @@ void DFS_Non_RC(Graph * G, int v){
     Stack s; InitStack(&s);
     for(v = 0; v < G->vexnum; ++v){
         // 初始化已访问的初始数据
-        visited[v] = true;
+        visited[v] = false;
     }
     
     // 标记
