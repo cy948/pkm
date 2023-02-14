@@ -439,4 +439,125 @@ fn main() {
 
 ## [Associated items](https://doc.rust-lang.org/rust-by-example/generics/assoc_items.html#associated-items)
 
+### [The Problem](https://doc.rust-lang.org/rust-by-example/generics/assoc_items/the_problem.html#the-problem)
+
+> `trait` 定义行为，类似interface，需要impl后才有功能
+
 关联`item`s指向一系列关于`item`s的类型，也是`trait`泛型的拓展，使`trait`s在内部定义新的`item`s。
+
+- 定义结构体`Container`和特征`Contains`
+
+```rust
+struct Container(i32, i32);
+
+// A trait which checks if 2 items are stored inside of container.
+// Also retrieves first or last value.
+trait Contains<A, B> {
+    fn contains(&self, _: &A, _: &B) -> bool; // Explicitly requires `A` and `B`.
+    fn first(&self) -> i32; // Doesn't explicitly require `A` or `B`.
+    fn last(&self) -> i32;  // Doesn't explicitly require `A` or `B`.
+}
+```
+
+- 为结构体`Container`实现特征`Contains`
+
+```rust
+impl Contains<i32, i32> for Container {
+    // True if the numbers stored are equal.
+    fn contains(&self, number_1: &i32, number_2: &i32) -> bool {
+        (&self.0 == number_1) && (&self.1 == number_2)
+    }
+
+    // Grab the first number.
+    fn first(&self) -> i32 { self.0 }
+
+    // Grab the last number.
+    fn last(&self) -> i32 { self.1 }
+}
+```
+
+- 在方法`difference`中，使用`where`关键字限定了`C`的类型为具有`Contains<A,B>`特征的`Container`实现
+
+```rust
+// `C` contains `A` and `B`. In light of that, having to express `A` and
+// `B` again is a nuisance.
+fn difference<A, B, C>(container: &C) -> i32 where
+    C: Contains<A, B> {
+    container.last() - container.first()
+}
+
+fn main() {
+    let number_1 = 3;
+    let number_2 = 10;
+
+    let container = Container(number_1, number_2);
+
+    println!("Does container contain {} and {}: {}",
+        &number_1, &number_2,
+        container.contains(&number_1, &number_2));
+    println!("First number: {}", container.first());
+    println!("Last number: {}", container.last());
+
+    println!("The difference is: {}", difference(&container));
+}
+```
+
+### [Associated types](https://doc.rust-lang.org/rust-by-example/generics/assoc_items/types.html#associated-types)
+
+在上面的例子中，`Contains trait` 允许泛型`A`和`B`的使用，特征`Contains`为类型`Container`实现。在`difference`方法中指定了`A`和`B`为`i32`。
+
+因为`Contains`是泛化的，我们需要为`fn difference()`明确指定类型。在实践中想要`A`和`B`取决于输入参数`C`，做法如下：
+
+- 定义类型及特征
+
+```rust
+struct Container(i32, i32);
+
+// A trait which checks if 2 items are stored inside of container.
+// Also retrieves first or last value.
+trait Contains<A, B> {
+    fn contains(&self, _: &A, _: &B) -> bool; // Explicitly requires `A` and `B`.
+    fn first(&self) -> i32; // Doesn't explicitly require `A` or `B`.
+    fn last(&self) -> i32;  // Doesn't explicitly require `A` or `B`.
+}
+```
+
+- 与上面不同，实现特征`Contains`时指定了泛型`A`和`B`的类型`<i32,i32>`
+
+```rust
+impl Contains<i32, i32> for Container {
+    // True if the numbers stored are equal.
+    fn contains(&self, number_1: &i32, number_2: &i32) -> bool {
+        (&self.0 == number_1) && (&self.1 == number_2)
+    }
+
+    // Grab the first number.
+    fn first(&self) -> i32 { self.0 }
+
+    // Grab the last number.
+    fn last(&self) -> i32 { self.1 }
+}
+
+// `C` contains `A` and `B`. In light of that, having to express `A` and
+// `B` again is a nuisance.
+fn difference<A, B, C>(container: &C) -> i32 where
+    C: Contains<A, B> {
+    container.last() - container.first()
+}
+
+fn main() {
+    let number_1 = 3;
+    let number_2 = 10;
+
+    let container = Container(number_1, number_2);
+
+    println!("Does container contain {} and {}: {}",
+        &number_1, &number_2,
+        container.contains(&number_1, &number_2));
+    println!("First number: {}", container.first());
+    println!("Last number: {}", container.last());
+
+    println!("The difference is: {}", difference(&container));
+}
+```
+
