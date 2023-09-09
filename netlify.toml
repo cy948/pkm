@@ -30,7 +30,7 @@
 NETLIFY_NEXT_PLUGIN_SKIP = "true"
 # NODE_VERSION = "16.13.2"
 
-[[plugins]]
+# [[plugins]]
   # Installs the Lighthouse Build Plugin for all deploy contexts
   # package = "@netlify/plugin-lighthouse"
 
