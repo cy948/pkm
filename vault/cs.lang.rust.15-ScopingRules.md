@@ -417,3 +417,7 @@ fn main() {
 }   // Lifetime ends. ─────────────────────────────────────┘
 ```
 
+### Explicit annotation
+
+可以显式指定指定生命周期，如：`foo<'a>`
+

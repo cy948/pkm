@@ -32,7 +32,7 @@ NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 [[plugins]]
   # Installs the Lighthouse Build Plugin for all deploy contexts
-  package = "@netlify/plugin-lighthouse"
+  # package = "@netlify/plugin-lighthouse"
 
 [[plugins]]
   # Next.js plugin, to implement caching, etc.
